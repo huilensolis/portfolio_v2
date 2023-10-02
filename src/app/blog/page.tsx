@@ -4,7 +4,7 @@ import RelativeTime from "../components/relative-time";
 
 export default function Blog() {
   const { getPostsListMetadata } = usePosts();
-  const blogsMetaData = getPostsListMetadata();
+  const blogsMetaData = getPostsListMetadata({ limit: 10 });
   return (
     <ul className="w-full flex flex-col gap-5">
       {blogsMetaData.map((metaData) => (
@@ -15,7 +15,7 @@ export default function Blog() {
                 {metaData.title}
               </h2>
               <p className="text-gray-400">{metaData.subtitle}</p>
-              <span className="italic text-gray-400">
+              <span className="text-gray-400">
                 <RelativeTime date={Date.parse(metaData.date)} />
               </span>
             </article>

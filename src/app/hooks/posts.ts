@@ -6,11 +6,12 @@ import { type PostMetadata } from "../interfaces/post-metadata.interface";
 const postsDir = path.join(process.cwd(), "src", "app", "blog", "posts");
 
 export function usePosts() {
-  function getPostsListMetadata(): PostMetadata[] {
+  function getPostsListMetadata({ limit }: { limit: number }): PostMetadata[] {
     const markDownXFiles = readdirSync(postsDir).filter((filename) =>
       filename.endsWith(".mdx")
     );
-    const postsMetadata = markDownXFiles.map((fileName) => {
+    const slicedMarkDownXFiles = markDownXFiles.slice(0, limit);
+    const postsMetadata = slicedMarkDownXFiles.map((fileName) => {
       const postPath = path.join(postsDir, fileName);
       const fileContent = readFileSync(postPath, "utf8");
 

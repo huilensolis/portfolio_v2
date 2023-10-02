@@ -1,15 +1,19 @@
+"use client";
+
 import Link from "next/link";
 import { ThemeSwitcher } from "./theme-switcher";
+import { usePathname } from "next/navigation";
 
 export function Header() {
+  const path = usePathname();
   const navigationItems = [
-    {
-      name: "blog",
-      href: "/blog",
-    },
     {
       name: "home",
       href: "/",
+    },
+    {
+      name: "blog",
+      href: "/blog",
     },
   ];
   return (
@@ -20,7 +24,13 @@ export function Header() {
             <li key={navItem.href}>
               <Link
                 href={navItem.href}
-                className="text-cm-black dark:text-cm-white font-medium"
+                className={`${
+                  path === navItem.href ? "font-bold" : "font-normal"
+                } ${
+                  path === navItem.href
+                    ? "text-cm-black dark:text-cm-white"
+                    : "text-gray-600 dark:text-gray-400"
+                } hover:font-semibold hover:text-cm-black dark:hover:text-cm-white cursor-pointer`}
               >
                 {navItem.name}
               </Link>
