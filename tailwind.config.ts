@@ -15,9 +15,10 @@ const config: Config = {
       colors: {
         "cm-white": "#ffffff",
         "cm-black": "#101010",
+        "cm-primary": "#3291ff",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

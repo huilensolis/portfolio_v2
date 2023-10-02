@@ -13,9 +13,9 @@ export function Header() {
     },
   ];
   return (
-    <header className="w-screen flex justify-between items-center h-20 fixed top-0 left-0 sm:px-20 px-3">
-      <nav className="w-full">
-        <ul className="w-full flex justify-around">
+    <header className="w-screen flex justify-between items-center h-20 fixed top-0 left-0 sm:px-20 px-3 bg-cm-white dark:bg-cm-black border-b-2 border-gray-300 dark:border-gray-700">
+      <nav className="w-max">
+        <ul className="w-max flex justify-start gap-5">
           {navigationItems.map((navItem) => (
             <li key={navItem.href}>
               <Link
@@ -28,7 +28,7 @@ export function Header() {
           ))}
         </ul>
       </nav>
-      <section className="w-full flex justify-around items-center">
+      <section className="w-max flex justify-end gap-5 items-center">
         <ThemeSwitcher />
       </section>
     </header>
