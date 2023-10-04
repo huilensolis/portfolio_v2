@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div className="bg-cm-white dark:bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-100px)] pt-[calc(100px+20px)] w-full sm:px-20 px-3">
+        <div className="bg-cm-white dark:bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-100px)] py-32 w-full sm:px-20 px-5">
           {children}
         </div>
         <Footer />

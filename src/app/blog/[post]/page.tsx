@@ -3,21 +3,29 @@ import { usePosts } from "../../hooks/posts";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PostLayout } from "./components/post-layout";
+import matter from "gray-matter";
 
 export default function Post(props: any) {
   const currentUrl = props.params.post;
-  const { doesPostExist, readPost } = usePosts();
+  const { doesPostExist, readPost, getPostsListMetadata, getPostMetadata } =
+    usePosts();
 
   const postExist = doesPostExist(currentUrl);
   if (!postExist) {
     return notFound();
   }
 
-  const post = readPost(currentUrl);
+  const currentPost = readPost(currentUrl);
+  const currentPostMetadata = getPostMetadata(currentUrl);
+
+  const postsMetadata = getPostsListMetadata({ limit: 4 });
+  const filteredPostsMetadata = postsMetadata.filter(
+    (post) => post.title !== currentPostMetadata.title
+  );
   return (
-    <PostLayout>
+    <PostLayout blogsMetaData={filteredPostsMetadata}>
       <div className="prose dark:prose-invert max-w-none w-full">
-        <MDXRemote source={post} />
+        <MDXRemote source={currentPost} />
       </div>
     </PostLayout>
   );

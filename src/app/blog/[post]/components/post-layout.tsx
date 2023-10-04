@@ -2,7 +2,14 @@ import { ReactNode } from "react";
 import Link from "next/link";
 import { IconChevronLeft } from "@tabler/icons-react";
 import { PostFooter } from "./post-footer";
-export function PostLayout({ children }: { children: ReactNode }) {
+import { PostMetadata } from "../../../interfaces/post-metadata.interface";
+export function PostLayout({
+  children,
+  blogsMetaData,
+}: {
+  children: ReactNode;
+  blogsMetaData: PostMetadata[];
+}) {
   return (
     <>
       <Link
@@ -14,7 +21,7 @@ export function PostLayout({ children }: { children: ReactNode }) {
       </Link>
       {children}
       <div className="w-full h-[1px] my-14 bg-gray-400 dark:bg-gray-700" />
-      <PostFooter />
+      <PostFooter blogsMetaData={blogsMetaData} />
     </>
   );
 }

@@ -35,7 +35,7 @@ export function Footer() {
     },
   ];
   return (
-    <footer className="w-full p-10 pt-20 sm:px-20 px-3 flex flex-col justify-center items-center bg-cm-white dark:bg-cm-black">
+    <footer className="w-full px-5 py-20 sm:px-20 flex flex-col justify-center items-center bg-cm-white dark:bg-cm-black">
       <ul className="flex gap-5 flex-wrap">
         {socialNetworks.map((link) => (
           <li key={link.href} className="flex">

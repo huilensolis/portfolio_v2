@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { usePosts } from "../../../hooks/posts";
 import RelativeTime from "../../../components/relative-time";
+import { PostMetadata } from "../../../interfaces/post-metadata.interface";
 
-export function PostFooter() {
-  const { getPostsListMetadata } = usePosts();
-  const blogsMetaData = getPostsListMetadata({ limit: 3 });
+export function PostFooter({
+  blogsMetaData,
+}: {
+  blogsMetaData: PostMetadata[];
+}) {
   return (
-    <section className="flex flex-col w-full">
-      <span className="text-cm-black dark:text-cm-white text-sm font-normal">
+    <section className="flex flex-col w-full gap-3">
+      <span className="text-cm-black dark:text-cm-white text-2xl">
         More posts
       </span>
       <ul className="flex flex-col gap-5">

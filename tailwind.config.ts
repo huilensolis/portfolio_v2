@@ -13,8 +13,8 @@ const config: Config = {
         "cm-icons": "1.50rem",
       },
       colors: {
-        "cm-white": "#ffffff",
-        "cm-black": "#101010",
+        "cm-white": "#FAFAFA" /* #FAFAFA */,
+        "cm-black": "#111111" /* #101010 */,
         "cm-primary": "#3291ff",
       },
     },
