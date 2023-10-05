@@ -13,9 +13,8 @@ export async function GET(req: Request, res: NextResponse) {
 
   try {
     const postsMetadata = getPostsListMetadata({ offset, limit });
-    console.log(offset);
     return NextResponse.json({ data: postsMetadata });
   } catch (error) {
-    console.log("there is been an error " + error);
+    return NextResponse.error();
   }
 }

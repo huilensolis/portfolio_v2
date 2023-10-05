@@ -20,7 +20,7 @@ export function PostLayout({
         <span className="text-gray-500 dark:text-gray-400">go back</span>
       </Link>
       {children}
-      <div className="w-full h-[1px] my-14 bg-gray-400 dark:bg-gray-700" />
+      <hr className="w-full my-14 dark:border-gray-700 border-b-[1px] border-gray-400" />
       <PostFooter blogsMetaData={blogsMetaData} />
     </>
   );

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PostMetadata } from "../components/post-metadata";
 import { type InterfacePostMetadata } from "../interfaces/post-metadata.interface";
 import { useEffect, useRef, useState } from "react";
+import { ErrorComponent } from "../components/error";
 
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(false);
@@ -14,6 +15,7 @@ export default function Blog() {
   const [areMorePosts, setAreMorePosts] = useState(true);
   const [limit, setLimit] = useState(10);
   const [isFetching, setIsFetching] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -37,7 +39,7 @@ export default function Blog() {
         const areThereMorePosts = jsonResponse.data.length >= limit;
         setAreMorePosts(areThereMorePosts);
       } catch (error) {
-        console.log("error");
+        setError(true);
       } finally {
         setIsLoading(false);
         setIsFetching(false);
@@ -49,7 +51,6 @@ export default function Blog() {
   }, [offset]);
 
   function handleScroll() {
-    console.log("on view!");
     if (areMorePosts) {
       setOffset((prev) => prev + limit);
     }
@@ -57,9 +58,7 @@ export default function Blog() {
   }
   return (
     <>
-      {isLoading ? (
-        <p>loading ...</p>
-      ) : (
+      {blogsMetaData.length > 0 && (
         <ul className="w-full flex flex-col gap-5">
           {blogsMetaData.map((metaData, index) => (
             <li key={index}>
@@ -78,6 +77,8 @@ export default function Blog() {
           ))}
         </ul>
       )}
+      {isLoading && <p>Loading...</p>}
+      {error && <ErrorComponent />}
     </>
   );
 }

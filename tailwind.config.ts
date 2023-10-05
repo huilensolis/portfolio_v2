@@ -24,6 +24,12 @@ const config: Config = {
         "cm-yellow": "#f8bd4d",
         "cm-blue": "#409fd4",
       },
+      backgroundImage: {
+        "cm-square":
+          "linear-gradient(#cc00ff 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #cc00ff 1.4000000000000001px, #000000 1.4000000000000001px);",
+        // opacity: 1;
+        // background-size: 28px 28px;'
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
