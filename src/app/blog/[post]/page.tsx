@@ -3,7 +3,6 @@ import { usePosts } from "../../hooks/posts";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PostLayout } from "./components/post-layout";
-import matter from "gray-matter";
 
 export default function Post(props: any) {
   const currentUrl = props.params.post;
@@ -18,7 +17,7 @@ export default function Post(props: any) {
   const currentPost = readPost(currentUrl);
   const currentPostMetadata = getPostMetadata(currentUrl);
 
-  const postsMetadata = getPostsListMetadata({ limit: 4 });
+  const postsMetadata = getPostsListMetadata({ limit: 4, offset: 0 });
   const filteredPostsMetadata = postsMetadata.filter(
     (post) => post.title !== currentPostMetadata.title
   );

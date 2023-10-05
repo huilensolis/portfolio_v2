@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 import Link from "next/link";
 import { IconChevronLeft } from "@tabler/icons-react";
 import { PostFooter } from "./post-footer";
-import { PostMetadata } from "../../../interfaces/post-metadata.interface";
+import { InterfacePostMetadata } from "../../../interfaces/post-metadata.interface";
 export function PostLayout({
   children,
   blogsMetaData,
 }: {
   children: ReactNode;
-  blogsMetaData: PostMetadata[];
+  blogsMetaData: InterfacePostMetadata[];
 }) {
   return (
     <>
