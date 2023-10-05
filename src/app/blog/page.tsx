@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { PostMetadata } from "../components/post-metadata";
 import { type InterfacePostMetadata } from "../interfaces/post-metadata.interface";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(false);
@@ -13,30 +13,43 @@ export default function Blog() {
   const [offset, setOffset] = useState(0);
   const [areMorePosts, setAreMorePosts] = useState(true);
   const [limit, setLimit] = useState(10);
+  const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(
-        `http://localhost:3000/api/blog?offset=${offset}&limit=${limit}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const jsonResponse: { data: InterfacePostMetadata[] } =
-        await response.json();
-      setBlogsMetaData((prev) => [...prev, ...jsonResponse.data]);
-      const areThereMorePosts = jsonResponse.data.length >= limit;
-      setAreMorePosts(areThereMorePosts);
-    }
-    if (areMorePosts) {
+      setIsFetching(true);
       setIsLoading(true);
-      fetchData().then(() => setIsLoading(false));
+
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/blog?offset=${offset}&limit=${limit}`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const jsonResponse: { data: InterfacePostMetadata[] } =
+          await response.json();
+
+        setBlogsMetaData((prev) => [...prev, ...jsonResponse.data]);
+
+        const areThereMorePosts = jsonResponse.data.length >= limit;
+        setAreMorePosts(areThereMorePosts);
+      } catch (error) {
+        console.log("error");
+      } finally {
+        setIsLoading(false);
+        setIsFetching(false);
+      }
     }
-  }, [offset, limit]);
+    if (areMorePosts && !isFetching) {
+      fetchData();
+    }
+  }, [offset]);
 
   function handleScroll() {
+    console.log("on view!");
     if (areMorePosts) {
       setOffset((prev) => prev + limit);
     }
@@ -49,7 +62,7 @@ export default function Blog() {
       ) : (
         <ul className="w-full flex flex-col gap-5">
           {blogsMetaData.map((metaData, index) => (
-            <li key={metaData.title}>
+            <li key={index}>
               <Link href={`blog/${metaData.slug}`}>
                 <PostMetadata
                   metaData={metaData}

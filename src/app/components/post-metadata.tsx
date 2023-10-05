@@ -24,7 +24,7 @@ export function PostMetadata({
       const observerCallback = (entries: any, observer: any) => {
         entries.forEach((entry: any) => {
           if (entry.isIntersecting) {
-            callback()
+            callback();
             observer.unobserve(entry.target);
           }
         });
@@ -32,6 +32,7 @@ export function PostMetadata({
 
       const observer = new IntersectionObserver(observerCallback, options);
       observer.observe(postMetadataRef.current as any);
+      if (postMetadataRef === null) observer.disconnect();
     }
   }, [useObserver, callback, postMetadataRef]);
 
