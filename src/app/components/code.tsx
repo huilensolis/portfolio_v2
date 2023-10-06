@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
-
-export function Code({ children }: { children: ReactNode }) {
-  return <>{children} test!</>;
+import { Code as CodeBlock } from "bright";
+export function Code({ children }: { children: any }) {
+  let code = children.props.children;
+  return (
+    <CodeBlock lang="ts" theme={"github-dark"}>
+      {code}
+    </CodeBlock>
+  );
 }

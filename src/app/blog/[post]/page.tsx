@@ -3,6 +3,8 @@ import { usePosts } from "../../hooks/posts";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PostLayout } from "./components/post-layout";
+import { Logo } from "../../components/icons";
+import { Code } from '../../components/code';
 
 export default function Post(props: any) {
   const currentUrl = props.params.post;
@@ -24,7 +26,7 @@ export default function Post(props: any) {
   return (
     <PostLayout blogsMetaData={filteredPostsMetadata}>
       <div className="prose dark:prose-invert max-w-none w-full">
-        <MDXRemote source={currentPost} />
+        <MDXRemote source={currentPost} components={{ Logo, Code }} />
       </div>
     </PostLayout>
   );
