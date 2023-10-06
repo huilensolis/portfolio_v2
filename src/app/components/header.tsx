@@ -31,12 +31,12 @@ export function Header() {
               <Link
                 href={navItem.href}
                 className={`${
-                  path === navItem.href ? "font-bold" : "font-normal"
+                  path === navItem.href ? "font-medium" : "font-normal"
                 } ${
                   path === navItem.href
-                    ? "text-cm-black dark:text-cm-white"
+                    ? "text-blue-500 dark:text-blue-500"
                     : "text-gray-600 dark:text-gray-400"
-                } hover:font-semibold hover:text-cm-black dark:hover:text-cm-white cursor-pointer`}
+                } hover:font-medium hover:text-blue-500 dark:hover:text-blue-500 cursor-pointer`}
               >
                 {navItem.name}
               </Link>

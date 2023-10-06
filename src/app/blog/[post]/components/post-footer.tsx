@@ -9,9 +9,9 @@ export function PostFooter({
 }) {
   return (
     <section className="flex flex-col w-full gap-3">
-      <span className="text-cm-black dark:text-cm-white text-2xl">
+      <h2 className="text-cm-black dark:text-cm-white text-4xl">
         More posts
-      </span>
+      </h2>
       <ul className="flex flex-col gap-5">
         {blogsMetaData.map((metaData) => (
           <li key={metaData.date}>

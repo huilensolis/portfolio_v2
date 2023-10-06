@@ -19,8 +19,10 @@ export function PostLayout({
         href={"/blog"}
         className="mb-[20px] flex w-full justify-start items-center"
       >
-        <IconChevronLeft className="text-gray-500 dark:text-gray-400" />
-        <span className="text-gray-500 dark:text-gray-400">Go back</span>
+        <IconChevronLeft className="text-gray-500 dark:text-gray-400 w-6 h-6" />
+        <span className="text-gray-500 dark:text-gray-400 text-2xl">
+          Go back
+        </span>
       </Link>
       {children}
       <hr className="w-full mt-7 border-transparent" />

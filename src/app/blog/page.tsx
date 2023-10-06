@@ -78,7 +78,7 @@ export default function Blog() {
           ))}
         </ul>
       )}
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       {error && <ErrorComponent />}
     </>
   );

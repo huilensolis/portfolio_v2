@@ -12,6 +12,7 @@ body {
 
 body::-webkit-scrollbar {
   width: var(--sb-size);
+  /* line-height: 33px; */
 }
 
 body::-webkit-scrollbar-track {

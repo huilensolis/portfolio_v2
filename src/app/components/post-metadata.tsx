@@ -44,7 +44,7 @@ export function PostMetadata({
       <h2 className="font-bold text-4xl dark:text-cm-white text-cm-black">
         {metaData.title}
       </h2>
-      <p className="dark:text-gray-500 text-gray-600">{metaData.subtitle}</p>
+      <p className="text-gray-500">{metaData.subtitle}</p>
       <span className="dark:text-gray-500 text-gray-600">
         <RelativeTime date={Date.parse(metaData.date)} />
       </span>
