@@ -63,7 +63,10 @@ export default function Blog() {
         <ul className="w-full flex flex-col gap-5">
           {blogsMetaData.map((metaData, index) => (
             <li key={index}>
-              <Link href={`blog/${metaData.slug}`}>
+              <Link
+                href={`blog/${metaData.slug}`}
+                className="hover:cursor-pointer"
+              >
                 <PostMetadata
                   metaData={metaData}
                   useObserver={
@@ -78,7 +81,7 @@ export default function Blog() {
           ))}
         </ul>
       )}
-      {/* {isLoading && <Loader />} */}
+      {isLoading && <Loader />}
       {error && <ErrorComponent />}
     </>
   );

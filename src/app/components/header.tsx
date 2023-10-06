@@ -5,6 +5,17 @@ import { ThemeSwitcher } from "./theme-switcher";
 import { usePathname } from "next/navigation";
 import { Logo } from "./icons";
 
+function isLinkTheCurrentPage(href: string, path: string): boolean {
+  if (path.length === 1 && href === path) return true; // case it is home
+  if (href.length === 1) {
+    return false;
+  }
+
+  if (path.startsWith(href)) return true;
+
+  return false;
+}
+
 export function Header() {
   const path = usePathname();
   const navigationItems = [
@@ -31,9 +42,11 @@ export function Header() {
               <Link
                 href={navItem.href}
                 className={`${
-                  path === navItem.href ? "font-medium" : "font-normal"
+                  isLinkTheCurrentPage(navItem.href, path)
+                    ? "font-medium"
+                    : "font-normal"
                 } ${
-                  path === navItem.href
+                  isLinkTheCurrentPage(navItem.href, path)
                     ? "text-blue-500 dark:text-blue-500"
                     : "text-gray-600 dark:text-gray-400"
                 } hover:font-medium hover:text-blue-500 dark:hover:text-blue-500 cursor-pointer`}
