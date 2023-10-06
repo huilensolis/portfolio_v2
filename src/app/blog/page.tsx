@@ -41,6 +41,10 @@ export default function Blog() {
         setAreMorePosts(areThereMorePosts);
       } catch (error) {
         setError(true);
+        console.log(error);
+        console.log(
+          `${process.env.NEXT_PUBLIC_API_URL}/blog?offset=${offset}&limit=${limit}`
+        );
       } finally {
         setIsLoading(false);
         setIsFetching(false);
