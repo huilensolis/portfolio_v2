@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 export async function GET() {
-  console.log("this is a api call!!! uwu");
+  return NextResponse.json({ data: "hellow world!" });
 }

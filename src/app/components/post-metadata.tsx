@@ -37,7 +37,10 @@ export function PostMetadata({
   }, [useObserver, callback, postMetadataRef]);
 
   return (
-    <article ref={postMetadataRef}>
+    <article
+      ref={postMetadataRef}
+      className="animate-cm-scale-top transition-all delay-700 ease-in-out"
+    >
       <h2 className="font-bold text-4xl dark:text-cm-white text-cm-black">
         {metaData.title}
       </h2>

@@ -30,6 +30,15 @@ const config: Config = {
         // opacity: 1;
         // background-size: 28px 28px;'
       },
+      keyframes: {
+        "cm-scale-to-top": {
+          "0%": { transform: "translateY(100px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "cm-scale-top": "cm-scale-to-top 1s",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

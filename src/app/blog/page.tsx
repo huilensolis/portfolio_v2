@@ -52,6 +52,7 @@ export default function Blog() {
   }, [offset]);
 
   function handleScroll() {
+    console.log("on view");
     if (areMorePosts) {
       setOffset((prev) => prev + limit);
     }
