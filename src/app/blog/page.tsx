@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { PostMetadata } from "../components/post-metadata";
-import { type InterfacePostMetadata } from "../interfaces/post-metadata.interface";
+import { type InterfacePostMetadata } from "../models/post-metadata.interface";
 import { useEffect, useRef, useState } from "react";
 import { ErrorComponent } from "../components/error";
+import { Loader } from "../components/loader";
 
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(false);
@@ -77,7 +78,7 @@ export default function Blog() {
           ))}
         </ul>
       )}
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <Loader />}
       {error && <ErrorComponent />}
     </>
   );

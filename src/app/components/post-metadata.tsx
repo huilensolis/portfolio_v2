@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { InterfacePostMetadata } from "../interfaces/post-metadata.interface";
+import { InterfacePostMetadata } from "../models/post-metadata.interface";
 import RelativeTime from "./relative-time";
 
 export function PostMetadata({

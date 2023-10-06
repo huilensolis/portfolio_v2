@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { type InterfacePostMetadata } from "../../../interfaces/post-metadata.interface";
+import { type InterfacePostMetadata } from "../../../models/post-metadata.interface";
 import { PostMetadata } from "../../../components/post-metadata";
 
 export function PostFooter({
