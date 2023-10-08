@@ -7,32 +7,6 @@ import { useEffect, useRef, useState } from "react";
 import { ErrorComponent } from "../components/error";
 import { Loader } from "../components/loader";
 
-import type { Metadata } from "next";
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: `Huilen Solis's Blog`,
-    description:
-      "Full stack developer, from Argentina. I often post about my journey in web development",
-    openGraph: {
-      images: [{ url: "../../public/icon.png", alt: "Huilen Solis logo" }],
-      title: `Huilen Solis's Blog`,
-      description:
-        "Full stack developer, from Argentina. I often post about my journey in web development",
-      type: "website",
-      siteName: "Huilen Solis's Blog",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `Huilen Solis's Blog`,
-      description:
-        "Full stack developer, from Argentina. I often post about my journey in web development",
-      creator: "@solishuilen",
-      images: [{ url: "../../public/icon.png", alt: "Huilen Solis logo" }],
-    },
-  };
-}
-
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(false);
   const [blogsMetaData, setBlogsMetaData] = useState(
