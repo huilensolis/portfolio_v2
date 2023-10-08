@@ -11,8 +11,8 @@ export function PostFooter({
     <section className="flex flex-col w-full gap-3">
       <h2 className="text-cm-black dark:text-cm-white text-2xl">More posts</h2>
       <ul className="flex flex-col gap-5">
-        {blogsMetaData.map((metaData) => (
-          <li key={metaData.date}>
+        {blogsMetaData.map((metaData, i) => (
+          <li key={i}>
             <Link href={`blog/${metaData.slug}`}>
               <PostMetadata metaData={metaData} />
             </Link>
@@ -22,3 +22,4 @@ export function PostFooter({
     </section>
   );
 }
+//
