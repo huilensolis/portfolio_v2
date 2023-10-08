@@ -42,14 +42,15 @@ export async function generateMetadata(
       title: postMetadata.title,
       description: postMetadata.subtitle,
       authors: "Huilen Solis",
-      // writers: "Huilen Solis",
+      type: "article",
+      siteName: "Huilen Solis",
     },
     twitter: {
       card: "summary_large_image",
       title: postMetadata.title,
       description: postMetadata.subtitle,
       creator: "@solishuilen",
-      images: [postMetadata.image ?? ""],
+      images: [{ url: postMetadata.image ?? "", alt: postMetadata.title }],
     },
   };
 }

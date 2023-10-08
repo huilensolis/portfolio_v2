@@ -14,7 +14,7 @@ export function PostLayout({
   blogsMetaData: InterfacePostMetadata[];
 }) {
   return (
-    <>
+    <article className="max-w-4xl w-full">
       <Link
         href={"/blog"}
         className="mb-[20px] flex w-full justify-start items-center"
@@ -40,6 +40,6 @@ export function PostLayout({
       </div>
       <hr className="w-full my-14 dark:border-gray-700 border-b-[1px] border-gray-400" />
       <PostFooter blogsMetaData={blogsMetaData} />
-    </>
+    </article>
   );
 }

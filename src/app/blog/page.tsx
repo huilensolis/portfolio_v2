@@ -62,7 +62,7 @@ export default function Blog() {
     <>
       {blogsMetaData.length > 0 && (
         <main className="w-full flex justify-center">
-          <ul className="w-max flex flex-col gap-5">
+          <ul className="max-w-4xl flex flex-col gap-5">
             {blogsMetaData.map((metaData, index) => (
               <li key={index} className="max-w-4xl">
                 <Link
