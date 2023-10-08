@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     template: "%s | Huilen solis",
   },
   description: `Explore Huilen's blog, projects and get in touch!`,
-  
 };
 
 const clasDisplay = localFont({

@@ -42,7 +42,7 @@ export async function generateMetadata(
       title: postMetadata.title,
       description: postMetadata.subtitle,
       authors: "Huilen Solis",
-      writers: "Huilen Solis",
+      // writers: "Huilen Solis",
     },
   };
 }
