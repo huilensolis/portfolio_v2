@@ -2,7 +2,7 @@ import { ImageResponse } from "next/server";
 import { usePosts } from "../../hooks/posts";
 import NextImage from "next/image";
 // Route segment config
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 // Image metadata
 export const alt = "Huilen Solis's blog";
@@ -32,7 +32,7 @@ export default async function Image({ params }: { params: { post: string } }) {
       // ImageResponse JSX element
       <article
         style={{
-          background: "#3782F6",
+          background: "#111111",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -48,10 +48,10 @@ export default async function Image({ params }: { params: { post: string } }) {
             style={{ width: "100%", height: "630px" }}
           />
         )}
-        <h1 style={{ fontSize: "45px", color: "#F1F1EF" }}>
+        <h1 style={{ fontSize: "45px", color: "#3782F6" }}>
           {postMetadata.title}
         </h1>
-        <p style={{ fontSize: "35px", color: "#F1F1EF" }}>
+        <p style={{ fontSize: "35px", color: "#3782F6" }}>
           {postMetadata.subtitle}
         </p>
       </article>
