@@ -4,7 +4,48 @@ import { usePosts } from "../../hooks/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PostLayout } from "./components/post-layout";
 import { Logo } from "../../components/icons";
-import { Code } from '../../components/code';
+import { Code } from "../../components/code";
+
+import type { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const { post } = params as any;
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { getPostMetadata } = usePosts();
+
+  const postMetadata = getPostMetadata(post);
+
+  function getImages() {
+    if (postMetadata.image) {
+      return {
+        images: [postMetadata.image],
+      };
+    }
+    return;
+  }
+
+  return {
+    title: postMetadata.title,
+    description: postMetadata.subtitle,
+    openGraph: {
+      ...getImages(),
+      title: postMetadata.title,
+      description: postMetadata.subtitle,
+      authors: "Huilen Solis",
+      writers: "Huilen Solis",
+    },
+  };
+}
 
 export default function Post(props: any) {
   const currentUrl = props.params.post;
@@ -25,6 +66,7 @@ export default function Post(props: any) {
   );
   return (
     <PostLayout blogsMetaData={filteredPostsMetadata}>
+      <meta name="description" content={currentPostMetadata.subtitle} />
       <div className="prose dark:prose-invert max-w-none w-full">
         <MDXRemote source={currentPost} components={{ Logo, Code }} />
       </div>

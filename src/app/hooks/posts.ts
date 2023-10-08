@@ -19,13 +19,12 @@ export function usePosts() {
 
     const endOfSlice = offset + limit;
     const slicedMarkDownXFiles = markDownXFiles.slice(offset, endOfSlice);
-    console.log(slicedMarkDownXFiles.length);
+
     const postsMetadata = slicedMarkDownXFiles.map((fileName) => {
       const postPath = path.join(postsDir, fileName);
       const fileContent = readFileSync(postPath, "utf8");
 
       const matterData = matter(fileContent);
-
       return {
         title: matterData.data.title,
         date: matterData.data.date,
@@ -44,7 +43,6 @@ export function usePosts() {
 
   function doesPostExist(postTitle: string): Boolean {
     const postPath = path.join(postsDir, postTitle + ".mdx");
-    console.log(postPath);
     const doesFileExist = existsSync(postPath);
     return doesFileExist;
   }

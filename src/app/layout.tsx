@@ -1,15 +1,17 @@
 import "./globals.css";
+import Head from "next/head";
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 
-// const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Huilen solis portfolio",
+  title: {
+    default: "Huilen solis",
+    template: "%s | Huilen solis",
+  },
   description: `Explore Huilen's blog, projects and get in touch!`,
+  
 };
 
 const clasDisplay = localFont({
@@ -54,6 +56,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="google" content="notranslate" key="notranslate" />
+        <meta name="robots" content="all" />
+      </Head>
       <body className={clasDisplay.className}>
         <Header />
         <div className="prose-p:text-3xl prose-p:tracking-wide prose-headings:tracking-wide prose-strong:tracking-wide prose-li:text-xl prose-li:tracking-wide bg-cm-white dark:bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-100px)] py-32 w-full sm:px-20 px-5">

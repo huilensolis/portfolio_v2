@@ -20,11 +20,11 @@ export function Header() {
   const path = usePathname();
   const navigationItems = [
     {
-      name: "home",
+      name: "Portfolio",
       href: "/",
     },
     {
-      name: "blog",
+      name: "Blog",
       href: "/blog",
     },
   ];

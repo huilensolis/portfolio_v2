@@ -49,6 +49,7 @@ export default function Blog() {
     if (areMorePosts && !isFetching) {
       fetchData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset]);
 
   function handleScroll() {
@@ -60,26 +61,28 @@ export default function Blog() {
   return (
     <>
       {blogsMetaData.length > 0 && (
-        <ul className="w-full flex flex-col gap-5">
-          {blogsMetaData.map((metaData, index) => (
-            <li key={index}>
-              <Link
-                href={`blog/${metaData.slug}`}
-                className="hover:cursor-pointer"
-              >
-                <PostMetadata
-                  metaData={metaData}
-                  useObserver={
-                    blogsMetaData.length - 1 === index && areMorePosts
-                  }
-                  callback={
-                    blogsMetaData.length - 1 === index ? handleScroll : null
-                  }
-                />
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <main className="w-full flex justify-center">
+          <ul className="w-max flex flex-col gap-5">
+            {blogsMetaData.map((metaData, index) => (
+              <li key={index} className="max-w-4xl">
+                <Link
+                  href={`blog/${metaData.slug}`}
+                  className="hover:cursor-pointer"
+                >
+                  <PostMetadata
+                    metaData={metaData}
+                    useObserver={
+                      blogsMetaData.length - 1 === index && areMorePosts
+                    }
+                    callback={
+                      blogsMetaData.length - 1 === index ? handleScroll : null
+                    }
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </main>
       )}
       {isLoading && <Loader />}
       {error && <ErrorComponent />}

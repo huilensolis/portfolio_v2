@@ -19,7 +19,7 @@ export function AvatarCard({
   children: ReactNode;
 }) {
   return (
-    <div className="flex">
+    <div className="flex w-full">
       <article className="flex flex-col gap-3 lg:max-w-1xl w-full max-w-4xl dark:bg-cm-gray bg-gray-200 shadow-md p-5 rounded-md">
         <header className="flex lg:flex-row flex-col justify-between lg:items-center w-full gap-3 lg:gap-10">
           <section className="flex gap-3">

@@ -3,4 +3,5 @@ export interface InterfacePostMetadata {
   date: string;
   subtitle: string;
   slug: string;
+  image?: string
 }
