@@ -29,6 +29,7 @@ export function usePosts() {
         title: matterData.data.title,
         date: matterData.data.date,
         subtitle: matterData.data.subtitle,
+        image: matterData.data.image,
         slug: fileName.replace(".mdx", ""),
       };
     });

@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { PostMetadata } from "../components/post-metadata";
 import { type InterfacePostMetadata } from "../models/post-metadata.interface";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { ErrorComponent } from "../components/error";
 import { Loader } from "../components/loader";
+import RelativeTime from "../components/relative-time";
+import { Logo } from "../components/icons";
 
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(false);
@@ -58,11 +60,35 @@ export default function Blog() {
     }
     return;
   }
+  const latestPost = blogsMetaData.shift();
   return (
     <>
       {blogsMetaData.length > 0 && (
-        <main className="w-full flex justify-center">
+        <main className="w-full flex flex-col items-center">
           <ul className="max-w-4xl flex flex-col gap-5">
+            {latestPost && (
+              <Link href={`blog/${latestPost.slug}`}>
+                <article>
+                  <img
+                    src={latestPost.image}
+                    alt={latestPost.title}
+                    className="w-full h-full"
+                  />
+                  <div className="flex h-full items-stretch gap-5 py-5 justify-start">
+                    <Logo classes={"w-full h-full"} />
+                    <section className="flex flex-col">
+                      <h2 className="font-bold text-4xl dark:text-cm-white text-cm-black">
+                        {latestPost.title}
+                      </h2>
+                      <p className="text-gray-500">{latestPost.subtitle}</p>
+                      <span className="dark:text-gray-500 text-gray-600">
+                        <RelativeTime date={Date.parse(latestPost.date)} />
+                      </span>
+                    </section>
+                  </div>
+                </article>
+              </Link>
+            )}
             {blogsMetaData.map((metaData, index) => (
               <li key={index} className="max-w-4xl">
                 <Link
@@ -81,6 +107,7 @@ export default function Blog() {
                 </Link>
               </li>
             ))}
+            Link
           </ul>
         </main>
       )}

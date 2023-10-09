@@ -1,10 +1,18 @@
+import { Code as CodeBlock, BrightProps } from "bright";
 import { ReactNode } from "react";
-import { Code as CodeBlock } from "bright";
-export function Code({ children }: { children: any }) {
-  let code = children.props.children;
+export function Code({
+  children,
+  language,
+  theme = "github-dark",
+}: {
+  children: ReactNode;
+  language: string;
+  theme: string;
+}) {
+  console.log({ language, theme, children });
   return (
-    <CodeBlock lang="ts" theme={"github-dark"}>
-      {code}
+    <CodeBlock lang={language} theme={theme as any}>
+      {children ?? ""}
     </CodeBlock>
   );
 }
