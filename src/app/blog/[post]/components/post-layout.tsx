@@ -26,7 +26,6 @@ export function PostLayout({
         </span>
       </Link>
       {children}
-      {/* <Hr display={false} /> */}
       <div className="w-full flex justify-start">
         <AvatarCard
           btnHref="https://www.linkedin.com/in/huilensolis/"

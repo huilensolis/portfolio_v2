@@ -83,9 +83,9 @@ export default function Blog() {
                 <div className="flex max-h-64 gap-5 justify-start">
                   <Logo classes={"h-auto w-72"} />
                   <section className="flex flex-col w-full">
-                    <h2 className="font-bold text-5xl dark:text-cm-white text-cm-black">
+                    <h1 className="font-bold text-5xl dark:text-cm-white text-cm-black flex-grow-[1]">
                       {latestPost.title}
-                    </h2>
+                    </h1>
                     <p className="text-gray-500">{latestPost.subtitle}</p>
                     <span className="dark:text-gray-500 text-gray-600">
                       <RelativeTime date={Date.parse(latestPost.date)} />
