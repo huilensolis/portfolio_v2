@@ -5,6 +5,7 @@ import { PostFooter } from "./post-footer";
 import { InterfacePostMetadata } from "../../../models/post-metadata.interface";
 import { AvatarCard } from "../../../components/avatar-card";
 import { Logo } from "../../../components/icons";
+import { Hr } from "../../../components/hr";
 
 export function PostLayout({
   children,
@@ -25,7 +26,7 @@ export function PostLayout({
         </span>
       </Link>
       {children}
-      <hr className="w-full mt-7 border-transparent" />
+      {/* <Hr display={false} /> */}
       <div className="w-full flex justify-start">
         <AvatarCard
           btnHref="https://www.linkedin.com/in/huilensolis/"
@@ -38,7 +39,7 @@ export function PostLayout({
           this is my about me!
         </AvatarCard>
       </div>
-      <hr className="w-full my-14 dark:border-gray-700 border-b-[1px] border-gray-400" />
+      <Hr />
       <PostFooter blogsMetaData={blogsMetaData} />
     </article>
   );

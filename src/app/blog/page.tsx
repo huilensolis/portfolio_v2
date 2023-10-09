@@ -8,6 +8,7 @@ import { ErrorComponent } from "../components/error";
 import { Loader } from "../components/loader";
 import RelativeTime from "../components/relative-time";
 import { Logo } from "../components/icons";
+import { Hr } from "../components/hr";
 
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +20,8 @@ export default function Blog() {
   const [limit, setLimit] = useState(10);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
-
+  const [isFirstRequest, setIsFirstRequest] = useState(true);
+  const [latestPost, setLatestPost] = useState({} as InterfacePostMetadata);
   useEffect(() => {
     async function fetchData() {
       setIsFetching(true);
@@ -37,9 +39,15 @@ export default function Blog() {
         const jsonResponse: { data: InterfacePostMetadata[] } =
           await response.json();
 
+        if (isFirstRequest) {
+          setLatestPost(jsonResponse.data.shift() as InterfacePostMetadata);
+          console.log();
+          setIsFirstRequest(false);
+        }
+
         setBlogsMetaData((prev) => [...prev, ...jsonResponse.data]);
 
-        const areThereMorePosts = jsonResponse.data.length >= limit;
+        const areThereMorePosts = jsonResponse.data.length + 1 >= limit;
         setAreMorePosts(areThereMorePosts);
       } catch (error) {
         setError(true);
@@ -60,26 +68,22 @@ export default function Blog() {
     }
     return;
   }
-  const latestPost = blogsMetaData.shift();
   return (
     <>
       {blogsMetaData.length > 0 && (
-        <main className="w-full flex flex-col items-center">
-          {latestPost && (
-            <Link
-              href={`blog/${latestPost.slug}`}
-              className="max-w-4xl flex flex-col"
-            >
-              <article>
+        <main className="max-w-4xl flex flex-col items-center">
+          {Boolean(latestPost) && (
+            <Link href={`blog/${latestPost.slug}`} className="w-full">
+              <article className="flex flex-col gap-5">
                 <img
                   src={latestPost.image}
                   alt={latestPost.title}
                   className="w-full h-full"
                 />
-                <div className="flex h-full items-stretch gap-5 py-5 justify-start">
-                  <Logo classes={"w-full h-full"} />
-                  <section className="flex flex-col">
-                    <h2 className="font-bold text-4xl dark:text-cm-white text-cm-black">
+                <div className="flex max-h-64 gap-5 justify-start">
+                  <Logo classes={"h-auto w-72"} />
+                  <section className="flex flex-col w-full">
+                    <h2 className="font-bold text-5xl dark:text-cm-white text-cm-black">
                       {latestPost.title}
                     </h2>
                     <p className="text-gray-500">{latestPost.subtitle}</p>
@@ -91,6 +95,7 @@ export default function Blog() {
               </article>
             </Link>
           )}
+          <Hr />
           <ul className="max-w-4xl flex flex-col gap-5">
             {blogsMetaData.map((metaData, index) => (
               <li key={index} className="max-w-4xl">
@@ -110,7 +115,6 @@ export default function Blog() {
                 </Link>
               </li>
             ))}
-            Link
           </ul>
         </main>
       )}
