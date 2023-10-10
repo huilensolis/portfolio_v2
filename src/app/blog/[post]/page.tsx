@@ -3,10 +3,12 @@ import { usePosts } from "../../hooks/posts";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PostLayout } from "./components/post-layout";
+
 import { Logo } from "../../components/icons";
 import { Code } from "../../components/code";
 
 import type { Metadata, ResolvingMetadata } from "next";
+import { ImageComponent } from "../../components/image";
 
 type Props = {
   params: { id: string };
@@ -74,10 +76,16 @@ export default function Post(props: any) {
   );
   return (
     <PostLayout blogsMetaData={filteredPostsMetadata}>
-      <meta name="description" content={currentPostMetadata.subtitle} />
-      <div className="prose dark:prose-invert max-w-none w-full">
+      <article className="prose dark:prose-invert max-w-none w-full">
+        <div className="w-full h-96">
+          <ImageComponent
+            src={currentPostMetadata.image}
+            alt={currentPostMetadata.title}
+            className="w-full h-full"
+          />
+        </div>
         <MDXRemote source={currentPost} components={{ Logo, Code }} />
-      </div>
+      </article>
     </PostLayout>
   );
 }

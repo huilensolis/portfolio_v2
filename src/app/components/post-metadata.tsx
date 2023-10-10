@@ -39,12 +39,14 @@ export function PostMetadata({
   return (
     <article
       ref={postMetadataRef}
-      className="animate-cm-scale-top transition-all delay-700 ease-in-out"
+      className="animate-cm-scale-top transition-all delay-700 ease-in-out max-w-[100vw]"
     >
-      <h2 className="font-bold text-4xl dark:text-cm-white text-cm-black">
+      <h2 className="font-bold sm:text-4xl text-3xl break-words dark:text-cm-white text-cm-black">
         {metaData.title}
       </h2>
-      <p className="text-gray-500">{metaData.subtitle}</p>
+      <p className="text-gray-500 sm:text-4xl break-words sm:break-words">
+        {metaData.subtitle}
+      </p>
       <span className="dark:text-gray-500 text-gray-600">
         <RelativeTime date={Date.parse(metaData.date)} />
       </span>

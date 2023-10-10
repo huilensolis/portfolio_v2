@@ -71,7 +71,7 @@ export default function Blog() {
   return (
     <>
       {blogsMetaData.length > 0 && (
-        <main className="max-w-4xl flex flex-col items-center">
+        <main className="max-w-4xl w-full flex flex-col items-center">
           {Boolean(latestPost) && (
             <Link href={`blog/${latestPost.slug}`} className="w-full">
               <article className="flex flex-col gap-5">
@@ -80,10 +80,10 @@ export default function Blog() {
                   alt={latestPost.title}
                   className="w-full h-full"
                 />
-                <div className="flex max-h-64 gap-5 justify-start">
-                  <Logo classes={"h-auto w-72"} />
+                <div className="flex xl:max-h-64 gap-5 justify-start">
+                  <Logo classes={"h-auto w-72 xl:inline-block hidden"} />
                   <section className="flex flex-col w-full">
-                    <h1 className="font-bold text-5xl dark:text-cm-white text-cm-black flex-grow-[1]">
+                    <h1 className="font-bold text-3xl sm:text-5xl dark:text-cm-white text-cm-black flex-grow-[1]">
                       {latestPost.title}
                     </h1>
                     <p className="text-gray-500">{latestPost.subtitle}</p>
@@ -96,7 +96,7 @@ export default function Blog() {
             </Link>
           )}
           <Hr />
-          <ul className="max-w-4xl flex flex-col gap-5">
+          <ul className="max-w-4xl w-full flex flex-col gap-5">
             {blogsMetaData.map((metaData, index) => (
               <li key={index} className="max-w-4xl">
                 <Link

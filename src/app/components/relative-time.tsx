@@ -13,17 +13,32 @@ export default function RelativeTime({ date }: { date: number }) {
       const timeDifference = currentDate.getTime() - providedDate.getTime();
       const seconds = Math.floor(timeDifference / 1000);
 
-      if (seconds < 60) {
+      const minute = 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+      const year = day * 365;
+
+      if (seconds < 0) {
+        setRelativeTime("In the future");
+      } else if (seconds < minute) {
         setRelativeTime(`${seconds} second${seconds !== 1 ? "s" : ""} ago`);
-      } else if (seconds < 3600) {
-        const minutes = Math.floor(seconds / 60);
+      } else if (seconds < hour) {
+        const minutes = Math.floor(seconds / minute);
         setRelativeTime(`${minutes} minute${minutes !== 1 ? "s" : ""} ago`);
-      } else if (seconds < 86400) {
-        const hours = Math.floor(seconds / 3600);
+      } else if (seconds < day) {
+        const hours = Math.floor(seconds / hour);
         setRelativeTime(`${hours} hour${hours !== 1 ? "s" : ""} ago`);
-      } else {
-        const days = Math.floor(seconds / 86400);
+      } else if (seconds < year) {
+        const days = Math.floor(seconds / day);
         setRelativeTime(`${days} day${days !== 1 ? "s" : ""} ago`);
+      } else {
+        const years = Math.floor(seconds / year);
+        const days = Math.floor((seconds - year) / day);
+        setRelativeTime(
+          `${years} year${years !== 1 ? "s" : ""} and ${days} day${
+            days !== 1 ? "s" : ""
+          } ago`
+        );
       }
     };
 
