@@ -8,7 +8,7 @@ import Link from "next/link";
 export function ImageComponent({
   src,
   alt,
-  className = "",
+  className = "w-full h-full object-cover object-center",
 }: {
   src: string;
   alt: string;

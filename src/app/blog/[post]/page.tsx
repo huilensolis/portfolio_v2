@@ -81,7 +81,7 @@ export default function Post(props: any) {
           <ImageComponent
             src={currentPostMetadata.image}
             alt={currentPostMetadata.title}
-            className="w-full h-full"
+            className="w-full h-full object-cover object-center"
           />
         </div>
         <MDXRemote source={currentPost} components={{ Logo, Code }} />

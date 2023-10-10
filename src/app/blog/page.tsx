@@ -78,7 +78,7 @@ export default function Blog() {
                 <img
                   src={latestPost.image}
                   alt={latestPost.title}
-                  className="w-full h-full"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="flex xl:max-h-64 gap-5 justify-start">
                   <Logo classes={"h-auto w-72 xl:inline-block hidden"} />
