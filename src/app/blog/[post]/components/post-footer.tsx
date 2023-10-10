@@ -13,7 +13,7 @@ export function PostFooter({
       <ul className="flex flex-col gap-5">
         {blogsMetaData.map((metaData, i) => (
           <li key={i}>
-            <Link href={`blog/${metaData.slug}`}>
+            <Link href={`/blog/${metaData.slug}`}>
               <PostMetadata metaData={metaData} />
             </Link>
           </li>
