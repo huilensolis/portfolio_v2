@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { InterfacePostMetadata } from "../models/post-metadata.interface";
 import RelativeTime from "./relative-time";
+import { ProseLayout } from "./prose-layout";
 
 export function PostMetadata({
   metaData,
@@ -37,19 +38,21 @@ export function PostMetadata({
   }, [useObserver, callback, postMetadataRef]);
 
   return (
-    <article
-      ref={postMetadataRef}
-      className="animate-cm-scale-top transition-all delay-700 ease-in-out max-w-[100vw]"
-    >
-      <h2 className="font-bold sm:text-4xl text-3xl break-words dark:text-cm-white text-cm-black">
-        {metaData.title}
-      </h2>
-      <p className="text-gray-500 sm:text-4xl break-words sm:break-words">
-        {metaData.subtitle}
-      </p>
-      <span className="dark:text-gray-500 text-gray-600">
-        <RelativeTime date={Date.parse(metaData.date)} />
-      </span>
-    </article>
+    <ProseLayout margings={false}>
+      <article
+        ref={postMetadataRef}
+        className="animate-cm-scale-top transition-all delay-700 ease-in-out max-w-[100vw]"
+      >
+        <h2 className="font-bold sm:text-4xl text-3xl break-words dark:text-cm-white text-cm-black">
+          {metaData.title}
+        </h2>
+        <p className="text-gray-500 sm:text-4xl break-words sm:break-words">
+          {metaData.subtitle}
+        </p>
+        <span className="dark:text-gray-500 text-gray-600 text-xl">
+          <RelativeTime date={Date.parse(metaData.date)} />
+        </span>
+      </article>
+    </ProseLayout>
   );
 }

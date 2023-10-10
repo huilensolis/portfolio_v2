@@ -9,7 +9,6 @@ export function Code({
   language: string;
   theme: string;
 }) {
-  console.log({ language, theme, children });
   return (
     <CodeBlock lang={language} theme={theme as any}>
       {children ?? ""}

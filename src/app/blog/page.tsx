@@ -9,6 +9,8 @@ import { Loader } from "../components/loader";
 import RelativeTime from "../components/relative-time";
 import { Logo } from "../components/icons";
 import { Hr } from "../components/hr";
+import { ProseLayout } from "../components/prose-layout";
+import { ImageComponent } from "../components/image";
 
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +43,6 @@ export default function Blog() {
 
         if (isFirstRequest) {
           setLatestPost(jsonResponse.data.shift() as InterfacePostMetadata);
-          console.log();
           setIsFirstRequest(false);
         }
 
@@ -75,23 +76,25 @@ export default function Blog() {
           {Boolean(latestPost) && (
             <Link href={`blog/${latestPost.slug}`} className="w-full">
               <article className="flex flex-col gap-5">
-                <img
+                <ImageComponent
                   src={latestPost.image}
                   alt={latestPost.title}
                   className="w-full h-full object-cover object-center"
                 />
-                <div className="flex xl:max-h-64 gap-5 justify-start">
-                  <Logo classes={"h-auto w-72 xl:inline-block hidden"} />
-                  <section className="flex flex-col w-full">
-                    <h1 className="font-bold text-3xl sm:text-5xl dark:text-cm-white text-cm-black flex-grow-[1]">
-                      {latestPost.title}
-                    </h1>
-                    <p className="text-gray-500">{latestPost.subtitle}</p>
-                    <span className="dark:text-gray-500 text-gray-600">
-                      <RelativeTime date={Date.parse(latestPost.date)} />
-                    </span>
-                  </section>
-                </div>
+                <ProseLayout margings={false}>
+                  <div className="flex xl:max-h-64 gap-5 justify-start">
+                    <Logo classes={"h-auto w-72 xl:inline-block hidden"} />
+                    <section className="flex flex-col w-full">
+                      <h1 className="font-bold text-3xl sm:text-5xl dark:text-cm-white text-cm-black flex-grow-[1]">
+                        {latestPost.title}
+                      </h1>
+                      <p className="text-gray-500">{latestPost.subtitle}</p>
+                      <span className="dark:text-gray-500 text-gray-600">
+                        <RelativeTime date={Date.parse(latestPost.date)} />
+                      </span>
+                    </section>
+                  </div>
+                </ProseLayout>
               </article>
             </Link>
           )}
@@ -118,8 +121,10 @@ export default function Blog() {
           </ul>
         </main>
       )}
-      {isLoading && <Loader />}
-      {error && <ErrorComponent />}
+      <ProseLayout>
+        {isLoading && <Loader />}
+        {error && <ErrorComponent />}
+      </ProseLayout>
     </>
   );
 }

@@ -9,6 +9,7 @@ import { Code } from "../../components/code";
 
 import type { Metadata, ResolvingMetadata } from "next";
 import { ImageComponent } from "../../components/image";
+import { ProseLayout } from "../../components/prose-layout";
 
 type Props = {
   params: { id: string };
@@ -76,16 +77,16 @@ export default function Post(props: any) {
   );
   return (
     <PostLayout blogsMetaData={filteredPostsMetadata}>
-      <article className="prose dark:prose-invert max-w-none w-full">
-        <div className="w-full h-96">
-          <ImageComponent
-            src={currentPostMetadata.image}
-            alt={currentPostMetadata.title}
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
+      <div className="w-full h-96">
+        <ImageComponent
+          src={currentPostMetadata.image}
+          alt={currentPostMetadata.title}
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+      <ProseLayout>
         <MDXRemote source={currentPost} components={{ Logo, Code }} />
-      </article>
+      </ProseLayout>
     </PostLayout>
   );
 }

@@ -17,10 +17,7 @@ export function usePosts() {
       filename.endsWith(".mdx")
     );
 
-    const endOfSlice = offset + limit;
-    const slicedMarkDownXFiles = markDownXFiles.slice(offset, endOfSlice);
-
-    const postsMetadata = slicedMarkDownXFiles.map((fileName) => {
+    const postsMetadata = markDownXFiles.map((fileName) => {
       const postPath = path.join(postsDir, fileName);
       const fileContent = readFileSync(postPath, "utf8");
 
@@ -33,7 +30,19 @@ export function usePosts() {
         slug: fileName.replace(".mdx", ""),
       };
     });
-    return postsMetadata as InterfacePostMetadata[];
+
+    const postsMetadataSorted = postsMetadata
+      .sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateA.getTime() - dateB.getTime();
+      })
+      .reverse();
+
+    const endOfSlice = offset + limit;
+    const postsMetadataSliced = postsMetadataSorted.slice(offset, endOfSlice);
+
+    return postsMetadataSliced as InterfacePostMetadata[];
   }
 
   function getPostMetadata(postTitle: string): InterfacePostMetadata {
