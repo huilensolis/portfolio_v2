@@ -26,7 +26,7 @@ export default async function Image() {
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <main className="w-full h-full flex justify-center items-center gap-3 bg-cm-black">
+      <main style={{backgroundColor: ''}}>
         <Logo />
         <section>
           <h1 className="text-cm-white">{`Huilen's Blog`}</h1>
