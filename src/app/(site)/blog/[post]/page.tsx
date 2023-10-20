@@ -77,7 +77,7 @@ export default function Post(props: any) {
   );
   return (
     <PostLayout blogsMetaData={filteredPostsMetadata}>
-      <div className="w-full h-96 mb-[0.8888889em]">
+      <div className="w-full h-full mb-[0.8888889em]">
         <ImageComponent
           src={currentPostMetadata.image}
           alt={currentPostMetadata.title}

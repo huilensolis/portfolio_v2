@@ -2,10 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { ErrorIcon } from "@icons";
-
-import Link from "next/link";
-import { ProseLayout } from "@layout/prose-layout";
+import { ImageIcon } from "@icons";
 
 export function ImageComponent({
   src,
@@ -24,15 +21,29 @@ export function ImageComponent({
       return true;
     }
   });
+  const [imageIsLoading, setImageIsLoading] = useState(true);
   return (
     <>
       {!error && (
         <img
           src={src}
           alt={alt}
-          className={className}
+          className={`${className} h-[196px] md:h-[312px] lg:h-[463px] xl:[600px] ${
+            imageIsLoading ? "hidden" : "inline-block"
+          }`}
           onError={() => setError(true)}
+          onLoad={() => setImageIsLoading(false)}
         />
+      )}
+      {imageIsLoading && !error && (
+        <>
+          <div
+            className={`animate-pulse delay-75 bg-gray-300 dark:bg-gray-700 w-full h-[196px] md:h-[312px] lg:h-[463px] xl:[600px] flex justify-center items-center`}
+          >
+            <ImageIcon classes="h-20 w-20 fill-gray-500" />
+          </div>
+          <span className="sr-only">Loading...</span>
+        </>
       )}
       {error && <ErrorImage />}
     </>
@@ -40,21 +51,8 @@ export function ImageComponent({
 }
 function ErrorImage() {
   return (
-    <figure className="w-full h-full flex flex-col gap-1 justify-center items-center bg-slate-800 sm:p-1 p-5">
-      <ProseLayout margings={false}>
-        <div className="flex flex-col justify-center items-center">
-          <ErrorIcon classes="text-slate-400 sm:w-32 sm:h-32 hidden sm:inline-block" />{" "}
-          <p className="m-auto text-slate-400 text-center">
-            There is been an error trying to load the image.
-          </p>
-        </div>
-        <p className="text-slate-400 text-center">
-          if the error persist,{" "}
-          <Link href={"/contact"} className="text-blue-500 text-center">
-            Contact me
-          </Link>
-        </p>
-      </ProseLayout>
-    </figure>
+    <div className="w-full h-full flex flex-col gap-1 justify-center items-center bg-gray-300 dark:bg-gray-700 sm:p-1 p-5">
+      <ImageIcon classes="h-20 w-20 fill-gray-400" />
+    </div>
   );
 }
