@@ -2,10 +2,10 @@
 "use client";
 
 import { useState } from "react";
-import { ErrorIcon } from "./icons";
+import { ErrorIcon } from "@icons";
 
 import Link from "next/link";
-import { ProseLayout } from "./prose-layout";
+import { ProseLayout } from "@layout/prose-layout";
 
 export function ImageComponent({
   src,

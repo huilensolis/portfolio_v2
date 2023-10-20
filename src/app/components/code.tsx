@@ -1,4 +1,4 @@
-import { Code as CodeBlock, BrightProps } from "bright";
+import { Code as CodeBlock } from "bright";
 import { ReactNode } from "react";
 export function Code({
   children,

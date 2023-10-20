@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { usePosts } from "../../hooks/posts";
+import { usePosts } from "@hooks/posts";
 
 export async function GET(req: Request, res: NextResponse) {
   const { getPostsListMetadata } = usePosts();
@@ -15,6 +15,8 @@ export async function GET(req: Request, res: NextResponse) {
     const postsMetadata = getPostsListMetadata({ offset, limit });
     return NextResponse.json({ data: postsMetadata });
   } catch (error) {
+    console.log("there is been an error");
+    console.log(error);
     return NextResponse.error();
   }
 }

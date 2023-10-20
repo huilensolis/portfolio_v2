@@ -1,16 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { PostMetadata } from "../../components/post-metadata";
-import { type InterfacePostMetadata } from "../../models/post-metadata.interface";
+import { PostMetadata } from "@components/post-metadata";
+import { type InterfacePostMetadata } from "@models/post-metadata.interface";
 import { useEffect, useState } from "react";
-import { ErrorComponent } from "../../components/error";
-import { Loader } from "../../components/loader";
-import RelativeTime from "../../components/relative-time";
-import { Logo } from "../../components/icons";
-import { Hr } from "../../components/hr";
-import { ProseLayout } from "../../components/prose-layout";
-import { ImageComponent } from "../../components/image";
+import { ErrorComponent } from "@components/error";
+import RelativeTime from "@components/relative-time";
+import { Logo } from "@components/icons";
+import { Hr } from "@components/hr";
+import { ProseLayout } from "@components/layout/prose-layout";
+import { ImageComponent } from "@components/image";
 
 export default function BlogList() {
   const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +30,7 @@ export default function BlogList() {
 
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/blog?offset=${offset}&limit=${limit}`,
+          `api/blog?offset=${offset}&limit=${limit}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -74,7 +73,7 @@ export default function BlogList() {
       {blogsMetaData.length > 0 && (
         <main className="max-w-4xl w-full flex flex-col items-center">
           {Boolean(latestPost) && (
-            <Link href={`blog/${latestPost.slug}`} className="w-full">
+            <Link href={`/blog/${latestPost.slug}`} className="w-full">
               <article className="flex flex-col gap-5">
                 <ImageComponent
                   src={latestPost.image}
@@ -122,7 +121,7 @@ export default function BlogList() {
         </main>
       )}
       <ProseLayout>
-        {isLoading && <Loader />}
+        {isLoading && <></>}
         {error && <ErrorComponent />}
       </ProseLayout>
     </>

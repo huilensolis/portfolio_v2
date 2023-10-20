@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { usePosts } from "./hooks/posts";
+import { usePosts } from "@hooks/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // eslint-disable-next-line react-hooks/rules-of-hooks

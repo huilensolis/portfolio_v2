@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { InterfacePostMetadata } from "../models/post-metadata.interface";
 import RelativeTime from "./relative-time";
-import { ProseLayout } from "./prose-layout";
+import { ProseLayout } from "./layout/prose-layout";
 
 export function PostMetadata({
   metaData,

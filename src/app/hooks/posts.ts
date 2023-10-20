@@ -1,9 +1,16 @@
 import path from "path";
 import { existsSync, readFileSync, readdirSync } from "fs";
 import matter from "gray-matter";
-import { type InterfacePostMetadata } from "../models/post-metadata.interface";
+import { type InterfacePostMetadata } from "@models/post-metadata.interface";
 
-const postsDir = path.join(process.cwd(), "src", "app", "blog", "posts");
+const postsDir = path.join(
+  process.cwd(),
+  "src",
+  "app",
+  "(site)",
+  "blog",
+  "posts"
+);
 
 export function usePosts() {
   function getPostsListMetadata({

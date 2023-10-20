@@ -1,15 +1,15 @@
 import { notFound } from "next/navigation";
-import { usePosts } from "../../hooks/posts";
+import { usePosts } from "@hooks/posts";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PostLayout } from "./components/post-layout";
 
-import { Logo } from "../../components/icons";
-import { Code } from "../../components/code";
+import { Logo } from "@components/icons";
+import { Code } from "@components/code";
 
 import type { Metadata, ResolvingMetadata } from "next";
-import { ImageComponent } from "../../components/image";
-import { ProseLayout } from "../../components/prose-layout";
+import { ImageComponent } from "@components/image";
+import { ProseLayout } from "@components/layout/prose-layout";
 
 type Props = {
   params: { id: string };

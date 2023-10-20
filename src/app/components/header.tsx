@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ThemeSwitcher } from "./theme-switcher";
+import { ThemeSwitcher } from "@components/theme-switcher";
 import { usePathname } from "next/navigation";
-import { Logo } from "./icons";
+import { Logo } from "@icons";
 
 function isLinkTheCurrentPage(href: string, path: string): boolean {
   if (path.length === 1 && href === path) return true; // case it is home

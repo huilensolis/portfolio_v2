@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 import Link from "next/link";
 import { IconChevronLeft } from "@tabler/icons-react";
 import { PostFooter } from "./post-footer";
-import { InterfacePostMetadata } from "../../../models/post-metadata.interface";
-import { AvatarCard } from "../../../components/avatar-card";
-import { Logo } from "../../../components/icons";
-import { Hr } from "../../../components/hr";
+import { InterfacePostMetadata } from "@models/post-metadata.interface";
+import { AvatarCard } from "@components/avatar-card";
+import { Logo } from "@components/icons";
+import { Hr } from "@components/hr";
 
 export function PostLayout({
   children,
