@@ -38,10 +38,8 @@ export function ImageComponent({
       {imageIsLoading && !error && (
         <>
           <div
-            className={`animate-pulse delay-75 bg-gray-300 dark:bg-gray-700 w-full h-[196px] md:h-[312px] lg:h-[463px] xl:[600px] flex justify-center items-center`}
-          >
-            <ImageIcon classes="h-20 w-20 fill-gray-500" />
-          </div>
+            className={`animate-pulse delay-75 bg-gray-300 dark:bg-gray-700 w-full h-[196px] md:h-[312px] lg:h-[463px] xl:[600px]`}
+          />
           <span className="sr-only">Loading...</span>
         </>
       )}
