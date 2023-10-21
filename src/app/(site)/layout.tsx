@@ -62,7 +62,7 @@ export default function RootLayout({
       </Head>
       <body className={clasDisplay.className}>
         <Header />
-        <div className="bg-cm-white dark:bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-100px)] py-32 w-full sm:px-20 px-5">
+        <div className="bg-cm-white dark:bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-80px)] pt-24 w-full sm:px-20 px-5">
           {children}
           <Analytics />
         </div>

@@ -14,7 +14,7 @@ const config: Config = {
       },
       colors: {
         "cm-white": "#F1F1EF" /* #FAFAFA */,
-        "cm-black": "#111111" /* #101010 */,
+        "cm-black": "#17181D" /* #101010 */,
         "cm-gray": "#18181B",
         "cm-primary": "#A594FD",
         "cm-secondary": "#5940D4",

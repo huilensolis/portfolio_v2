@@ -49,7 +49,7 @@ export function ImageComponent({
 }
 function ErrorImage() {
   return (
-    <div className="w-full h-full flex flex-col gap-1 justify-center items-center bg-gray-300 dark:bg-gray-700 sm:p-1 p-5">
+    <div className="w-full h-[196px] md:h-[312px] lg:h-[463px] xl:[600px] flex flex-col gap-1 justify-center items-center bg-gray-300 dark:bg-gray-700 sm:p-1 p-5">
       <ImageIcon classes="h-20 w-20 fill-gray-400" />
     </div>
   );
