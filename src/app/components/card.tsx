@@ -41,10 +41,12 @@ export function Card({ leftSide, cards }: Props) {
                 ? "-rotate-[9deg]"
                 : "-rotate-[4deg]";
 
+            const zIndex = index === 0 ? "z-10" : index === 1 ? "z-20" : "z-30";
+
             return (
               <li
                 key={index}
-                className={`w-80 h-80 absolute ${rotateValue} ${leftValue} hover:-translate-y-8 delay-75 duration-500 transition-all hover:z-40 overflow-auto shadow-left-bottom dark:shadow-neutral-950/40 shadow-neutral-950/20`}
+                className={`w-80 h-80 ${zIndex} absolute ${rotateValue} ${leftValue} hover:-translate-y-8 delay-75 duration-500 transition-all hover:z-50 rounded-lg overflow-hidden shadow-left-bottom dark:shadow-neutral-950/40 shadow-neutral-950/30`}
               >
                 <MiniCard>{card}</MiniCard>
               </li>
@@ -57,7 +59,7 @@ export function Card({ leftSide, cards }: Props) {
 }
 function MiniCard({ children }: { children?: ReactNode }) {
   return (
-    <article className="flex justify-start items-start flex-col bg-white rounded-lg dark:bg-neutral-800 p-8 w-full h-full border-2 border-neutral-600">
+    <article className="flex justify-start items-start flex-col bg-cm-white rounded-lg dark:bg-neutral-800 p-8 w-full h-full dark:border-2 dark:border-neutral-600 border-2 border-neutral-400/50">
       {children}
     </article>
   );

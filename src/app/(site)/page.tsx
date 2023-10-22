@@ -78,14 +78,14 @@ export default function Home() {
                   <img
                     src="https://plus.unsplash.com/premium_photo-1673264933188-811321fb4dd2?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
-                    className="w-full h-full object-cover rounded-sm"
+                    className="w-full h-full object-cover rounded-md"
                   />
                 </>,
                 <>
                   <img
                     src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
-                    className="w-full h-full object-cover rounded-sm"
+                    className="w-full h-full object-cover rounded-md"
                   />
                 </>,
                 <>
