@@ -39,6 +39,9 @@ const config: Config = {
       animation: {
         "cm-scale-top": "cm-scale-to-top 1s",
       },
+      boxShadow: {
+        "left-bottom": "-20px 17px 60px 0px",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
