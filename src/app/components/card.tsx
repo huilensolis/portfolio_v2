@@ -59,7 +59,7 @@ export function Card({ leftSide, cards }: Props) {
 }
 function MiniCard({ children }: { children?: ReactNode }) {
   return (
-    <article className="flex justify-start items-start flex-col bg-cm-white rounded-lg dark:bg-neutral-800 p-8 w-full h-full dark:border-2 dark:border-neutral-600 border-2 border-neutral-400/50">
+    <article className="flex justify-start items-start flex-col bg-cm-white rounded-lg dark:bg-neutral-800 w-full h-full dark:border-2 dark:border-neutral-600 border-2 border-neutral-400/50">
       {children}
     </article>
   );

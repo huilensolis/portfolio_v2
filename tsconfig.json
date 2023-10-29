@@ -25,7 +25,8 @@
       "@models/*": ["./src/app/models/*"],
       "@icons": ["./src/app/components/icons.tsx"],
       "@layout/*": ["./src/app/components/layout/*"],
-      "@fonts/*": ["./public/fonts/*"]
+      "@fonts/*": ["./public/fonts/*"],
+      "@public/*": ["./public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

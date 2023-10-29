@@ -1,6 +1,7 @@
 import { PrimaryBtn, SecondaryBtn } from "@components/buttons";
 import { ArrowUpRight } from "@components/icons";
 import { Card } from "@components/card";
+import Image from "next/image";
 
 export const metadata = {
   title: `Huilen Solis's Portfolio`,
@@ -68,42 +69,67 @@ export default function Home() {
                     through an api.
                   </p>
                   <div className="flex gap-4 mt-4 justify-start w-full">
-                    <PrimaryBtn>Deploy</PrimaryBtn>
-                    <SecondaryBtn>github</SecondaryBtn>
+                    <a href="">
+                      <PrimaryBtn>
+                        Deploy <ArrowUpRight classes="w-4 h-4" />
+                      </PrimaryBtn>
+                    </a>
+                    <a href="">
+                      <SecondaryBtn>
+                        github <ArrowUpRight classes="w-4 h-4" />
+                      </SecondaryBtn>
+                    </a>
                   </div>
                 </article>
               }
               cards={[
                 <>
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1673264933188-811321fb4dd2?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    className="w-full h-full object-cover rounded-md"
-                  />
+                  <article className="p-8 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      Metodologies
+                    </h3>
+                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
+                      we have been working with a{" "}
+                      <span className="dark:text-orange-400 text-orange-600">
+                        Clean Architecture
+                      </span>{" "}
+                      following the{" "}
+                      <span className="dark:text-orange-400 text-orange-600">
+                        Solid
+                      </span>{" "}
+                      principles. We Organized the project with{" "}
+                      <span className="dark:text-orange-400 text-orange-600">
+                        Jira
+                      </span>{" "}
+                      and used the{" "}
+                      <span className="dark:text-orange-400 text-orange-600">
+                        Scrum
+                      </span>{" "}
+                      metodologie
+                    </p>
+                  </article>
                 </>,
                 <>
-                  <img
-                    src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    className="w-full h-full object-cover rounded-md"
-                  />
+                  <article className="p-8 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      Backend Technologies
+                    </h3>
+                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
+                      Node.JS, Express, JWT, PostgreSQL, Bcrypt,
+                      Express-validator
+                    </p>
+                  </article>
                 </>,
                 <>
-                  <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Technologies
-                  </h3>
-                  <span className="dark:text-orange-400 text-orange-600">
-                    Backend
-                  </span>
-                  <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                    Node.JS, Express, JWT, PostgreSQL, Bcrypt, Express-validator
-                  </p>
-                  <span className="dark:text-orange-400 text-orange-600">
-                    Frontend
-                  </span>
-                  <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                    React, React-router-dom, Mui, Axios
-                  </p>
+                  <article className="p-8 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      Frontend Technologies
+                    </h3>
+                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
+                      React, React-router-dom, Mui, Axios
+                    </p>
+                  </article>
+                  ,
                 </>,
               ]}
             />
