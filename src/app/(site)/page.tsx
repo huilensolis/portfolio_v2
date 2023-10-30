@@ -36,13 +36,13 @@ export default function Home() {
             Full stack web developer
           </h2>
           <div className="mt-6 flex justify-center items-center gap-4">
-            <a href="#projects">
-              <PrimaryBtn>Projects</PrimaryBtn>
+            <a href="https://github.com/Huilensolis" target="_blank">
+              <SecondaryBtn>Github</SecondaryBtn>
             </a>
             <a href="https://www.linkedin.com/in/huilensolis/" target="_blank">
-              <SecondaryBtn>
+              <PrimaryBtn>
                 Linkedin <ArrowUpRight classes="w-4 h-4" />
-              </SecondaryBtn>
+              </PrimaryBtn>
             </a>
           </div>
         </section>
