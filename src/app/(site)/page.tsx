@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <main className="h-full w-full flex flex-col gap-4 justify-center items-center">
         <section className="flex flex-col items-center relative mb-10 p-20 cm-1xl:p-4 justify-center">
-          <h1 className="text-6xl font-bold dark:text-neutral-300 text-neutral-700">
+          <h1 className="text-6xl font-bold dark:text-neutral-300 text-neutral-700 text-center">
             Huilen Solis
           </h1>
           <h2 className="text-xl font-normal dark:text-neutral-400 text-neutral-500 w-2/3 text-center">

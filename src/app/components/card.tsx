@@ -13,7 +13,7 @@ export function Card({ leftSide, cards }: Props) {
         "card"
     );
   return (
-    <article className="flex justify-center items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-white border border-gray-200 rounded-2xl dark:bg-neutral-800 dark:border-neutral-600 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20">
+    <article className="flex justify-center items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-white border border-gray-200 rounded-2xl dark:bg-neutral-800 dark:border-neutral-600 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20 cm-1xl:bg-transparent cm-1xl:dark:bg-transparent cm-1xl:border-transparent cm-1xl:dark:border-transparent">
       <div className="w-full h-full flex flex-col justify-center items-center">
         {/* top left  */}
         <figure className="bg-orange-500/60 w-24 h-24 absolute top-24 left-20 blur-3xl ounded-full select-none z-0 cm-1xl:hidden" />
@@ -61,7 +61,7 @@ export function Card({ leftSide, cards }: Props) {
 }
 function MiniCard({ children }: { children?: ReactNode }) {
   return (
-    <article className="flex justify-start items-start flex-col bg-cm-white rounded-lg dark:bg-neutral-800 w-full  h-full dark:border-2 dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0">
+    <article className="flex justify-start items-start flex-col bg-cm-white rounded-lg dark:bg-neutral-800 cm-1xl:bg-transparent w-full  h-full dark:border-2 dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0">
       {children}
     </article>
   );
