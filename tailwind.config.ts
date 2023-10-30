@@ -35,9 +35,20 @@ const config: Config = {
           "0%": { transform: "translateY(100px)" },
           "100%": { transform: "translateY(0)" },
         },
+        "cm-fade-out-down": {
+          "0%": { opacity: "1", transform: "translateY(0)" },
+          "100%": { opacity: "0", transform: "translateY(40%)" },
+        },
+        "cm-fade-in-top": {
+          "0%": { opacity: "0", transform: "translateY(40%)" },
+          "20%": { opacity: "1" },
+          "100%": { opacity: "1", transform: "translateY(-30%)" },
+        },
       },
       animation: {
         "cm-scale-top": "cm-scale-to-top 1s",
+        "cm-fade-out-down": "cm-fade-out-down 1s ease-out",
+        "cm-fade-in-top": "cm-fade-in-top 1s ease-out forwards",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",
