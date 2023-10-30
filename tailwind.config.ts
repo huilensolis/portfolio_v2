@@ -52,7 +52,7 @@ const config: Config = {
         "cm-scale-top": "cm-scale-to-top 1s",
         "cm-fade-out-down": "cm-fade-out-down 1s ease-out",
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
-        "cm-fade-in-left": "cm-fade-in-left 2s linear backwards ",
+        "cm-fade-in-left": "2s cm-fade-in-left linear backwards ",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",

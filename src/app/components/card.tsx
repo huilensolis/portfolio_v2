@@ -38,17 +38,17 @@ export function Card({ leftSide, cards }: Props) {
                 : "-translate-x-[27rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0";
             const rotateValue =
               index === 0 && cards.length > 1
-                ? "-rotate-[12deg] cm-1xl:-rotate-0"
+                ? "-rotate-[12deg] hover:-rotate-[8deg] cm-1xl:-rotate-0"
                 : index === 1 && cards.length > 1
-                ? "-rotate-[8deg] cm-1xl:-rotate-0"
-                : "-rotate-[4deg] cm-1xl:-rotate-0";
+                ? "-rotate-[8deg] hover:-rotate-[4deg] cm-1xl:-rotate-0"
+                : "-rotate-[4deg] hover:-rotate-0 cm-1xl:-rotate-0";
 
             const zIndex = index === 0 ? "z-10" : index === 1 ? "z-20" : "z-30";
 
             return (
               <li
                 key={index}
-                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:rotate-0 hover:scale-105 hover:cm-1xl:scale-100 cm-1xl:contents rounded-lg overflow-hidden shadow-left-bottom dark:shadow-neutral-950/30 shadow-neutral-950/20 animate-cm-fade-in-left [animation-timeline:view();] [animation-range:0%_700px]`}
+                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:cm-1xl:scale-100 cm-1xl:contents rounded-lg overflow-hidden shadow-left-bottom dark:shadow-neutral-950/30 shadow-neutral-950/20 animate-cm-fade-in-left [animation-timeline:view();] [animation-range:0px_400px] cm-2xl:[animation-range:0px_200px] cm-1xl:[animation-range:0px_0px]`}
               >
                 <MiniCard>{card}</MiniCard>
               </li>
