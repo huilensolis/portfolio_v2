@@ -40,18 +40,20 @@ const config: Config = {
           "100%": { opacity: "0", transform: "translateY(40%)" },
         },
         "cm-fade-in-top": {
-          "0%": { opacity: "0", transform: "translateY(40%)" },
+          "0%": { opacity: "0" },
           "20%": { opacity: "1" },
-          "100%": { opacity: "1", transform: "translateY(-30%)" },
         },
       },
       animation: {
         "cm-scale-top": "cm-scale-to-top 1s",
         "cm-fade-out-down": "cm-fade-out-down 1s ease-out",
-        "cm-fade-in-top": "cm-fade-in-top 1s ease-out forwards",
+        "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",
+      },
+      supports: {
+        "no-scroll-driven-animations": "not(animation-timeline:scroll())",
       },
     },
   },
