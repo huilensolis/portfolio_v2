@@ -28,7 +28,7 @@ export function Card({ leftSide, cards }: Props) {
         <div className="z-10  flex justify-center items-center">{leftSide}</div>
       </div>
       <div className="w-1/2 cm-2xl:w-3/4 cm-1xl:w-full h-full flex justify-center items-center">
-        <ul className="flex cm-1xl:flex-col cm-1xl:gap-4 cm-1xl:justify-center items-center w-full">
+        <ul className="flex cm-1xl:flex-col cm-1xl:gap-4 cm-1xl:justify-center items-center w-full overflow-visible">
           {cards.map((card, index) => {
             const leftValue =
               index === 0
@@ -48,7 +48,7 @@ export function Card({ leftSide, cards }: Props) {
             return (
               <li
                 key={index}
-                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:rotate-0 hover:scale-105 hover:cm-1xl:scale-100 cm-1xl:contents rounded-lg overflow-hidden shadow-left-bottom dark:shadow-neutral-950/30 shadow-neutral-950/20`}
+                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:rotate-0 hover:scale-105 hover:cm-1xl:scale-100 cm-1xl:contents rounded-lg overflow-hidden shadow-left-bottom dark:shadow-neutral-950/30 shadow-neutral-950/20 animate-cm-fade-in-left [animation-timeline:view();] [animation-range:0%_700px]`}
               >
                 <MiniCard>{card}</MiniCard>
               </li>

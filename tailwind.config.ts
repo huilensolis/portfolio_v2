@@ -43,11 +43,16 @@ const config: Config = {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "cm-fade-in-left": {
+          "0%": { transform: "translateX(-30%)" },
+          "100%": { transform: "translateX(0%))" },
+        },
       },
       animation: {
         "cm-scale-top": "cm-scale-to-top 1s",
         "cm-fade-out-down": "cm-fade-out-down 1s ease-out",
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
+        "cm-fade-in-left": "cm-fade-in-left 2s linear backwards ",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",
