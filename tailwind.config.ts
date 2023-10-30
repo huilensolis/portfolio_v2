@@ -55,6 +55,10 @@ const config: Config = {
       supports: {
         "no-scroll-driven-animations": "not(animation-timeline:scroll())",
       },
+      screens: {
+        "cm-2xl": { max: "1500px" },
+        "cm-1xl": { max: "1000px" },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

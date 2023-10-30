@@ -28,16 +28,19 @@ export default function Home() {
   return (
     <>
       <main className="h-full w-full flex flex-col gap-4 justify-center items-center">
-        <section className="flex flex-col items-center relative mb-10 p-20 justify-center">
+        <section className="flex flex-col items-center relative mb-10 p-20 cm-1xl:p-4 justify-center">
           <h1 className="text-6xl font-semibold dark:text-neutral-300 text-neutral-700">
             Huilen Solis
           </h1>
           <h2 className="text-4xl font-normal dark:text-neutral-400 text-neutral-500">
             Full stack web developer
           </h2>
-          <div className="mt-6 flex justify-center items-center gap-4">
+          <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap">
             <a href="https://github.com/Huilensolis" target="_blank">
-              <SecondaryBtn>Github</SecondaryBtn>
+              <SecondaryBtn>
+                Github
+                <ArrowUpRight classes="w-4 h-4" />
+              </SecondaryBtn>
             </a>
             <a href="https://www.linkedin.com/in/huilensolis/" target="_blank">
               <PrimaryBtn>
@@ -47,7 +50,7 @@ export default function Home() {
           </div>
         </section>
         <ul className="w-full flex flex-col gap-16 justify-center items-center max-w-5xl relative">
-          <li className="z-[1] sticky top-32 animate-cm-fade-in-top w-full">
+          <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-fade-in-top w-full">
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
@@ -71,7 +74,7 @@ export default function Home() {
                     database and manageing images hosted in third party
                     services, interacting through an api.
                   </p>
-                  <div className="flex gap-4 mt-4 justify-start w-full">
+                  <div className="flex cm-1xl:flex-col gap-4 mt-4 justify-start w-full">
                     <a href="https://culinary-alchemy-web-app.vercel.app/">
                       <PrimaryBtn>
                         Deploy <ArrowUpRight classes="w-4 h-4" />
@@ -87,8 +90,8 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 flex flex-col">
-                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white cm-1xl:break-all">
                       Metodologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
@@ -112,8 +115,8 @@ export default function Home() {
                   </article>
                 </>,
                 <>
-                  <article className="p-8 flex flex-col">
-                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white cm-1xl:break-all">
                       Backend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
@@ -153,8 +156,8 @@ export default function Home() {
                   </article>
                 </>,
                 <>
-                  <article className="p-8 flex flex-col">
-                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
@@ -189,11 +192,11 @@ export default function Home() {
               ]}
             />
           </li>
-          <li className="sticky top-36 z-[2] animate-cm-fade-in-top [animation-timeline:scroll();] w-full">
+          <li className="sticky top-36 cm-2xl:static z-[2] animate-cm-fade-in-top [animation-timeline:scroll();] w-full">
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
-                  <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white cm-1xl:break-all">
                     Spotify Clone
                   </h3>
                   <span className="text-[#F3AF37]">09/2023 - 09/23</span>
@@ -203,7 +206,7 @@ export default function Home() {
                     providing a log In service music player, songs upload, user
                     profile, favorites colection and a song search system.
                   </p>
-                  <div className="flex gap-4 mt-4 justify-start w-full">
+                  <div className="flex cm-1xl:flex-col gap-4 mt-4 justify-start w-full">
                     <a
                       href="https://spotify-clone-jjk.vercel.app/"
                       target="_blank"
@@ -225,8 +228,8 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 flex flex-col">
-                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white cm-1xl:break-all">
                       Backend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
@@ -241,8 +244,8 @@ export default function Home() {
                   </article>
                 </>,
                 <>
-                  <article className="p-8 flex flex-col">
-                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
@@ -273,7 +276,7 @@ export default function Home() {
               ]}
             />
           </li>
-          <li className="sticky top-40 z-[3] animate-cm-fade-in-top [animation-timeline:scroll();]">
+          <li className="sticky top-40 cm-2xl:static z-[3] animate-cm-fade-in-top [animation-timeline:scroll();] w-full">
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
@@ -287,7 +290,7 @@ export default function Home() {
                     English, validation the traduction and communicating if its
                     right or else.
                   </p>
-                  <div className="flex gap-4 mt-4 justify-start w-full">
+                  <div className="flex cm-1xl:flex-col gap-4 mt-4 justify-start w-full">
                     <a href="https://owr-french.vercel.app/" target="_blank">
                       <PrimaryBtn>
                         Deploy <ArrowUpRight classes="w-4 h-4" />
@@ -306,8 +309,8 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 flex flex-col">
-                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col">
+                    <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
