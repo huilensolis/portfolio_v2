@@ -58,17 +58,17 @@ export default function Home() {
                   <h3 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-neutral-300">
                     Culinary Alchemy
                   </h3>
-                  <span className="text-[#F3AF37] mb-2">07/2023 - present</span>
+                  <span className="text-cm-orange mb-2">07/2023 - present</span>
                   <p className="font-normal text-neutral-800 dark:text-neutral-400">
                     A Recipe Social Network, build in colaboration with{" "}
                     <a
                       href="https://www.linkedin.com/in/jesus-oyola-b9b530284/"
-                      className="dark:text-orange-400 text-orange-600 hover:underline transition-all delay-75"
+                      className="dark:text-cm-orange text-cm-orange hover:underline transition-all delay-75"
                       target="_blank"
                     >
                       Jesus Oyola
                     </a>
-                    , who worked on the frontend, whyle I worked in the Backend
+                    , who worked on the frontend, while I worked in the Backend
                     my role consisted on creating the backend api, and its
                     routes, controllers, providers, while working with Json Web
                     Tokens to manage user session and roles. Connecting to a
@@ -188,7 +188,6 @@ export default function Home() {
                       (input validation)
                     </p>
                   </article>
-                  ,
                 </>,
               ]}
             />
@@ -200,7 +199,7 @@ export default function Home() {
                   <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-neutral-300 cm-1xl:break-all">
                     Spotify Clone
                   </h3>
-                  <span className="text-[#F3AF37]">09/2023 - 09/23</span>
+                  <span className="text-cm-orange">09/2023 - 09/23</span>
                   <p className="font-normal text-neutral-800 dark:text-neutral-400">
                     A personal Project, Built with Next js, Typescript and
                     Tailwind. It Contains almost all Spotify Functionalities,

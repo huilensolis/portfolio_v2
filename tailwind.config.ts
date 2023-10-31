@@ -18,7 +18,7 @@ const config: Config = {
         "cm-gray": "#18181B",
         "cm-primary": "#A594FD",
         "cm-secondary": "#5940D4",
-        "cm-orange": "#f36c5f",
+        "cm-orange": "#F3AF37",
         "light-green": "#31b970",
         "dark-green": "#53c14f",
         "cm-yellow": "#f8bd4d",
@@ -52,7 +52,7 @@ const config: Config = {
         "cm-scale-top": "cm-scale-to-top 1s",
         "cm-fade-out-down": "cm-fade-out-down 1s ease-out",
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
-        "cm-fade-in-left": "2s cm-fade-in-left linear backwards ",
+        "cm-fade-in-left": "3s cm-fade-in-left linear backwards ",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",
