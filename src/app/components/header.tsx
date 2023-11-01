@@ -47,7 +47,7 @@ export function Header() {
                     : "font-normal"
                 } ${
                   isLinkTheCurrentPage(navItem.href, path)
-                    ? "text-blue-600"
+                    ? "text-blue-600 dark:text-cm-orange"
                     : "text-gray-600 dark:text-gray-400"
                 } hover:font-medium hover:text-cm-orange cursor-pointer`}
               >

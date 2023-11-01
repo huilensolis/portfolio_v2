@@ -50,7 +50,7 @@ export function Card({ leftSide, cards }: Props) {
             return (
               <li
                 key={index}
-                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:cm-1xl:scale-100 cm-1xl:contents rounded-lg overflow-hidden shadow-left-bottom dark:shadow-neutral-950/30 shadow-neutral-950/20 animate-cm-fade-in-left [animation-timeline:view();] [animation-range:0px_50vh] cm-2xl:[animation-range:0px_200px] cm-1xl:[animation-range:0px_0px]`}
+                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:cm-1xl:scale-100 cm-1xl:contents overflow-hidden shadow-left-bottom dark:shadow-neutral-950/30 shadow-neutral-950/20 rounded-xl animate-cm-fade-in-left [animation-timeline:view();] [animation-range:0px_50vh] cm-2xl:[animation-range:0px_200px] cm-1xl:[animation-range:0px_0px]`}
               >
                 <MiniCard>{card}</MiniCard>
               </li>
@@ -63,7 +63,7 @@ export function Card({ leftSide, cards }: Props) {
 }
 function MiniCard({ children }: { children?: ReactNode }) {
   return (
-    <article className="flex justify-start items-start flex-col bg-cm-white rounded-lg dark:bg-neutral-800 cm-1xl:bg-transparent w-full  h-full">
+    <article className="flex justify-start items-start flex-col rounded-xl bg-cm-white dark:bg-neutral-800 cm-1xl:bg-transparent w-full h-full">
       {children}
     </article>
   );

@@ -43,7 +43,7 @@ export function PostMetadata({
         ref={postMetadataRef}
         className="animate-cm-scale-top transition-all delay-700 ease-in-out max-w-[100vw]"
       >
-        <h2 className="font-bold sm:text-4xl text-3xl break-words dark:text-cm-white text-cm-black">
+        <h2 className="font-bold sm:text-4xl text-3xl break-words dark:text-neutral-300 text-neutral-700">
           {metaData.title}
         </h2>
         <p className="text-gray-500 sm:text-4xl break-words sm:break-words">

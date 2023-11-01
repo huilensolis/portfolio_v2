@@ -49,7 +49,7 @@ export function PostLayout({
                 target="_blank"
                 className="w-full h-full rounded-xl overflow-hidden"
               >
-                <article className="flex flex-col cm-1xl:flex-row cm-1xl:gap-4 cm-1xl:items-center items-start p-4 bg-blue-600 h-full w-full md:text-red-100">
+                <article className="h-full w-full flex flex-col cm-1xl:flex-row cm-1xl:gap-4 cm-1xl:items-center items-start p-4 bg-blue-600">
                   <div className="flex items-center">
                     <h3 className="text-neutral-300 font-bold text-4xl cm-1xl:text-7xl cm-lg:text-4xl">
                       LinkedIn
