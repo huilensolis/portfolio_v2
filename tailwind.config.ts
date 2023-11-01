@@ -63,6 +63,7 @@ const config: Config = {
       screens: {
         "cm-2xl": { max: "1500px" },
         "cm-1xl": { max: "1000px" },
+        "cm-lg": { max: "600px" },
       },
     },
   },

@@ -25,7 +25,9 @@ export function Card({ leftSide, cards }: Props) {
 
         <figure className="bg-orange-500/40 w-24 h-24 absolute top-14 right-20 cm-1xl:right-2 blur-3xl ounded-full select-none z-0 cm-1xl:hidden" />
         <figure className="bg-emerald-500/40 w-36 h-36 absolute bottom-16 right-16 cm-1xl:right-2 blur-3xl rounded-full select-none z-0 cm-1xl:hidden" />
-        <div className="z-10  flex justify-center items-center">{leftSide}</div>
+        <div className="z-10 w-full flex justify-center items-center">
+          {leftSide}
+        </div>
       </div>
       <div className="w-1/2 cm-2xl:w-3/4 cm-1xl:w-full h-full flex justify-center items-center">
         <ul className="flex cm-1xl:flex-col cm-1xl:gap-4 cm-1xl:justify-center items-center w-full overflow-visible">
@@ -61,7 +63,7 @@ export function Card({ leftSide, cards }: Props) {
 }
 function MiniCard({ children }: { children?: ReactNode }) {
   return (
-    <article className="flex justify-start items-start flex-col bg-cm-white rounded-lg dark:bg-neutral-800 cm-1xl:bg-transparent w-full  h-full dark:border-2 dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0">
+    <article className="flex justify-start items-start flex-col bg-cm-white rounded-lg dark:bg-neutral-800 cm-1xl:bg-transparent w-full  h-full">
       {children}
     </article>
   );

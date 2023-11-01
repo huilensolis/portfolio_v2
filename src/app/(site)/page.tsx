@@ -45,7 +45,7 @@ export default function Home() {
             </a>
             <a href="https://www.linkedin.com/in/huilensolis/" target="_blank">
               <PrimaryBtn>
-                Linkedin <ArrowUpRight classes="w-4 h-4" />
+                LinkedIn <ArrowUpRight classes="w-4 h-4" />
               </PrimaryBtn>
             </a>
           </div>
@@ -55,15 +55,17 @@ export default function Home() {
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
-                  <h3 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-neutral-300">
+                  <h3 className="text-4xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300">
                     Culinary Alchemy
                   </h3>
-                  <span className="text-cm-orange mb-2">07/2023 - present</span>
+                  <span className="dark:text-cm-orange mb-2 text-blue-600">
+                    07/2023 - Present
+                  </span>
                   <p className="font-normal text-neutral-800 dark:text-neutral-400">
                     A Recipe Social Network, build in colaboration with{" "}
                     <a
                       href="https://www.linkedin.com/in/jesus-oyola-b9b530284/"
-                      className="dark:text-cm-orange text-cm-orange hover:underline transition-all delay-75"
+                      className="dark:text-cm-orange text-blue-600 font-semibold hover:underline transition-all delay-75"
                       target="_blank"
                     >
                       Jesus Oyola
@@ -76,14 +78,20 @@ export default function Home() {
                     services, interacting through an api.
                   </p>
                   <div className="flex cm-1xl:flex-col gap-4 mt-4 justify-start w-full">
-                    <a href="https://culinary-alchemy-web-app.vercel.app/">
+                    <a
+                      href="https://culinary-alchemy-web-app.vercel.app/"
+                      target="_blank"
+                    >
                       <PrimaryBtn>
                         Deploy <ArrowUpRight classes="w-4 h-4" />
                       </PrimaryBtn>
                     </a>
-                    <a href="https://github.com/CulinaryAlchemy/CulinaryAlchemy">
+                    <a
+                      href="https://github.com/CulinaryAlchemy/CulinaryAlchemy"
+                      target="_blank"
+                    >
                       <SecondaryBtn>
-                        github <ArrowUpRight classes="w-4 h-4" />
+                        Github <ArrowUpRight classes="w-4 h-4" />
                       </SecondaryBtn>
                     </a>
                   </div>
@@ -91,65 +99,65 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col">
-                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-lg">
+                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
                       Metodologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
                       We have been working with a{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Clean Architecture
                       </span>{" "}
                       following the{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Solid principles,
                       </span>{" "}
                       while staying organized using{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Jira
                       </span>{" "}
                       and{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Scrum metodologie
                       </span>{" "}
                     </p>
                   </article>
                 </>,
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col">
-                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-lg">
+                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
                       Backend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Typescript
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Node.JS
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Express
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Sequelize
                       </span>{" "}
                       (database ORM),{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         JWT
                       </span>{" "}
                       (Json Web Tokens),{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         PostgreSQL
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Bcrypt
                       </span>{" "}
                       (encripting library),{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Express-validator
                       </span>{" "}
                       (input validation)
@@ -157,32 +165,32 @@ export default function Home() {
                   </article>
                 </>,
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col">
-                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-gray-900 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-lg">
+                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Typescript
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         React
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         React-router-dom
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Mui
                       </span>{" "}
                       (component library),{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Axios
                       </span>{" "}
                       and{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Zod
                       </span>{" "}
                       (input validation)
@@ -196,10 +204,12 @@ export default function Home() {
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
-                  <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-neutral-300 cm-1xl:break-all">
+                  <h3 className=" text-4xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
                     Spotify Clone
                   </h3>
-                  <span className="text-cm-orange">09/2023 - 09/23</span>
+                  <span className="dark:text-cm-orange mb-2 text-blue-600">
+                    09/2023 - 09/2023
+                  </span>
                   <p className="font-normal text-neutral-800 dark:text-neutral-400">
                     A personal Project, Built with Next js, Typescript and
                     Tailwind. It Contains almost all Spotify Functionalities,
@@ -220,7 +230,7 @@ export default function Home() {
                       target="_blank"
                     >
                       <SecondaryBtn>
-                        github <ArrowUpRight classes="w-4 h-4" />
+                        Github <ArrowUpRight classes="w-4 h-4" />
                       </SecondaryBtn>
                     </a>
                   </div>
@@ -228,13 +238,13 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col">
-                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-gray-900 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-lg">
+                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
                       Backend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
                       I have used{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Supabase
                       </span>
                       , which is a Firebase Alternative, Built on PostgreSQL,
@@ -244,34 +254,33 @@ export default function Home() {
                   </article>
                 </>,
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col">
-                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-gray-900 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-lg">
+                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Typescript
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Next JS
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Supabase
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Zustand
                       </span>{" "}
                       (Global State manager), and{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Remix
                       </span>{" "}
                       (component library)
                     </p>
                   </article>
-                  ,
                 </>,
               ]}
             />
@@ -280,9 +289,12 @@ export default function Home() {
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
-                  <h3 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-neutral-300">
+                  <h3 className=" text-4xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300">
                     Owr
                   </h3>
+                  <span className="dark:text-cm-orange mb-2 text-blue-600">
+                    08/2023 - 08/2023
+                  </span>
                   <p className="font-normal text-neutral-800 dark:text-neutral-400">
                     A mini Duolingo clone, which provides random practicing
                     exercises in a entretaining way, providing a sentence in
@@ -301,7 +313,7 @@ export default function Home() {
                       target="_blank"
                     >
                       <SecondaryBtn>
-                        github <ArrowUpRight classes="w-4 h-4" />
+                        Github <ArrowUpRight classes="w-4 h-4" />
                       </SecondaryBtn>
                     </a>
                   </div>
@@ -309,24 +321,24 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col">
-                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-lg">
+                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
                     <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Typescript
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         React
                       </span>
                       ,{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         React-router-dom
                       </span>{" "}
                       and{" "}
-                      <span className="dark:text-orange-400 text-orange-600">
+                      <span className="dark:text-orange-400 text-blue-600">
                         Zustand
                       </span>{" "}
                       (global state manager)
