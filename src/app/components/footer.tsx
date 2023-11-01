@@ -25,7 +25,7 @@ export function Footer() {
     },
   ];
   return (
-    <footer className="w-full flex justify-center items-center dark:bg-cm-black bg-cm-white sm:px-20 px-5 cm-1xl:px-2 py-12">
+    <footer className="w-full flex justify-center items-center dark:bg-cm-black bg-cm-white px-5 cm-1xl:px-2 pt-36 pb-12">
       <div className="md:flex md:items-center md:justify-between">
         <span className="text-lg dark:text-neutral-300 text-neutral-700 sm:text-center mr-6 flex flex-wrap gap-x-2">
           © 2023{" "}

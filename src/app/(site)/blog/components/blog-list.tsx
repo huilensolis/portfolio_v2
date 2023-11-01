@@ -117,13 +117,13 @@ export default function BlogList() {
                 </Link>
               </li>
             ))}
+            <ProseLayout>
+              {isLoading && <></>}
+              {error && <ErrorComponent />}
+            </ProseLayout>
           </ul>
         </main>
       )}
-      <ProseLayout>
-        {isLoading && <></>}
-        {error && <ErrorComponent />}
-      </ProseLayout>
     </>
   );
 }
