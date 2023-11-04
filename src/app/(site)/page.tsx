@@ -1,3 +1,5 @@
+import cssStyles from "./page.module.css";
+
 import { PrimaryBtn, SecondaryBtn } from "@components/buttons";
 import { ArrowUpRight } from "@components/icons";
 import { Card } from "@components/card";
@@ -25,32 +27,34 @@ export const metadata = {
 };
 
 export default function Home() {
+  const ABOUTME =
+    "My journey into web development commenced on the dynamic online learning platform, Platzi. [space] There, I delved into the intricacies of web development, mastering the fundamental building blocks of *JavaScript, *HTML, and *CSS. [space] These early experiences ignited my passion for coding, and in March 2023, I embarked on an exciting journey by enrolling in the *Full *Stack Santex *Bootcamp. [space] The Santex Bootcamp, organized by Santex, a leading software company, was a remarkable initiative. It provided a unique opportunity to learn web development from industry experts who were actively contributing to Santex's projects. In addition to technical skills, I also acquired invaluable experience in teamwork and the *Scrum methodology. [space] Through this immersive experience, I not only honed my skills in JavaScript, Node.js, Express, TypeScript, SCSS, and Angular but also learned how to effectively *collaborate *within *a *team and follow agile Scrum practices. It was an intensive period of growth, and I emerged with the confidence to tackle real-world challenges in web development. [space] In October 2023, as the Bootcamp came to a close, my journey continued, and I ventured into the dynamic realm of *React. Today, I am continuously crafting impressive projects using *React.js, *Next.js, *Tailwind *CSS, *Node.js, *Express, and *TypeScript. The learning never stops, and I'm committed to staying at the forefront of web development technologies to deliver top-notch solutions. I am eager to bring my passion, skills, and dedication to your team. [space] *Let's *create something exceptional together!";
   return (
-    <>
-      <main className="h-full w-full flex flex-col gap-4 justify-center items-center">
-        <section className="flex flex-col items-center relative mb-10 p-20 cm-1xl:p-4 justify-center">
-          <h1 className="text-6xl font-bold dark:text-neutral-300 text-neutral-700 text-center">
-            Huilen Solis
-          </h1>
-          <h2 className="text-xl font-normal dark:text-neutral-400 text-neutral-500 w-2/3 text-center">
-            Full Stack Web Developer, building aesthetic, accesible and
-            responsive websites.
-          </h2>
-          <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap">
-            <a href="https://github.com/Huilensolis" target="_blank">
-              <SecondaryBtn>
-                Github
-                <ArrowUpRight classes="w-4 h-4" />
-              </SecondaryBtn>
-            </a>
-            <a href="https://www.linkedin.com/in/huilensolis/" target="_blank">
-              <PrimaryBtn>
-                LinkedIn <ArrowUpRight classes="w-4 h-4" />
-              </PrimaryBtn>
-            </a>
-          </div>
-        </section>
-        <ul className="w-full flex flex-col gap-16 justify-center items-center max-w-5xl relative">
+    <section className="flex flex-col items-center gap-32">
+      <main className="flex flex-col items-center relative p-20 cm-1xl:p-4 justify-center">
+        <h1 className="text-6xl font-bold dark:text-neutral-300 text-neutral-700 text-center">
+          Huilen Solis
+        </h1>
+        <h2 className="text-xl font-normal dark:text-neutral-400 text-neutral-500 w-2/3 text-center">
+          Full Stack Web Developer, building aesthetic, accesible and responsive
+          websites.
+        </h2>
+        <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap">
+          <a href="https://github.com/Huilensolis" target="_blank">
+            <SecondaryBtn>
+              Github
+              <ArrowUpRight classes="w-4 h-4" />
+            </SecondaryBtn>
+          </a>
+          <a href="https://www.linkedin.com/in/huilensolis/" target="_blank">
+            <PrimaryBtn>
+              LinkedIn <ArrowUpRight classes="w-4 h-4" />
+            </PrimaryBtn>
+          </a>
+        </div>
+      </main>
+      <section className="max-w-5xl">
+        <ul className="flex flex-col gap-16 justify-center items-center w-full">
           <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
             <Card
               leftSide={
@@ -349,10 +353,61 @@ export default function Home() {
             />
           </li>
         </ul>
-        <p className="text-orange-500 p-52">
-          cards stacking effect with animation timeline
-        </p>
-      </main>
-    </>
+      </section>
+
+      <section className="max-w-5xl">
+        <article className="w-full h-full flex flex-col items-start justify-center max-w-[calc(100vw-12rem)] overflow-y-visible">
+          <h3 className="text-cm-white font-semibold text-5xl">
+            {/* A little more <br /> about me */}
+          </h3>
+          <div className="flex flex-wrap gap-8">
+            {ABOUTME.split(" ").map((word, i) => {
+              if (word === "[space]") {
+                return <div className="w-full h-16" key={i} />;
+              }
+
+              if (word.startsWith("*")) {
+                const charactersArray = word.split("");
+                charactersArray.shift();
+
+                const finalWord = charactersArray.join("");
+                return (
+                  <p
+                    className="text-cm-white text-4xl font-semibold animate-cm-fade-text-in-top-orange [animation-timeline:view()] [animation-range:entry_150px_800px] text-center text-transparent"
+                    key={i}
+                  >
+                    {finalWord}
+                  </p>
+                );
+              }
+
+              return (
+                <p
+                  className="text-cm-white text-4xl font-semibold animate-cm-fade-text-in-top-dark [animation-timeline:view()] [animation-range:entry_150px_800px] text-center text-transparent"
+                  key={i}
+                >
+                  {word}
+                </p>
+              );
+            })}
+            {/* <p className="text-cm-white text-5xl animate-cm-fade-text-in-top-dark [animation-timeline:view()] 
+            <p className="text-cm-white text-5xl animate-cm-fade-text-in-top-dark [animation-timeline:view()] [animation-range:entry_400px_800px] text-center text-transparent">
+              
+            </p>
+            <p className="text-cm-white text-5xl animate-cm-fade-text-in-top-dark [animation-timeline:view()] [animation-range:entry_400px_800px] text-center text-transparent">
+              
+            </p> */}
+          </div>
+        </article>
+      </section>
+
+      <section id={cssStyles["sectionPin"]}>
+        <div className={cssStyles["pin-wrap-sticky"]}>
+          <div className={cssStyles["pin-wrap"]}>
+            <div className="flex py-10 w-full h-[calc(100%-(2.5rem*2))] px-24"></div>
+          </div>
+        </div>
+      </section>
+    </section>
   );
 }

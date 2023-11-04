@@ -47,12 +47,31 @@ const config: Config = {
           "0%": { transform: "translateX(-30%)" },
           "100%": { transform: "translateX(0%))" },
         },
+        "cm-fade-text-in-top-dark": {
+          "0%": {
+            color: "transparent",
+            transform: "translateY(-40%)",
+          },
+          "40%": { color: "#F1F1EF", transform: " translateY(0)" },
+        },
+        "cm-fade-text-in-top-orange": {
+          "0%": {
+            color: "transparent",
+            transform: "translateY(-40%)",
+          },
+          "40%": { color: "#F3722B", transform: " translateY(0)" },
+        },
       },
       animation: {
         "cm-scale-top": "cm-scale-to-top 1s",
         "cm-fade-out-down": "cm-fade-out-down 1s ease-out",
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
         "cm-fade-in-left": "3s cm-fade-in-left linear backwards ",
+        "cm-translate-to-left": "1s cm-translate-to-left linear move forwards",
+        "cm-fade-text-in-top-dark":
+          "1s cm-fade-text-in-top-dark linear forwards",
+        "cm-fade-text-in-top-orange":
+          "1s cm-fade-text-in-top-orange linear forwards",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",
