@@ -1,8 +1,8 @@
-import cssStyles from "./page.module.css";
 import { PrimaryBtn, SecondaryBtn } from "@components/buttons";
 import { ArrowUpRight } from "@components/icons";
 import { Card } from "@components/card";
 import { Span } from "../components/span";
+import { SingleCard } from "../components/card-2";
 
 export const metadata = {
   title: `Huilen Solis's Portfolio`,
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </main>
       <section className="max-w-screen">
-        <ul className="flex flex-col gap-16 justify-center items-center w-full max-w-5xl px-10">
+        <ul className="flex flex-col gap-16 justify-center items-center w-full max-w-5xl">
           <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
             <Card
               leftSide={
@@ -352,47 +352,37 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section id={cssStyles["sectionPin"]}>
-        <div className={cssStyles["pin-wrap-sticky"]}>
-          <div className={cssStyles["pin-wrap"]}>
-            <div className="flex items-center justify-center py-10 w-screen h-[calc(100%-(2.5rem*2))] px-24">
-              <article className="max-w-5xl h-full flex flex-col items-start justify-center w-full relative overflow-hidden bg-neutral-800 px-32 py-12 rounded-lg gap-4">
-                <h3 className="text-cm-white text-4xl text-center font-bold w-full font-geistSans tracking-[-0.03em]">
-                  About me
-                </h3>
-                <p className="text-neutral-400 font-normal text-lg text-center font-geistSans">
-                  My web development journey began on Platzi, a online learning
-                  platform, where I mastered <Span>JavaScript</Span>,{" "}
-                  <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion
-                  for coding. In March 2023, I joined the{" "}
-                  <Span>Full Stack Santex Bootcamp</Span>, a initiative
-                  organized by Santex, a software company. it was taught by the
-                  developers at the company, giving the oportunity to learn web
-                  development from developers who are actively working in the
-                  industry. This experience not only honed my technical skills
-                  in <Span>JavaScript</Span>, <Span>Node.js</Span>,{" "}
-                  <Span>Express</Span>, <Span>TypeScript</Span>,{" "}
-                  <Span>SCSS</Span>,<Span> and Angular</Span>, but also gave me{" "}
-                  <Span>
-                    experiencie working in teamwork and Scrum methodology
-                  </Span>
-                  . As the Bootcamp concluded in October 2023, my journey
-                  continued into the realm of React. Today,{" "}
-                  <Span>
-                    I'm crafting accessible, performant, and maintainable
-                    projects using React.js, Next.js, Tailwind CSS, Node.js,
-                    Express, and TypeScript.
-                  </Span>
-                  <br /> <br /> The learning never stops, and I'm committed to
-                  staying at the forefront of web development technologies to
-                  deliver top-notch solutions. Let's create something cool
-                  together!
-                </p>
-              </article>
-              {/* // <figure className="bg-red-400 h-52 w-52 absolute top-0 right-0" /> */}
-            </div>
-          </div>
-        </div>
+      <section className="max-w-screen flex flex-col">
+        <SingleCard>
+          <h3 className="text-cm-white text-4xl text-center font-bold w-full font-geistSans tracking-[-0.03em]">
+            About me
+          </h3>
+          <p className="text-neutral-400 font-normal text-lg text-center font-geistSans">
+            My web development journey began on Platzi, a online learning
+            platform, where I mastered <Span>JavaScript</Span>,{" "}
+            <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
+            coding. In March 2023, I joined the{" "}
+            <Span>Full Stack Santex Bootcamp</Span>, a initiative organized by
+            Santex, a software company. it was taught by the developers at the
+            company, giving the oportunity to learn web development from
+            developers who are actively working in the industry. This experience
+            not only honed my technical skills in <Span>JavaScript</Span>,{" "}
+            <Span>Node.js</Span>, <Span>Express</Span>, <Span>TypeScript</Span>,{" "}
+            <Span>SCSS</Span>,<Span> and Angular</Span>, but also gave me{" "}
+            <Span>experiencie working in teamwork and Scrum methodology</Span>.
+            As the Bootcamp concluded in October 2023, my journey continued into
+            the realm of React. Today,{" "}
+            <Span>
+              I'm crafting accessible, performant, and maintainable projects
+              using React.js, Next.js, Tailwind CSS, Node.js, Express, and
+              TypeScript.
+            </Span>
+            <br /> <br /> The learning never stops, and I'm committed to staying
+            at the forefront of web development technologies to deliver
+            top-notch solutions. Let's create something cool together!
+          </p>
+        </SingleCard>
+        {/* // <figure className="bg-red-400 h-52 w-52 absolute top-0 right-0" /> */}
       </section>
     </section>
   );
