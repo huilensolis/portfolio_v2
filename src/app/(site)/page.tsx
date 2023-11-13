@@ -36,44 +36,44 @@ export const metadata = {
 const technologies: {
   name: string;
   icon: (props: React.ComponentProps<"svg">) => JSX.Element;
-  numberOfProjects: number;
   color: "orange" | "blue" | "violet";
+  span: number;
 }[] = [
   {
     name: "Next JS",
     icon: IconNextjs,
-    numberOfProjects: 3,
     color: "violet",
+    span: 1,
   },
   {
     name: "React JS",
     icon: IconBxlReact,
-    numberOfProjects: 5,
     color: "blue",
+    span: 2,
   },
   {
     name: "Typescript",
     icon: IconTypescript,
-    numberOfProjects: 10,
     color: "blue",
+    span: 2,
   },
   {
     name: "CSS",
     icon: IconCss3,
-    numberOfProjects: 10,
     color: "blue",
+    span: 1,
   },
   {
     name: "HTML",
     icon: IconHtml5,
-    numberOfProjects: 10,
     color: "orange",
+    span: 1,
   },
   {
     name: "JavaScript",
     icon: IconBxlJavascript,
-    numberOfProjects: 10,
     color: "orange",
+    span: 2,
   },
 ];
 export default function Home() {
@@ -428,13 +428,14 @@ export default function Home() {
               . As the Bootcamp concluded in October 2023, my journey continued
               into the realm of React. Today,{" "}
               <Span>
-                I&apos;m crafting accessible, performant, and maintainable projects
-                using React.js, Next.js, Tailwind CSS, Node.js, Express, and
-                TypeScript.
+                I&apos;m crafting accessible, performant, and maintainable
+                projects using React.js, Next.js, Tailwind CSS, Node.js,
+                Express, and TypeScript.
               </Span>
               <br /> <br /> The learning never stops, and I&apos;m committed to
               staying at the forefront of web development technologies to
-              deliver top-notch solutions. Let&apos;s create something cool together!
+              deliver top-notch solutions. Let&apos;s create something cool
+              together!
             </p>
           </div>
         </SingleCard>
@@ -443,19 +444,8 @@ export default function Home() {
             return (
               <li
                 key={i}
-                className={`col-span-${
-                  i === 0
-                    ? 1
-                    : i === 1
-                    ? 2
-                    : i === 3
-                    ? 2
-                    : i === 4
-                    ? 1
-                    : i === 5
-                    ? 2
-                    : 1
-                } w-full h-full`}
+                className="w-full h-full"
+                style={{ gridColumn: `${technologie.span} span` }}
               >
                 <SingleCard>
                   <article className="flex gap-3 xl:p-14 md:p-10 p-10 w-full h-full">
@@ -484,9 +474,6 @@ export default function Home() {
                       >
                         {technologie.name}
                       </h4>
-                      <span className="text-neutral-400 font-geistSans">
-                        {technologie.numberOfProjects} projects
-                      </span>
                     </div>
                   </article>
                 </SingleCard>
