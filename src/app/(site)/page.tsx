@@ -78,8 +78,8 @@ const technologies: {
 ];
 export default function Home() {
   return (
-    <section className="flex flex-col items-center gap-24">
-      <main className="flex flex-col items-center relative p-20 cm-1xl:p-4 justify-center max-w-5xl">
+    <section className="flex flex-col items-center gap-24 max-w-5xl w-full">
+      <main className="w-full flex flex-col items-center relative p-20 cm-1xl:p-4 justify-center">
         <h1 className="text-6xl font-bold dark:text-neutral-300 text-neutral-700 text-center">
           Huilen Solis
         </h1>
@@ -101,10 +101,10 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <section className="max-w-5xl flex flex-col justify-center items-center gap-8">
-        <h1 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
+      <section className="w-full flex flex-col justify-center items-center gap-8 mb-20">
+        <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
           Projects
-        </h1>
+        </h3>
         <ul className="flex flex-col gap-16 justify-center items-center w-full">
           <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
             <Card
@@ -405,12 +405,12 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="max-w-5xl flex flex-col gap-8">
+      <section className="w-full flex flex-col justify-center items-center gap-8">
+        <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
+          About me
+        </h3>
         <SingleCard>
-          <div className="h-full w-full p-16">
-            <h3 className="text-cm-white text-4xl text-center font-bold w-full font-geistSans tracking-[-0.03em]">
-              About me
-            </h3>
+          <div className="h-full w-full xl:p-16 md:p-10 p-5">
             <p className="text-neutral-400 font-normal text-lg text-center font-geistSans">
               My web development journey began on Platzi, a online learning
               platform, where I mastered <Span>JavaScript</Span>,{" "}
@@ -438,20 +438,27 @@ export default function Home() {
             </p>
           </div>
         </SingleCard>
-        <ul className="grid w-full max-w-full grid-cols-3 gap-3">
+        <ul className="md:grid flex flex-col w-full max-w-full xl:grid-cols-3 md:grid-cols-2 gap-3">
           {technologies.map((technologie, i) => {
-            const span = () => {
-              if (i === 0) return 1;
-              if (i === 1) return 2;
-              if (i === 2) return 2;
-              if (i === 3) return 1;
-              if (i === 4) return 1;
-              if (i === 5) return 2;
-            };
             return (
-              <li key={i} className={`col-span-${span()}`}>
+              <li
+                key={i}
+                className={`col-span-${
+                  i === 0
+                    ? 1
+                    : i === 1
+                    ? 2
+                    : i === 3
+                    ? 2
+                    : i === 4
+                    ? 1
+                    : i === 5
+                    ? 2
+                    : 1
+                } w-full h-full`}
+              >
                 <SingleCard>
-                  <article className="flex gap-3 p-14 w-full h-full">
+                  <article className="flex gap-3 xl:p-14 md:p-10 p-10 w-full h-full">
                     <technologie.icon
                       className={`${
                         technologie.color === "blue"
@@ -461,7 +468,7 @@ export default function Home() {
                           : technologie.color === "violet"
                           ? "fill-violet-200 text-violet-200"
                           : "fill-neutral-400 text-neutral-400"
-                      } w-20 h-20`}
+                      } w-20 h-20 xl:inline-block hidden`}
                     />
                     <div className="flex flex-col justify-center h-full">
                       <h4
