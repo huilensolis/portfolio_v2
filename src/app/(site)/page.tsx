@@ -1,5 +1,13 @@
 import { PrimaryBtn, SecondaryBtn } from "@components/buttons";
-import { ArrowUpRight } from "@components/icons";
+import {
+  ArrowUpRight,
+  IconBxlJavascript,
+  IconBxlReact,
+  IconCss3,
+  IconHtml5,
+  IconNextjs,
+  IconTypescript,
+} from "@components/icons";
 import { Card } from "@components/card";
 import { Span } from "../components/span";
 import { SingleCard } from "../components/card-2";
@@ -25,11 +33,53 @@ export const metadata = {
     images: [{ url: "../../public/icon.png", alt: "Huilen Solis logo" }],
   },
 };
-
+const technologies: {
+  name: string;
+  icon: (props: React.ComponentProps<"svg">) => JSX.Element;
+  numberOfProjects: number;
+  color: "orange" | "blue" | "violet";
+}[] = [
+  {
+    name: "Next JS",
+    icon: IconNextjs,
+    numberOfProjects: 3,
+    color: "violet",
+  },
+  {
+    name: "React JS",
+    icon: IconBxlReact,
+    numberOfProjects: 5,
+    color: "blue",
+  },
+  {
+    name: "Typescript",
+    icon: IconTypescript,
+    numberOfProjects: 10,
+    color: "blue",
+  },
+  {
+    name: "JavaScript",
+    icon: IconBxlJavascript,
+    numberOfProjects: 10,
+    color: "orange",
+  },
+  {
+    name: "CSS",
+    icon: IconCss3,
+    numberOfProjects: 10,
+    color: "blue",
+  },
+  {
+    name: "HTML",
+    icon: IconHtml5,
+    numberOfProjects: 10,
+    color: "orange",
+  },
+];
 export default function Home() {
   return (
-    <section className="flex flex-col items-center gap-32">
-      <main className="flex flex-col items-center relative p-20 cm-1xl:p-4 justify-center">
+    <section className="flex flex-col items-center gap-24">
+      <main className="flex flex-col items-center relative p-20 cm-1xl:p-4 justify-center max-w-5xl">
         <h1 className="text-6xl font-bold dark:text-neutral-300 text-neutral-700 text-center">
           Huilen Solis
         </h1>
@@ -51,8 +101,11 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <section className="max-w-screen">
-        <ul className="flex flex-col gap-16 justify-center items-center w-full max-w-5xl">
+      <section className="max-w-5xl flex flex-col justify-center items-center gap-8">
+        <h1 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
+          Projects
+        </h1>
+        <ul className="flex flex-col gap-16 justify-center items-center w-full">
           <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
             <Card
               leftSide={
@@ -352,37 +405,88 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="max-w-screen flex flex-col">
+      <section className="max-w-5xl flex flex-col gap-8">
         <SingleCard>
-          <h3 className="text-cm-white text-4xl text-center font-bold w-full font-geistSans tracking-[-0.03em]">
-            About me
-          </h3>
-          <p className="text-neutral-400 font-normal text-lg text-center font-geistSans">
-            My web development journey began on Platzi, a online learning
-            platform, where I mastered <Span>JavaScript</Span>,{" "}
-            <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
-            coding. In March 2023, I joined the{" "}
-            <Span>Full Stack Santex Bootcamp</Span>, a initiative organized by
-            Santex, a software company. it was taught by the developers at the
-            company, giving the oportunity to learn web development from
-            developers who are actively working in the industry. This experience
-            not only honed my technical skills in <Span>JavaScript</Span>,{" "}
-            <Span>Node.js</Span>, <Span>Express</Span>, <Span>TypeScript</Span>,{" "}
-            <Span>SCSS</Span>,<Span> and Angular</Span>, but also gave me{" "}
-            <Span>experiencie working in teamwork and Scrum methodology</Span>.
-            As the Bootcamp concluded in October 2023, my journey continued into
-            the realm of React. Today,{" "}
-            <Span>
-              I'm crafting accessible, performant, and maintainable projects
-              using React.js, Next.js, Tailwind CSS, Node.js, Express, and
-              TypeScript.
-            </Span>
-            <br /> <br /> The learning never stops, and I'm committed to staying
-            at the forefront of web development technologies to deliver
-            top-notch solutions. Let's create something cool together!
-          </p>
+          <div className="h-full w-full p-16">
+            <h3 className="text-cm-white text-4xl text-center font-bold w-full font-geistSans tracking-[-0.03em]">
+              About me
+            </h3>
+            <p className="text-neutral-400 font-normal text-lg text-center font-geistSans">
+              My web development journey began on Platzi, a online learning
+              platform, where I mastered <Span>JavaScript</Span>,{" "}
+              <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
+              coding. In March 2023, I joined the{" "}
+              <Span>Full Stack Santex Bootcamp</Span>, a initiative organized by
+              Santex, a software company. it was taught by the developers at the
+              company, giving the oportunity to learn web development from
+              developers who are actively working in the industry. This
+              experience not only honed my technical skills in{" "}
+              <Span>JavaScript</Span>, <Span>Node.js</Span>,{" "}
+              <Span>Express</Span>, <Span>TypeScript</Span>, <Span>SCSS</Span>,
+              <Span> and Angular</Span>, but also gave me{" "}
+              <Span>experiencie working in teamwork and Scrum methodology</Span>
+              . As the Bootcamp concluded in October 2023, my journey continued
+              into the realm of React. Today,{" "}
+              <Span>
+                I'm crafting accessible, performant, and maintainable projects
+                using React.js, Next.js, Tailwind CSS, Node.js, Express, and
+                TypeScript.
+              </Span>
+              <br /> <br /> The learning never stops, and I'm committed to
+              staying at the forefront of web development technologies to
+              deliver top-notch solutions. Let's create something cool together!
+            </p>
+          </div>
         </SingleCard>
-        {/* // <figure className="bg-red-400 h-52 w-52 absolute top-0 right-0" /> */}
+        <ul className="grid w-full max-w-full grid-cols-3 gap-3">
+          {technologies.map((technologie, i) => {
+            const span = () => {
+              if (i === 0) return 1;
+              if (i === 1) return 2;
+              if (i === 2) return 2;
+              if (i === 3) return 1;
+              if (i === 4) return 1;
+              if (i === 5) return 2;
+            };
+            return (
+              <li key={i} className={`col-span-${span()}`}>
+                <SingleCard>
+                  <article className="flex gap-3 p-14 w-full h-full">
+                    <technologie.icon
+                      className={`${
+                        technologie.color === "blue"
+                          ? "fill-blue-200 text-blue-200"
+                          : technologie.color === "orange"
+                          ? "fill-orange-200 text-orange-200"
+                          : technologie.color === "violet"
+                          ? "fill-violet-200 text-violet-200"
+                          : "fill-neutral-400 text-neutral-400"
+                      } w-20 h-20`}
+                    />
+                    <div className="flex flex-col justify-center h-full">
+                      <h4
+                        className={` ${
+                          technologie.color === "blue"
+                            ? "text-blue-200"
+                            : technologie.color === "orange"
+                            ? "text-orange-200"
+                            : technologie.color === "violet"
+                            ? "text-violet-200"
+                            : "text-neutral-400"
+                        } font-geistSans font-bold text-3xl`}
+                      >
+                        {technologie.name}
+                      </h4>
+                      <span className="text-neutral-400 font-geistSans">
+                        {technologie.numberOfProjects} projects
+                      </span>
+                    </div>
+                  </article>
+                </SingleCard>
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </section>
   );
