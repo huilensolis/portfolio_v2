@@ -428,13 +428,13 @@ export default function Home() {
               . As the Bootcamp concluded in October 2023, my journey continued
               into the realm of React. Today,{" "}
               <Span>
-                I'm crafting accessible, performant, and maintainable projects
+                I&apos;m crafting accessible, performant, and maintainable projects
                 using React.js, Next.js, Tailwind CSS, Node.js, Express, and
                 TypeScript.
               </Span>
-              <br /> <br /> The learning never stops, and I'm committed to
+              <br /> <br /> The learning never stops, and I&apos;m committed to
               staying at the forefront of web development technologies to
-              deliver top-notch solutions. Let's create something cool together!
+              deliver top-notch solutions. Let&apos;s create something cool together!
             </p>
           </div>
         </SingleCard>
