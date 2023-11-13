@@ -409,36 +409,32 @@ export default function Home() {
         <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
           About me
         </h3>
-        <SingleCard>
-          <div className="h-full w-full xl:p-16 md:p-10 p-5">
-            <p className="text-neutral-400 font-normal text-lg text-center font-geistSans">
-              My web development journey began on Platzi, a online learning
-              platform, where I mastered <Span>JavaScript</Span>,{" "}
-              <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
-              coding. In March 2023, I joined the{" "}
-              <Span>Full Stack Santex Bootcamp</Span>, a initiative organized by
-              Santex, a software company. it was taught by the developers at the
-              company, giving the oportunity to learn web development from
-              developers who are actively working in the industry. This
-              experience not only honed my technical skills in{" "}
-              <Span>JavaScript</Span>, <Span>Node.js</Span>,{" "}
-              <Span>Express</Span>, <Span>TypeScript</Span>, <Span>SCSS</Span>,
-              <Span> and Angular</Span>, but also gave me{" "}
-              <Span>experiencie working in teamwork and Scrum methodology</Span>
-              . As the Bootcamp concluded in October 2023, my journey continued
-              into the realm of React. Today,{" "}
-              <Span>
-                I&apos;m crafting accessible, performant, and maintainable
-                projects using React.js, Next.js, Tailwind CSS, Node.js,
-                Express, and TypeScript.
-              </Span>
-              <br /> <br /> The learning never stops, and I&apos;m committed to
-              staying at the forefront of web development technologies to
-              deliver top-notch solutions. Let&apos;s create something cool
-              together!
-            </p>
-          </div>
-        </SingleCard>
+        <div className="h-full w-full xl:p-28 md:p-10 p-5 relative overflow-hidden rounded-lg bg-[#232227] border-neutral-700 border">
+          <p className="text-cm-white font-normal text-lg text-center font-geistSans">
+            My web development journey began on Platzi, a online learning
+            platform, where I mastered <Span>JavaScript</Span>,{" "}
+            <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
+            coding. In March 2023, I joined the{" "}
+            <Span>Full Stack Santex Bootcamp</Span>, a initiative organized by
+            Santex, a software company. it was taught by the developers at the
+            company, giving the oportunity to learn web development from
+            developers who are actively working in the industry. This experience
+            not only honed my technical skills in <Span>JavaScript</Span>,{" "}
+            <Span>Node.js</Span>, <Span>Express</Span>, <Span>TypeScript</Span>,{" "}
+            <Span>SCSS</Span>,<Span> and Angular</Span>, but also gave me{" "}
+            <Span>experiencie working in teamwork and Scrum methodology</Span>.
+            As the Bootcamp concluded in October 2023, my journey continued into
+            the realm of React. Today,{" "}
+            <Span>
+              I&apos;m crafting accessible, performant, and maintainable
+              projects using React.js, Next.js, Tailwind CSS, Node.js, Express,
+              and TypeScript.
+            </Span>
+            <br /> <br /> The learning never stops, and I&apos;m committed to
+            staying at the forefront of web development technologies to deliver
+            top-notch solutions. Let&apos;s create something cool together!
+          </p>
+        </div>
         <ul className="md:grid flex flex-col w-full max-w-full xl:grid-cols-3 md:grid-cols-2 gap-3">
           {technologies.map((technologie, i) => {
             return (
