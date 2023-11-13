@@ -58,12 +58,6 @@ const technologies: {
     color: "blue",
   },
   {
-    name: "JavaScript",
-    icon: IconBxlJavascript,
-    numberOfProjects: 10,
-    color: "orange",
-  },
-  {
     name: "CSS",
     icon: IconCss3,
     numberOfProjects: 10,
@@ -72,6 +66,12 @@ const technologies: {
   {
     name: "HTML",
     icon: IconHtml5,
+    numberOfProjects: 10,
+    color: "orange",
+  },
+  {
+    name: "JavaScript",
+    icon: IconBxlJavascript,
     numberOfProjects: 10,
     color: "orange",
   },

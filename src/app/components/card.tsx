@@ -16,14 +16,14 @@ export function Card({ leftSide, cards }: Props) {
     <article className="flex justify-center items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-white dark:bg-[#1F2124] border border-neutral-300 rounded-2xl dark:border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20 cm-1xl:bg-transparent cm-1xl:dark:bg-transparent cm-1xl:border-transparent cm-1xl:dark:border-transparent">
       <div className="w-full h-full flex flex-col justify-center items-center">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <figure className="[background-image:radial-gradient_at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute top-24 right-20 select-none z-0 cm-1xl:hidden blur-3xl opacity-100" />
-          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-16 right-60 select-none z-0 cm-1xl:hidden blur-3xl" />
+          <figure className="[background-image:radial-gradient_at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute top-24 right-20 select-none z-0 cm-1xl:hidden blur-[80px] opacity-100" />
+          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-16 right-60 select-none z-0 cm-1xl:hidden blur-[80px]" />
 
-          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-48 right-80 cm-1xl:left-2 select-none z-0 cm-1xl:hidden blur-3xl" />
-          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-32 right-80  cm-1xl:left-2 select-none z-0 cm-1xl:hidden blur-3xl" />
+          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-48 right-80 cm-1xl:left-2 select-none z-0 cm-1xl:hidden blur-[80px]" />
+          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-32 right-80  cm-1xl:left-2 select-none z-0 cm-1xl:hidden blur-[80px]" />
 
-          <figure className="[background-image:radial-gradient(at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute top-14 right-20 cm-1xl:right-2 select-none z-0 cm-1xl:hidden blur-3xl opacity-100" />
-          <figure className="[background-image:radial-gradient(at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute bottom-16 right-16 cm-1xl:right-2 select-none z-0 cm-1xl:hidden blur-3xl opacity-100" />
+          <figure className="[background-image:radial-gradient(at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute top-14 right-20 cm-1xl:right-2 select-none z-0 cm-1xl:hidden blur-[80px] opacity-100" />
+          <figure className="[background-image:radial-gradient(at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute bottom-16 right-16 cm-1xl:right-2 select-none z-0 cm-1xl:hidden blur-[80px] opacity-100" />
         </div>
 
         <div
