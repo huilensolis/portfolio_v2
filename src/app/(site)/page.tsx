@@ -37,43 +37,43 @@ const technologies: {
   name: string;
   icon: (props: React.ComponentProps<"svg">) => JSX.Element;
   color: "orange" | "blue" | "violet";
-  span: number;
+  span: string;
 }[] = [
   {
     name: "Next JS",
     icon: IconNextjs,
     color: "violet",
-    span: 1,
+    span: "col-span-1",
   },
   {
     name: "React JS",
     icon: IconBxlReact,
     color: "blue",
-    span: 2,
+    span: "xl:col-span-2 col-span-1",
   },
   {
     name: "Typescript",
     icon: IconTypescript,
     color: "blue",
-    span: 2,
+    span: "col-span-2",
   },
   {
     name: "CSS",
     icon: IconCss3,
     color: "blue",
-    span: 1,
+    span: "col-span-1",
   },
   {
     name: "HTML",
     icon: IconHtml5,
     color: "orange",
-    span: 1,
+    span: "col-span-1",
   },
   {
     name: "JavaScript",
     icon: IconBxlJavascript,
     color: "orange",
-    span: 2,
+    span: "col-span-2",
   },
 ];
 export default function Home() {
@@ -442,11 +442,7 @@ export default function Home() {
         <ul className="md:grid flex flex-col w-full max-w-full xl:grid-cols-3 md:grid-cols-2 gap-3">
           {technologies.map((technologie, i) => {
             return (
-              <li
-                key={i}
-                className="w-full h-full"
-                style={{ gridColumn: `${technologie.span} span` }}
-              >
+              <li key={i} className={`w-full h-full ${technologie.span}`}>
                 <SingleCard>
                   <article className="flex gap-3 xl:p-14 md:p-10 p-10 w-full h-full">
                     <technologie.icon
