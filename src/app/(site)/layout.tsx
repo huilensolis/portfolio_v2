@@ -1,3 +1,5 @@
+import { GeistSans } from "geist/font/sans";
+
 import "./globals.css";
 import Head from "next/head";
 import type { Metadata } from "next";
@@ -60,7 +62,7 @@ export default function RootLayout({
         <meta name="google" content="notranslate" key="notranslate" />
         <meta name="robots" content="all" />
       </Head>
-      <body className={clasDisplay.className}>
+      <body className={`${clasDisplay.className} ${GeistSans.variable}`}>
         <Header />
         <div className="bg-cm-white dark:bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-80px)] pt-24 w-full sm:px-20 px-5 cm-1xl:px-2 overflow-x-clip">
           {children}

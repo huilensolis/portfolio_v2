@@ -12,9 +12,12 @@ const config: Config = {
       fontSize: {
         "cm-icons": "1.50rem",
       },
+      fontFamily: {
+        geistSans: ["var(--font-geist-sans)"],
+      },
       colors: {
-        "cm-white": "#F1F1EF" /* #FAFAFA */,
-        "cm-black": "#17181D" /* #101010 */,
+        "cm-white": "#F4F4F4" /* #FFFFFF */,
+        "cm-black": "#17181D" /* #141414 */,
         "cm-gray": "#18181B",
         "cm-primary": "#A594FD",
         "cm-secondary": "#5940D4",
@@ -50,16 +53,16 @@ const config: Config = {
         "cm-fade-text-in-top-dark": {
           "0%": {
             color: "transparent",
-            transform: "translateY(-40%)",
+            transform: "translateY(100%)",
           },
-          "40%": { color: "#F1F1EF", transform: " translateY(0)" },
+          "20%": { color: "#F1F1EF", transform: " translateY(0)" },
         },
         "cm-fade-text-in-top-orange": {
           "0%": {
             color: "transparent",
-            transform: "translateY(-40%)",
+            transform: "translateY(100%)",
           },
-          "40%": { color: "#F3722B", transform: " translateY(0)" },
+          "20%": { color: "#F3722B", transform: " translateY(0)" },
         },
       },
       animation: {
@@ -68,10 +71,8 @@ const config: Config = {
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
         "cm-fade-in-left": "3s cm-fade-in-left linear backwards ",
         "cm-translate-to-left": "1s cm-translate-to-left linear move forwards",
-        "cm-fade-text-in-top-dark":
-          "1s cm-fade-text-in-top-dark linear forwards",
-        "cm-fade-text-in-top-orange":
-          "1s cm-fade-text-in-top-orange linear forwards",
+        "cm-fade-text-in-top-dark": "1s cm-fade-text-in-top-dark forwards",
+        "cm-fade-text-in-top-orange": "1s cm-fade-text-in-top-orange forwards",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",

@@ -1,8 +1,8 @@
 import cssStyles from "./page.module.css";
-
 import { PrimaryBtn, SecondaryBtn } from "@components/buttons";
 import { ArrowUpRight } from "@components/icons";
 import { Card } from "@components/card";
+import { Span } from "../components/span";
 
 export const metadata = {
   title: `Huilen Solis's Portfolio`,
@@ -27,8 +27,6 @@ export const metadata = {
 };
 
 export default function Home() {
-  const ABOUTME =
-    "My journey into web development commenced on the dynamic online learning platform, Platzi. [space] There, I delved into the intricacies of web development, mastering the fundamental building blocks of *JavaScript, *HTML, and *CSS. [space] These early experiences ignited my passion for coding, and in March 2023, I embarked on an exciting journey by enrolling in the *Full *Stack Santex *Bootcamp. [space] The Santex Bootcamp, organized by Santex, a leading software company, was a remarkable initiative. It provided a unique opportunity to learn web development from industry experts who were actively contributing to Santex's projects. In addition to technical skills, I also acquired invaluable experience in teamwork and the *Scrum methodology. [space] Through this immersive experience, I not only honed my skills in JavaScript, Node.js, Express, TypeScript, SCSS, and Angular but also learned how to effectively *collaborate *within *a *team and follow agile Scrum practices. It was an intensive period of growth, and I emerged with the confidence to tackle real-world challenges in web development. [space] In October 2023, as the Bootcamp came to a close, my journey continued, and I ventured into the dynamic realm of *React. Today, I am continuously crafting impressive projects using *React.js, *Next.js, *Tailwind *CSS, *Node.js, *Express, and *TypeScript. The learning never stops, and I'm committed to staying at the forefront of web development technologies to deliver top-notch solutions. I am eager to bring my passion, skills, and dedication to your team. [space] *Let's *create something exceptional together!";
   return (
     <section className="flex flex-col items-center gap-32">
       <main className="flex flex-col items-center relative p-20 cm-1xl:p-4 justify-center">
@@ -53,8 +51,8 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <section className="max-w-5xl">
-        <ul className="flex flex-col gap-16 justify-center items-center w-full">
+      <section className="max-w-screen">
+        <ul className="flex flex-col gap-16 justify-center items-center w-full max-w-5xl px-10">
           <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
             <Card
               leftSide={
@@ -354,57 +352,45 @@ export default function Home() {
           </li>
         </ul>
       </section>
-
-      <section className="max-w-5xl">
-        <article className="w-full h-full flex flex-col items-start justify-center max-w-[calc(100vw-12rem)] overflow-y-visible">
-          <h3 className="text-cm-white font-semibold text-5xl">
-            {/* A little more <br /> about me */}
-          </h3>
-          <div className="flex flex-wrap gap-8">
-            {ABOUTME.split(" ").map((word, i) => {
-              if (word === "[space]") {
-                return <div className="w-full h-16" key={i} />;
-              }
-
-              if (word.startsWith("*")) {
-                const charactersArray = word.split("");
-                charactersArray.shift();
-
-                const finalWord = charactersArray.join("");
-                return (
-                  <p
-                    className="text-cm-white text-4xl font-semibold animate-cm-fade-text-in-top-orange [animation-timeline:view()] [animation-range:entry_150px_800px] text-center text-transparent"
-                    key={i}
-                  >
-                    {finalWord}
-                  </p>
-                );
-              }
-
-              return (
-                <p
-                  className="text-cm-white text-4xl font-semibold animate-cm-fade-text-in-top-dark [animation-timeline:view()] [animation-range:entry_150px_800px] text-center text-transparent"
-                  key={i}
-                >
-                  {word}
-                </p>
-              );
-            })}
-            {/* <p className="text-cm-white text-5xl animate-cm-fade-text-in-top-dark [animation-timeline:view()] 
-            <p className="text-cm-white text-5xl animate-cm-fade-text-in-top-dark [animation-timeline:view()] [animation-range:entry_400px_800px] text-center text-transparent">
-              
-            </p>
-            <p className="text-cm-white text-5xl animate-cm-fade-text-in-top-dark [animation-timeline:view()] [animation-range:entry_400px_800px] text-center text-transparent">
-              
-            </p> */}
-          </div>
-        </article>
-      </section>
-
       <section id={cssStyles["sectionPin"]}>
         <div className={cssStyles["pin-wrap-sticky"]}>
           <div className={cssStyles["pin-wrap"]}>
-            <div className="flex py-10 w-full h-[calc(100%-(2.5rem*2))] px-24"></div>
+            <div className="flex items-center justify-center py-10 w-screen h-[calc(100%-(2.5rem*2))] px-24">
+              <article className="max-w-5xl h-full flex flex-col items-start justify-center w-full relative overflow-hidden bg-neutral-800 px-32 py-12 rounded-lg gap-4">
+                <h3 className="text-cm-white text-4xl text-center font-bold w-full font-geistSans tracking-[-0.03em]">
+                  About me
+                </h3>
+                <p className="text-neutral-400 font-normal text-lg text-center font-geistSans">
+                  My web development journey began on Platzi, a online learning
+                  platform, where I mastered <Span>JavaScript</Span>,{" "}
+                  <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion
+                  for coding. In March 2023, I joined the{" "}
+                  <Span>Full Stack Santex Bootcamp</Span>, a initiative
+                  organized by Santex, a software company. it was taught by the
+                  developers at the company, giving the oportunity to learn web
+                  development from developers who are actively working in the
+                  industry. This experience not only honed my technical skills
+                  in <Span>JavaScript</Span>, <Span>Node.js</Span>,{" "}
+                  <Span>Express</Span>, <Span>TypeScript</Span>,{" "}
+                  <Span>SCSS</Span>,<Span> and Angular</Span>, but also gave me{" "}
+                  <Span>
+                    experiencie working in teamwork and Scrum methodology
+                  </Span>
+                  . As the Bootcamp concluded in October 2023, my journey
+                  continued into the realm of React. Today,{" "}
+                  <Span>
+                    I'm crafting accessible, performant, and maintainable
+                    projects using React.js, Next.js, Tailwind CSS, Node.js,
+                    Express, and TypeScript.
+                  </Span>
+                  <br /> <br /> The learning never stops, and I'm committed to
+                  staying at the forefront of web development technologies to
+                  deliver top-notch solutions. Let's create something cool
+                  together!
+                </p>
+              </article>
+              {/* // <figure className="bg-red-400 h-52 w-52 absolute top-0 right-0" /> */}
+            </div>
           </div>
         </div>
       </section>
