@@ -423,7 +423,7 @@ export default function Home() {
         <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
           About me
         </h3>
-        <div className="h-full w-full xl:p-28 md:p-10 p-5 relative overflow-hidden rounded-lg bg-[#232227] border-neutral-700 border">
+        <div className="h-full w-full xl:p-28 md:p-10 p-5 relative overflow-hidden rounded-lg bg-[#232227] border-neutral-700 border mb-20">
           <p className="text-cm-white font-normal text-lg text-center font-geistSans">
             My web development journey began on Platzi, a online learning
             platform, where I mastered <Span>JavaScript</Span>,{" "}
@@ -449,6 +449,11 @@ export default function Home() {
             top-notch solutions. Let&apos;s create something cool together!
           </p>
         </div>
+      </section>
+      <section className="w-full flex flex-col items-center justify-center gap-8">
+        <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
+          My stack
+        </h3>
         <ul className="md:grid flex flex-col w-full max-w-full xl:grid-cols-3 md:grid-cols-2 gap-3">
           {technologies.map((technologie, i) => {
             return (
