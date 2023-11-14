@@ -5,20 +5,14 @@ import {
   IconBxlReact,
   IconCss3,
   IconExpress,
-  IconGithub,
-  IconGmail,
   IconHtml5,
-  IconLinkedin,
   IconNextjs,
   IconNodeJs,
-  IconTwitter,
   IconTypescript,
 } from "@components/icons";
 import { Card } from "@components/card";
 import { Span } from "../components/span";
 import { SingleCard } from "../components/card-2";
-import { ReactNode } from "react";
-import Link from "next/link";
 
 export const metadata = {
   title: `Huilen Solis's Portfolio`,
@@ -100,11 +94,11 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center gap-24 max-w-5xl w-full">
       <main className="w-full flex flex-col items-center relative p-20 cm-1xl:p-4 justify-center">
-        <h1 className="text-6xl font-bold dark:text-neutral-300 text-neutral-700 text-center">
+        <h1 className="text-6xl font-bold text-neutral-300 text-center">
           Huilen Solis
         </h1>
-        <h2 className="text-xl font-normal dark:text-neutral-400 text-neutral-500 w-2/3 text-center">
-          Full Stack Web Developer, building aesthetic, accesible and responsive
+        <h2 className="text-xl font-normal text-neutral-400 w-2/3 text-center">
+          Full Stack Web Developer, building aesthetic, accesible and scalable
           websites.
         </h2>
         <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap">
@@ -122,25 +116,21 @@ export default function Home() {
         </div>
       </main>
       <section className="w-full flex flex-col justify-center items-center gap-8 mb-20">
-        <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
-          Projects
-        </h3>
+        <h3 className="text-4xl font-bold text-neutral-300">Projects</h3>
         <ul className="flex flex-col gap-16 justify-center items-center w-full">
           <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
-                  <h3 className="text-4xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300">
+                  <h3 className="text-4xl font-bold tracking-tight text-neutral-300">
                     Culinary Alchemy
                   </h3>
-                  <span className="dark:text-cm-orange mb-2 text-blue-600">
-                    07/2023 - Present
-                  </span>
-                  <p className="font-normal text-neutral-800 dark:text-neutral-400">
+                  <span className="text-cm-orange mb-2">07/2023 - Present</span>
+                  <p className="font-normal text-neutral-400">
                     A Recipe Social Network, build in colaboration with{" "}
                     <a
                       href="https://www.linkedin.com/in/jesus-oyola-b9b530284/"
-                      className="dark:text-cm-orange text-blue-600 font-semibold hover:underline transition-all delay-75"
+                      className="text-cm-orangefont-semibold hover:underline transition-all delay-75"
                       target="_blank"
                     >
                       Jesus Oyola
@@ -174,101 +164,57 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-xl">
-                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                       Metodologies
                     </h3>
-                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
+                    <p className="font-normal text-neutral-400">
                       We have been working with a{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
+                      <span className="text-orange-400">
                         Clean Architecture
                       </span>{" "}
                       following the{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Solid principles,
-                      </span>{" "}
+                      <span className="text-orange-400">Solid principles,</span>{" "}
                       while staying organized using{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Jira
-                      </span>{" "}
-                      and{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Scrum metodologie
-                      </span>{" "}
+                      <span className="text-orange-400">Jira</span> and{" "}
+                      <span className="text-orange-400">Scrum metodologie</span>{" "}
                     </p>
                   </article>
                 </>,
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-xl">
-                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                       Backend Technologies
                     </h3>
-                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Typescript
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Node.JS
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Express
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Sequelize
-                      </span>{" "}
+                    <p className="font-normal text-neutral-400">
+                      <span className="text-orange-400">Typescript</span>,{" "}
+                      <span className="text-orange-400">Node.JS</span>,{" "}
+                      <span className="text-orange-400">Express</span>,{" "}
+                      <span className="text-orange-400">Sequelize</span>{" "}
                       (database ORM),{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        JWT
-                      </span>{" "}
-                      (Json Web Tokens),{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        PostgreSQL
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Bcrypt
-                      </span>{" "}
+                      <span className="text-orange-400">JWT</span> (Json Web
+                      Tokens),{" "}
+                      <span className="text-orange-400">PostgreSQL</span>,{" "}
+                      <span className="text-orange-400">Bcrypt</span>{" "}
                       (encripting library),{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Express-validator
-                      </span>{" "}
+                      <span className="text-orange-400">Express-validator</span>{" "}
                       (input validation)
                     </p>
                   </article>
                 </>,
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-xl">
-                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <h3 className="mb-2 text-3xl  font-bold tracking-tight  text-neutral-300 cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
-                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Typescript
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        React
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        React-router-dom
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Mui
-                      </span>{" "}
-                      (component library),{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Axios
-                      </span>{" "}
-                      and{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Zod
-                      </span>{" "}
-                      (input validation)
+                    <p className="font-normal text-neutral-400">
+                      <span className="text-orange-400">Typescript</span>,{" "}
+                      <span className="text-orange-400">React</span>,{" "}
+                      <span className="text-orange-400">React-router-dom</span>,{" "}
+                      <span className="text-orange-400">Mui</span> (component
+                      library), <span className="text-orange-400">Axios</span>{" "}
+                      and <span className="text-orange-400">Zod</span> (input
+                      validation)
                     </p>
                   </article>
                 </>,
@@ -279,13 +225,11 @@ export default function Home() {
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
-                  <h3 className=" text-4xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
+                  <h3 className=" text-4xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                     Spotify Clone
                   </h3>
-                  <span className="dark:text-cm-orange mb-2 text-blue-600">
-                    09/2023 - 09/2023
-                  </span>
-                  <p className="font-normal text-neutral-800 dark:text-neutral-400">
+                  <span className="text-cm-orange mb-2">09/2023 - 09/2023</span>
+                  <p className="font-normal text-neutral-400">
                     A personal Project, Built with Next js, Typescript and
                     Tailwind. It Contains almost all Spotify Functionalities,
                     providing a log In service music player, songs upload, user
@@ -313,47 +257,32 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-xl">
-                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                       Backend Technologies
                     </h3>
-                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
+                    <p className="font-normal text-neutral-400">
                       I have used{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Supabase
-                      </span>
-                      , which is a Firebase Alternative, Built on PostgreSQL,
-                      which comes with a ORM for Next js, letting you interact
-                      with your database and authenticating the user.
+                      <span className="text-orange-400">Supabase</span>, which
+                      is a Firebase Alternative, Built on PostgreSQL, which
+                      comes with a ORM for Next js, letting you interact with
+                      your database and authenticating the user.
                     </p>
                   </article>
                 </>,
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-xl">
-                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
-                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Typescript
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Next JS
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Supabase
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Zustand
-                      </span>{" "}
-                      (Global State manager), and{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Remix
-                      </span>{" "}
-                      (component library)
+                    <p className="font-normal text-neutral-400">
+                      <span className="text-orange-400">Typescript</span>,{" "}
+                      <span className="text-orange-400">Next JS</span>,{" "}
+                      <span className="text-orange-400">Supabase</span>,{" "}
+                      <span className="text-orange-400">Zustand</span> (Global
+                      State manager), and{" "}
+                      <span className="text-orange-400">Remix</span> (component
+                      library)
                     </p>
                   </article>
                 </>,
@@ -364,13 +293,11 @@ export default function Home() {
             <Card
               leftSide={
                 <article className="h-full w-full flex flex-col justify-center items-start">
-                  <h3 className=" text-4xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300">
+                  <h3 className=" text-4xl font-bold tracking-tight text-neutral-300">
                     Owr
                   </h3>
-                  <span className="dark:text-cm-orange mb-2 text-blue-600">
-                    08/2023 - 08/2023
-                  </span>
-                  <p className="font-normal text-neutral-800 dark:text-neutral-400">
+                  <span className="text-cm-orange mb-2">08/2023 - 08/2023</span>
+                  <p className="font-normal text-neutral-400">
                     A mini Duolingo clone, which provides random practicing
                     exercises in a entretaining way, providing a sentence in
                     French, letting you choose the correct traduction to
@@ -396,26 +323,15 @@ export default function Home() {
               }
               cards={[
                 <>
-                  <article className="p-8 cm-1xl:p-4 flex flex-col dark:border-neutral-600 border-2 border-neutral-400/50 cm-1xl:border-transparent cm-1xl:border-0 dark:cm-1xl:border-transparent dark:cm-1xl:border-0 h-full w-full rounded-xl">
-                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 cm-1xl:break-all">
+                  <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                       Frontend Technologies
                     </h3>
-                    <p className="font-normal text-neutral-800 dark:text-neutral-400">
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Typescript
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        React
-                      </span>
-                      ,{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        React-router-dom
-                      </span>{" "}
-                      and{" "}
-                      <span className="dark:text-orange-400 text-blue-600">
-                        Zustand
-                      </span>{" "}
+                    <p className="font-normal text-neutral-400">
+                      <span className="text-orange-400">Typescript</span>,{" "}
+                      <span className="text-orange-400">React</span>,{" "}
+                      <span className="text-orange-400">React-router-dom</span>{" "}
+                      and <span className="text-orange-400">Zustand</span>{" "}
                       (global state manager)
                     </p>
                   </article>
@@ -426,9 +342,7 @@ export default function Home() {
         </ul>
       </section>
       <section className="w-full flex flex-col justify-center items-center gap-8 mb-20">
-        <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
-          About me
-        </h3>
+        <h3 className="text-4xl font-bold text-neutral-300">About me</h3>
         <div className="h-full w-full xl:p-28 md:p-10 p-5 relative overflow-hidden rounded-lg bg-[#232227] border-neutral-700 border mb-20">
           <p className="text-cm-white font-normal text-lg text-center font-geistSans">
             My web development journey began on Platzi, a online learning
@@ -457,9 +371,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full flex flex-col items-center justify-center gap-8 mb-20">
-        <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
-          My stack
-        </h3>
+        <h3 className="text-4xl font-bold text-neutral-300">My stack</h3>
         <ul className="md:grid flex flex-col w-full max-w-full xl:grid-cols-3 md:grid-cols-2 gap-3">
           {technologies.map((technologie, i) => {
             return (
@@ -504,9 +416,7 @@ export default function Home() {
         </ul>
       </section>
       <section className="w-full flex justify-center items-center flex-col gap-8 mb-20">
-        <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
-          Contact me
-        </h3>
+        <h3 className="text-4xl font-bold text-neutral-300">Contact me</h3>
         <article className="flex items-center justify-center bg-orange-500 sm:p-36 xl:p-30 p-20 rounded-lg relative group w-full">
           <div className="z-[1] flex items-center justify-center w-full h-ful">
             <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">

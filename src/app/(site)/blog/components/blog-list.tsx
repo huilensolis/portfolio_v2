@@ -84,7 +84,7 @@ export default function BlogList() {
                   <div className="flex xl:max-h-64 gap-5 justify-start">
                     <Logo classes={"h-auto w-72 xl:inline-block hidden"} />
                     <section className="flex flex-col w-full">
-                      <h1 className="font-bold text-3xl sm:text-5xl dark:text-cm-white text-cm-black flex-grow-[1]">
+                      <h1 className="font-bold text-3xl sm:text-5xl text-cm-white flex-grow-[1]">
                         {latestPost.title}
                       </h1>
                       <p className="text-gray-500">{latestPost.subtitle}</p>

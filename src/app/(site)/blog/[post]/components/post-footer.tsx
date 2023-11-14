@@ -9,7 +9,7 @@ export function PostFooter({
 }) {
   return (
     <section className="flex flex-col w-full gap-3">
-      <h2 className="dark:text-neutral-300 text-neutral-700 text-2xl">
+      <h2 className="text-neutral-300 text-2xl">
         More posts
       </h2>
       <ul className="flex flex-col gap-5">

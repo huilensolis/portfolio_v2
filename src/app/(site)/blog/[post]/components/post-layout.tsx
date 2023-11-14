@@ -23,8 +23,8 @@ export function PostLayout({
         onClick={() => router.back()}
         className="mb-[20px] flex w-full justify-start items-center"
       >
-        <IconChevronLeft className="text-gray-500 dark:text-gray-400 w-6 h-6" />
-        <span className="text-gray-500 dark:text-gray-400 text-2xl">
+        <IconChevronLeft className="text-gray-400 w-6 h-6" />
+        <span className="text-gray-400 text-2xl">
           Go back
         </span>
       </button>
@@ -34,10 +34,10 @@ export function PostLayout({
           leftSide={
             <article className="w-full flex flex-col cm-2xl:flex-row cm-2xl:gap-4 cm-2xl:items-center cm-lg:flex-col">
               <Logo classes={"h-48 w-48 cm-lg:w-full cm-lg:h-full"} />
-              <h1 className="dark:text-neutral-300 text-neutral-700 font-bold text-7xl break-all cm-lg:hidden">
+              <h1 className="text-neutral-300 font-bold text-7xl break-all cm-lg:hidden">
                 Lets <br /> Con <br /> nect!
               </h1>
-              <h1 className="dark:text-neutral-300 text-neutral-700 font-bold text-7xl break-all hidden cm-lg:inline-block">
+              <h1 className="text-neutral-300 font-bold text-7xl break-all hidden cm-lg:inline-block">
                 Lets Connect!
               </h1>
             </article>
