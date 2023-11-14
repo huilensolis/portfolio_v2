@@ -4,8 +4,10 @@ import {
   IconBxlJavascript,
   IconBxlReact,
   IconCss3,
+  IconExpress,
   IconHtml5,
   IconNextjs,
+  IconNodeJs,
   IconTypescript,
 } from "@components/icons";
 import { Card } from "@components/card";
@@ -36,7 +38,7 @@ export const metadata = {
 const technologies: {
   name: string;
   icon: (props: React.ComponentProps<"svg">) => JSX.Element;
-  color: "orange" | "blue" | "violet";
+  color: "orange" | "blue" | "violet" | "green";
   span: string;
 }[] = [
   {
@@ -74,6 +76,18 @@ const technologies: {
     icon: IconBxlJavascript,
     color: "orange",
     span: "col-span-2",
+  },
+  {
+    name: "Node JS",
+    icon: IconNodeJs,
+    color: "green",
+    span: "col-span-2",
+  },
+  {
+    name: "Express",
+    icon: IconExpress,
+    color: "green",
+    span: "col-span-1",
   },
 ];
 export default function Home() {
@@ -449,6 +463,8 @@ export default function Home() {
                           ? "fill-orange-200 text-orange-200"
                           : technologie.color === "violet"
                           ? "fill-violet-200 text-violet-200"
+                          : technologie.color === "green"
+                          ? "fill-green-200 text-green-200"
                           : "fill-neutral-400 text-neutral-400"
                       } w-20 h-20 xl:inline-block hidden`}
                     />
@@ -461,8 +477,10 @@ export default function Home() {
                             ? "text-orange-200"
                             : technologie.color === "violet"
                             ? "text-violet-200"
+                            : technologie.color === "green"
+                            ? "text-green-200"
                             : "text-neutral-400"
-                        } font-geistSans font-bold text-3xl`}
+                        } font-geistSans font-semibold text-3xl`}
                       >
                         {technologie.name}
                       </h4>
