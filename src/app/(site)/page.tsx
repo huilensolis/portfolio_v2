@@ -445,7 +445,7 @@ export default function Home() {
         </section>
         <section className="w-full flex justify-center items-center flex-col gap-8 mb-20">
           <h3 className="text-4xl font-bold text-neutral-300">Contact me</h3>
-          <article className="flex items-center justify-center bg-orange-500 sm:p-36 xl:p-30 p-20 rounded-lg relative group w-full">
+          <article className="flex items-center justify-center bg-orange-400 sm:p-36 xl:p-30 p-20 rounded-lg relative group w-full">
             <div className="z-[1] flex items-center justify-center w-full h-ful">
               <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
                 huilensolis@skiff.com
@@ -462,7 +462,7 @@ export default function Home() {
             target="_blank"
             className="z-[1] w-full"
           >
-            <article className="flex items-center justify-center bg-blue-500 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <article className="flex items-center justify-center bg-blue-400 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
               <div className="flex items-center justify-center w-full h-ful">
                 <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
                   Huilensolis
@@ -481,7 +481,7 @@ export default function Home() {
             target="_blank"
             className="z-[1] w-full"
           >
-            <article className="flex items-center justify-center bg-violet-500 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <article className="flex items-center justify-center bg-violet-400 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
               <div className="flex items-center justify-center w-full h-ful">
                 <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
                   Huilensolis
@@ -500,7 +500,7 @@ export default function Home() {
             target="_blank"
             className="z-[1] w-full"
           >
-            <article className="flex items-center justify-center bg-blue-500 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <article className="flex items-center justify-center bg-blue-400 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
               <div className="flex items-center justify-center w-full h-ful">
                 <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
                   solishuilen
