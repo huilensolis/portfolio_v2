@@ -6,15 +6,15 @@ interface Props {
 }
 
 export function Card({ leftSide, cards }: Props) {
-  if (cards.length > 3)
+  if (cards.length > 4)
     throw new Error(
       "this component doesnt suppont more than 3 cards, please remove " +
-        (cards.length - 3) +
+        (cards.length - 4) +
         "card"
     );
   return (
-    <article className="flex justify-center items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-white dark:bg-[#1F2124] border border-neutral-300 rounded-2xl dark:border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20 cm-1xl:bg-transparent cm-1xl:dark:bg-transparent cm-1xl:border-transparent cm-1xl:dark:border-transparent">
-      <div className="w-full h-full flex flex-col justify-center items-center">
+    <article className="flex justify-start items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-white dark:bg-[#1F2124] border border-neutral-300 rounded-2xl dark:border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20 cm-1xl:bg-transparent cm-1xl:dark:bg-transparent cm-1xl:border-transparent cm-1xl:dark:border-transparent">
+      <div className="h-full flex flex-col justify-center items-center">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
           <figure className="[background-image:radial-gradient_at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute top-24 right-20 select-none z-0 cm-1xl:hidden blur-[80px] opacity-100" />
           <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-16 right-60 select-none z-0 cm-1xl:hidden blur-[80px]" />
@@ -27,7 +27,7 @@ export function Card({ leftSide, cards }: Props) {
         </div>
 
         <div
-          className={`z-10 w-full flex justify-center items-center before:[background-image:url(/square-pattern.png)] before:[background-size:1200px] before:[background-position:center] relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-[1]`}
+          className={`z-10 flex justify-center items-center before:[background-image:url(/square-pattern.png)] before:[background-size:1200px] before:[background-position:center] relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-[1]`}
         >
           {leftSide}
         </div>
@@ -40,15 +40,26 @@ export function Card({ leftSide, cards }: Props) {
                 ? "translate-x-0 cm-1xl:translate-y-0 cm-1xl:-translate-x-0"
                 : index === 1
                 ? "-translate-x-56 cm-1xl:-translate-y-0 cm-1xl:-translate-x-0"
-                : "-translate-x-[27rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0";
+                : index === 2
+                ? "-translate-x-[28rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0"
+                : "-translate-x-[42rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0";
             const rotateValue =
               index === 0 && cards.length > 1
-                ? "-rotate-[12deg] hover:-rotate-[8deg] cm-1xl:-rotate-0"
+                ? "-rotate-[16deg] hover:-rotate-[8deg] cm-1xl:-rotate-0"
                 : index === 1 && cards.length > 1
-                ? "-rotate-[8deg] hover:-rotate-[4deg] cm-1xl:-rotate-0"
+                ? "-rotate-[12deg] hover:-rotate-[4deg] cm-1xl:-rotate-0"
+                : index === 2 && cards.length > 1
+                ? "-rotate-[8deg] hover:-rotate-0 cm-1xl:-rotate-0"
                 : "-rotate-[4deg] hover:-rotate-0 cm-1xl:-rotate-0";
 
-            const zIndex = index === 0 ? "z-10" : index === 1 ? "z-20" : "z-30";
+            const zIndex =
+              index === 0
+                ? "z-10"
+                : index === 1
+                ? "z-20"
+                : index === 2
+                ? "z-30"
+                : "z-40";
 
             return (
               <li

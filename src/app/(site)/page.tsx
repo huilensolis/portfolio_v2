@@ -5,14 +5,20 @@ import {
   IconBxlReact,
   IconCss3,
   IconExpress,
+  IconGithub,
+  IconGmail,
   IconHtml5,
+  IconLinkedin,
   IconNextjs,
   IconNodeJs,
+  IconTwitter,
   IconTypescript,
 } from "@components/icons";
 import { Card } from "@components/card";
 import { Span } from "../components/span";
 import { SingleCard } from "../components/card-2";
+import { ReactNode } from "react";
+import Link from "next/link";
 
 export const metadata = {
   title: `Huilen Solis's Portfolio`,
@@ -419,7 +425,7 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="w-full flex flex-col justify-center items-center gap-8">
+      <section className="w-full flex flex-col justify-center items-center gap-8 mb-20">
         <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
           About me
         </h3>
@@ -450,7 +456,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="w-full flex flex-col items-center justify-center gap-8">
+      <section className="w-full flex flex-col items-center justify-center gap-8 mb-20">
         <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
           My stack
         </h3>
@@ -496,6 +502,80 @@ export default function Home() {
             );
           })}
         </ul>
+      </section>
+      <section className="w-full flex justify-center items-center flex-col gap-8 mb-20">
+        <h3 className="text-4xl font-bold dark:text-neutral-300 text-neutral-700">
+          Contact me
+        </h3>
+        <article className="flex items-center justify-center bg-orange-500 sm:p-36 xl:p-30 p-20 rounded-lg relative group w-full">
+          <div className="z-[1] flex items-center justify-center w-full h-ful">
+            <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+              huilensolis@skiff.com
+            </h4>
+          </div>
+          <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
+            <span className="text-neutral-200/20 font-geistSans font-semibold text-[30vw] select-none">
+              Gmail
+            </span>
+          </div>
+        </article>
+        <a
+          href="https://www.linkedin.com/in/huilensolis/"
+          target="_blank"
+          className="z-[1] w-full"
+        >
+          <article className="flex items-center justify-center bg-blue-500 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <div className="flex items-center justify-center w-full h-ful">
+              <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                Huilensolis
+              </h4>
+              <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
+            </div>
+            <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
+              <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                LinkedIn
+              </span>
+            </div>
+          </article>
+        </a>
+        <a
+          href="https://github.com/Huilensolis"
+          target="_blank"
+          className="z-[1] w-full"
+        >
+          <article className="flex items-center justify-center bg-violet-500 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <div className="flex items-center justify-center w-full h-ful">
+              <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                Huilensolis
+              </h4>
+              <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
+            </div>
+            <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
+              <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                Github
+              </span>
+            </div>
+          </article>
+        </a>
+        <a
+          href="https://twitter.com/solishuilen"
+          target="_blank"
+          className="z-[1] w-full"
+        >
+          <article className="flex items-center justify-center bg-blue-500 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <div className="flex items-center justify-center w-full h-ful">
+              <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                solishuilen
+              </h4>
+              <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
+            </div>
+            <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
+              <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                Twitter
+              </span>
+            </div>
+          </article>
+        </a>
       </section>
     </section>
   );
