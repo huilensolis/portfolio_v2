@@ -1,3 +1,5 @@
-body:hover {
+body,
+button,
+a:hover {
   cursor: none;
 }
