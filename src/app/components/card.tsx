@@ -14,27 +14,27 @@ export function Card({ leftSide, cards }: Props) {
         "card"
     );
   return (
-    <article className="flex justify-start items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-[#1F2124] border border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20 cm-1xl:bg-transparent cm-1xl:border-transparent">
-      <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
-      <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
+    <article className="flex justify-start items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-[#1F2124] border border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20">
+      <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px]" />
+      <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px]" />
 
-      <figure className="absolute left-0 top-[-15%] h-[130%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
-      <figure className="absolute right-0 top-[-15%] h-[130%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+      <figure className="absolute left-0 top-[-15%] h-[130%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px]" />
+      <figure className="absolute right-0 top-[-15%] h-[130%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px]" />
 
       <div className="h-full flex flex-col justify-center items-center">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <figure className="[background-image:radial-gradient_at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute top-24 right-20 select-none z-0 cm-1xl:hidden blur-[80px] opacity-100" />
-          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-16 right-60 select-none z-0 cm-1xl:hidden blur-[80px]" />
+          <figure className="[background-image:radial-gradient_at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute top-24 right-20 select-none z-0 blur-[80px] opacity-100" />
+          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-16 right-60 select-none z-0 blur-[80px]" />
 
           <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-48 right-80 cm-1xl:left-2 select-none z-0 cm-1xl:hidden blur-[80px]" />
-          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-32 right-80  cm-1xl:left-2 select-none z-0 cm-1xl:hidden blur-[80px]" />
+          <figure className="[background-image:radial-gradient(at_center,_#F974164D,_#F9741600)] opacity-60 w-64 h-64 absolute top-32 right-80  cm-1xl:left-2 select-none z-0 blur-[80px]" />
 
           <figure className="[background-image:radial-gradient(at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute top-14 right-20 cm-1xl:right-2 select-none z-0 cm-1xl:hidden blur-[80px] opacity-100" />
-          <figure className="[background-image:radial-gradient(at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute bottom-16 right-16 cm-1xl:right-2 select-none z-0 cm-1xl:hidden blur-[80px] opacity-100" />
+          <figure className="[background-image:radial-gradient(at_center,_#8C5CF64D,_#F9741600)] w-64 h-64 absolute bottom-16 right-16 cm-1xl:right-2 select-none z-0 blur-[80px] opacity-100" />
         </div>
 
         <div
-          className={`z-10 flex justify-center items-center before:[background-image:url(/square-pattern.png)] before:[background-size:1200px] before:[background-position:center] relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-[1]`}
+          className={`z-10 flex justify-center items-center before:[background-image:url(/square-pattern.png)] before:[background-size:1200px] before:[background-position:center] relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-[1] cm-1xl:p-5`}
         >
           {leftSide}
         </div>
@@ -71,7 +71,7 @@ export function Card({ leftSide, cards }: Props) {
             return (
               <li
                 key={index}
-                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:cm-1xl:scale-100 cm-1xl:contents overflow-hidden shadow-left-bottom shadow-neutral-950/30 animate-cm-fade-in-left [animation-timeline:view();] [animation-range:0px_50vh] cm-2xl:[animation-range:0px_200px] cm-1xl:[animation-range:0px_0px]`}
+                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:cm-1xl:scale-100 cm-1xl:contents overflow-hidden shadow-left-bottom shadow-neutral-950/30 animate-cm-fade-in-left [animation-timeline:view();] [animation-range:0px_50vh] cm-2xl:[animation-range:0px_200px] cm-1xl:[animation-range:0px_0px] cm-1xl:p-10`}
               >
                 <MiniCard>{card}</MiniCard>
               </li>
@@ -84,7 +84,7 @@ export function Card({ leftSide, cards }: Props) {
 }
 function MiniCard({ children }: { children?: ReactNode }) {
   return (
-    <article className="flex justify-start items-start flex-col bg-neutral-800 cm-1xl:bg-transparent w-full h-full">
+    <article className="flex justify-start items-start flex-col bg-neutral-800 w-full h-full cm-1xl:z-[2]">
       {children}
     </article>
   );

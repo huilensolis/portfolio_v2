@@ -28,8 +28,8 @@ export function Header() {
     },
   ];
   return (
-    <header className="w-screen flex justify-between items-center h-20 fixed top-0 left-0 sm:px-20 px-3 bg-cm-black border-b-2 border-gray-700 z-50">
-      <nav className="w-max">
+    <header className="w-screen flex justify-center items-center h-20 fixed top-0 left-0 bg-cm-black border-b-2 border-gray-700 z-50 sm:px-20 px-5 cm-1xl:px-2">
+      <nav className="max-w-5xl w-full">
         <ul className="w-max flex justify-start gap-5">
           <li>
             <Link href={"/"}>
