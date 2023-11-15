@@ -106,8 +106,8 @@ export default function Home() {
             Huilen Solis
           </h1>
           <h2 className="text-xl font-normal text-neutral-400 w-2/3 text-center">
-            Full Stack Web Developer, building aesthetic, accesible and scalable
-            websites.
+            Full Stack Web Developer, building aesthetic and accesible websites
+            with scalable, perfomant and legible code.
           </h2>
           <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap">
             <a href="https://github.com/Huilensolis" target="_blank">
@@ -133,24 +133,24 @@ export default function Home() {
                     <h3 className="text-4xl font-bold tracking-tight text-neutral-300">
                       Culinary Alchemy
                     </h3>
-                    <span className="text-cm-orange mb-2">
+                    <span className="text-orange-300 mb-2 font-geistSans">
                       07/2023 - Present
                     </span>
-                    <p className="font-normal text-neutral-400">
-                      A Recipe Social Network, build in colaboration with{" "}
+                    <p className="font-normal text-neutral-400 font-geistSans">
+                      A Recipe Social Network, built in collaboration with{" "}
                       <a
                         href="https://www.linkedin.com/in/jesus-oyola-b9b530284/"
-                        className="text-cm-orangefont-semibold hover:underline transition-all delay-75"
+                        className="text-orange-300 font-semibold hover:underline transition-all delay-75"
                         target="_blank"
                       >
                         Jesus Oyola
                       </a>
                       , who worked on the frontend, while I worked in the
-                      Backend my role consisted on creating the backend api, and
-                      its routes, controllers, providers, while working with
-                      Json Web Tokens to manage user session and roles.
-                      Connecting to a database and manageing images hosted in
-                      third party services, interacting through an api.
+                      Backend. My role consisted of creating the backend API,
+                      and its routes, controllers, and providers while working
+                      with JSON Web Tokens to manage user sessions and roles.
+                      Connecting to a database and managing images hosted in
+                      third-party services, interacting through an API.
                     </p>
                     <div className="flex cm-1xl:flex-col gap-4 mt-4 justify-start w-full">
                       <a
@@ -178,18 +178,18 @@ export default function Home() {
                       <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Metodologies
                       </h3>
-                      <p className="font-normal text-neutral-400">
+                      <p className="font-normal text-neutral-400 font-geistSans">
                         We have been working with a{" "}
-                        <span className="text-orange-400">
+                        <span className="text-orange-300">
                           Clean Architecture
                         </span>{" "}
                         following the{" "}
-                        <span className="text-orange-400">
+                        <span className="text-orange-300">
                           Solid principles,
                         </span>{" "}
                         while staying organized using{" "}
-                        <span className="text-orange-400">Jira</span> and{" "}
-                        <span className="text-orange-400">
+                        <span className="text-orange-300">Jira</span> and{" "}
+                        <span className="text-orange-300">
                           Scrum metodologie
                         </span>{" "}
                       </p>
@@ -200,18 +200,18 @@ export default function Home() {
                       <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Backend Technologies
                       </h3>
-                      <p className="font-normal text-neutral-400">
-                        <span className="text-orange-400">Typescript</span>,{" "}
-                        <span className="text-orange-400">Node.JS</span>,{" "}
-                        <span className="text-orange-400">Express</span>,{" "}
-                        <span className="text-orange-400">Sequelize</span>{" "}
+                      <p className="font-normal text-neutral-400 font-geistSans">
+                        <span className="text-orange-300">Typescript</span>,{" "}
+                        <span className="text-orange-300">Node.JS</span>,{" "}
+                        <span className="text-orange-300">Express</span>,{" "}
+                        <span className="text-orange-300">Sequelize</span>{" "}
                         (database ORM),{" "}
-                        <span className="text-orange-400">JWT</span> (Json Web
+                        <span className="text-orange-300">JWT</span> (Json Web
                         Tokens),{" "}
-                        <span className="text-orange-400">PostgreSQL</span>,{" "}
-                        <span className="text-orange-400">Bcrypt</span>{" "}
+                        <span className="text-orange-300">PostgreSQL</span>,{" "}
+                        <span className="text-orange-300">Bcrypt</span>{" "}
                         (encripting library),{" "}
-                        <span className="text-orange-400">
+                        <span className="text-orange-300">
                           Express-validator
                         </span>{" "}
                         (input validation)
@@ -223,16 +223,16 @@ export default function Home() {
                       <h3 className="mb-2 text-3xl  font-bold tracking-tight  text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h3>
-                      <p className="font-normal text-neutral-400">
-                        <span className="text-orange-400">Typescript</span>,{" "}
-                        <span className="text-orange-400">React</span>,{" "}
-                        <span className="text-orange-400">
+                      <p className="font-normal text-neutral-400 font-geistSans">
+                        <span className="text-orange-300">Typescript</span>,{" "}
+                        <span className="text-orange-300">React</span>,{" "}
+                        <span className="text-orange-300">
                           React-router-dom
                         </span>
-                        , <span className="text-orange-400">Mui</span>{" "}
+                        , <span className="text-orange-300">Mui</span>{" "}
                         (component library),{" "}
-                        <span className="text-orange-400">Axios</span> and{" "}
-                        <span className="text-orange-400">Zod</span> (input
+                        <span className="text-orange-300">Axios</span> and{" "}
+                        <span className="text-orange-300">Zod</span> (input
                         validation)
                       </p>
                     </article>
@@ -247,10 +247,10 @@ export default function Home() {
                     <h3 className=" text-4xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                       Spotify Clone
                     </h3>
-                    <span className="text-cm-orange mb-2">
+                    <span className="text-orange-300 mb-2 font-geistSans">
                       09/2023 - 09/2023
                     </span>
-                    <p className="font-normal text-neutral-400">
+                    <p className="font-normal text-neutral-400 font-geistSans">
                       A personal Project, Built with Next js, Typescript and
                       Tailwind. It Contains almost all Spotify Functionalities,
                       providing a log In service music player, songs upload,
@@ -283,9 +283,9 @@ export default function Home() {
                       <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Backend Technologies
                       </h3>
-                      <p className="font-normal text-neutral-400">
+                      <p className="font-normal text-neutral-400 font-geistSans">
                         I have used{" "}
-                        <span className="text-orange-400">Supabase</span>, which
+                        <span className="text-orange-300">Supabase</span>, which
                         is a Firebase Alternative, Built on PostgreSQL, which
                         comes with a ORM for Next js, letting you interact with
                         your database and authenticating the user.
@@ -297,13 +297,13 @@ export default function Home() {
                       <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h3>
-                      <p className="font-normal text-neutral-400">
-                        <span className="text-orange-400">Typescript</span>,{" "}
-                        <span className="text-orange-400">Next JS</span>,{" "}
-                        <span className="text-orange-400">Supabase</span>,{" "}
-                        <span className="text-orange-400">Zustand</span> (Global
+                      <p className="font-normal text-neutral-400 font-geistSans">
+                        <span className="text-orange-300">Typescript</span>,{" "}
+                        <span className="text-orange-300">Next JS</span>,{" "}
+                        <span className="text-orange-300">Supabase</span>,{" "}
+                        <span className="text-orange-300">Zustand</span> (Global
                         State manager), and{" "}
-                        <span className="text-orange-400">Remix</span>{" "}
+                        <span className="text-orange-300">Remix</span>{" "}
                         (component library)
                       </p>
                     </article>
@@ -318,10 +318,10 @@ export default function Home() {
                     <h3 className=" text-4xl font-bold tracking-tight text-neutral-300">
                       Owr
                     </h3>
-                    <span className="text-cm-orange mb-2">
+                    <span className="text-orange-300 mb-2 font-geistSans">
                       08/2023 - 08/2023
                     </span>
-                    <p className="font-normal text-neutral-400">
+                    <p className="font-normal text-neutral-400 font-geistSans">
                       A mini Duolingo clone, which provides random practicing
                       exercises in a entretaining way, providing a sentence in
                       French, letting you choose the correct traduction to
@@ -351,13 +351,13 @@ export default function Home() {
                       <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h3>
-                      <p className="font-normal text-neutral-400">
-                        <span className="text-orange-400">Typescript</span>,{" "}
-                        <span className="text-orange-400">React</span>,{" "}
-                        <span className="text-orange-400">
+                      <p className="font-normal text-neutral-400 font-geistSans">
+                        <span className="text-orange-300">Typescript</span>,{" "}
+                        <span className="text-orange-300">React</span>,{" "}
+                        <span className="text-orange-300">
                           React-router-dom
                         </span>{" "}
-                        and <span className="text-orange-400">Zustand</span>{" "}
+                        and <span className="text-orange-300">Zustand</span>{" "}
                         (global state manager)
                       </p>
                     </article>
@@ -411,7 +411,7 @@ export default function Home() {
                           technologie.color === "blue"
                             ? "fill-blue-200 text-blue-200"
                             : technologie.color === "orange"
-                            ? "fill-orange-200 text-orange-200"
+                            ? "fill-orange-200 text-orange-300"
                             : technologie.color === "violet"
                             ? "fill-violet-200 text-violet-200"
                             : technologie.color === "green"
@@ -425,7 +425,7 @@ export default function Home() {
                             technologie.color === "blue"
                               ? "text-blue-200"
                               : technologie.color === "orange"
-                              ? "text-orange-200"
+                              ? "text-orange-300"
                               : technologie.color === "violet"
                               ? "text-violet-200"
                               : technologie.color === "green"
