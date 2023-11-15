@@ -1,14 +1,8 @@
-body,
-button,
-a:hover {
+* :hover {
   cursor: none;
 }
 @media (max-width: 1024px) {
-  body:hover {
+  *:hover {
     cursor: default;
-  }
-  button,
-  a:hover {
-    cursor: pointer;
   }
 }

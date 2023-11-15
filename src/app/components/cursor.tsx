@@ -39,6 +39,7 @@ export function Cursor() {
     return () => {
       const body = document.querySelector("body");
       body?.removeEventListener("mousemove", handleMouseOver);
+      body?.style.setProperty("cursor", "default");
     };
   }, []);
   return (

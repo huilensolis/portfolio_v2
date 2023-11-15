@@ -7,6 +7,8 @@ import localFont from "next/font/local";
 import { Header } from "@components/header";
 import { Footer } from "@components/footer";
 import { Analytics } from "@vercel/analytics/react";
+import { Suspense } from "react";
+import { Cursor } from "@components/cursor";
 
 export const metadata: Metadata = {
   title: {
@@ -63,6 +65,9 @@ export default function RootLayout({
         <meta name="robots" content="all" />
       </Head>
       <body className={`${clasDisplay.className} ${GeistSans.variable}`}>
+        <Suspense>
+          <Cursor />
+        </Suspense>
         <Header />
         <div className="bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-80px)] pt-24 w-full sm:px-20 px-5 cm-1xl:px-2 overflow-x-clip">
           {children}

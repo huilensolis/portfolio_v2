@@ -15,8 +15,6 @@ import {
 import { Card } from "@components/card";
 import { Span } from "../components/span";
 import { SingleCard } from "../components/card-2";
-import { Suspense } from "react";
-import { Cursor } from "../components/cursor";
 import { SquarePatten } from "../components/square-patten";
 
 export const metadata = {
@@ -98,9 +96,6 @@ const technologies: {
 export default function Home() {
   return (
     <>
-      <Suspense>
-        <Cursor />
-      </Suspense>
       <SquarePatten />
       <section className="flex flex-col items-center gap-24 max-w-5xl w-full relative">
         <main className="flex flex-col items-center p-20 cm-1xl:p-4 justify-center z-[3]">
