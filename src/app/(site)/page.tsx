@@ -177,7 +177,7 @@ export default function Home() {
                 }
                 cards={[
                   <>
-                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] cm-1xl:border-transparent cm-1xl:border-0 h-full w-full ">
                       <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Metodologies
                       </h3>
@@ -199,7 +199,7 @@ export default function Home() {
                     </article>
                   </>,
                   <>
-                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] cm-1xl:border-transparent cm-1xl:border-0 h-full w-full ">
                       <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Backend Technologies
                       </h3>
@@ -222,7 +222,7 @@ export default function Home() {
                     </article>
                   </>,
                   <>
-                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] cm-1xl:border-transparent cm-1xl:border-0 h-full w-full">
                       <h3 className="mb-2 text-3xl  font-bold tracking-tight  text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h3>
@@ -282,7 +282,7 @@ export default function Home() {
                 }
                 cards={[
                   <>
-                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] cm-1xl:border-transparent cm-1xl:border-0 h-full w-full ">
                       <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Backend Technologies
                       </h3>
@@ -296,7 +296,7 @@ export default function Home() {
                     </article>
                   </>,
                   <>
-                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] cm-1xl:border-transparent cm-1xl:border-0 h-full w-full ">
                       <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h3>
@@ -350,7 +350,7 @@ export default function Home() {
                 }
                 cards={[
                   <>
-                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-2 cm-1xl:border-transparent cm-1xl:border-0 h-full w-full rounded-xl">
+                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] cm-1xl:border-transparent cm-1xl:border-0 h-full w-full ">
                       <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h3>
