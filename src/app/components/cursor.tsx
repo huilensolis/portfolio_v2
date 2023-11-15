@@ -4,9 +4,8 @@ import { useEffect, useRef } from "react";
 
 export function Cursor() {
   const cursor = useRef(null);
-
   useEffect(() => {
-    if (document) {
+    if (document && window && window.innerWidth >= 1280) {
       const body = document.querySelector("body");
 
       body?.addEventListener("mousemove", handleMouseOver);
@@ -44,7 +43,7 @@ export function Cursor() {
   }, []);
   return (
     <div
-      className="fixed [width:var(--mouse-width)] [height:var(--mouse-height)] rounded-full bg-cm-white pointer-events-none mix-blend-difference z-[99999] [top:var(--mouse-y)] [left:var(--mouse-x)] duration-75 ease-in-out"
+      className="fixed [width:var(--mouse-width)] [height:var(--mouse-height)] rounded-full bg-cm-white pointer-events-none mix-blend-difference z-[99999] [top:var(--mouse-y)] [left:var(--mouse-x)] duration-75 ease-in-out "
       ref={cursor}
     />
   );

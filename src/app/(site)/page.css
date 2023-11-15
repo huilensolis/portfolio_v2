@@ -3,3 +3,12 @@ button,
 a:hover {
   cursor: none;
 }
+@media (max-width: 1024px) {
+  body:hover {
+    cursor: default;
+  }
+  button,
+  a:hover {
+    cursor: pointer;
+  }
+}
