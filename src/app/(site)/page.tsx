@@ -17,6 +17,7 @@ import { Span } from "../components/span";
 import { SingleCard } from "../components/card-2";
 import { Suspense } from "react";
 import { Cursor } from "../components/cursor";
+import { SquarePatten } from "../components/square-patten";
 
 export const metadata = {
   title: `Huilen Solis's Portfolio`,
@@ -100,15 +101,13 @@ export default function Home() {
       <Suspense>
         <Cursor />
       </Suspense>
+      <SquarePatten />
       <section className="flex flex-col items-center gap-24 max-w-5xl w-full relative">
-        <main className="w-full flex flex-col items-center p-20 cm-1xl:p-4 justify-center relative">
-          <figure className="absolute top-10 left-0 h-full w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
-          <figure className="absolute top-10 right-0 h-full w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
-
+        <main className="flex flex-col items-center p-20 cm-1xl:p-4 justify-center z-[3]">
           <h1 className="text-6xl font-bold text-neutral-300 text-center z-10 flex justify-center items-center">
             Huilen Solis
           </h1>
-          <h2 className="text-xl font-normal text-neutral-400 w-2/3 text-center">
+          <h2 className="text-xl font-normal text-neutral-400 w-2/3 text-center font-geistSans">
             Full Stack Web Developer, building aesthetic and accesible websites
             with scalable, perfomant and legible code.
           </h2>
@@ -126,7 +125,7 @@ export default function Home() {
             </a>
           </div>
         </main>
-        <section className="w-full flex flex-col justify-center items-center gap-8 mb-20">
+        <section className="w-full flex flex-col justify-center items-center gap-8 mb-20 z-10">
           <h3 className="text-4xl font-bold text-neutral-300">Projects</h3>
           <ul className="flex flex-col gap-16 justify-center items-center w-full">
             <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
