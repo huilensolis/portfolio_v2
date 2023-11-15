@@ -450,75 +450,103 @@ export default function Home() {
         </section>
         <section className="w-full flex justify-center items-center flex-col gap-8 mb-20">
           <h3 className="text-4xl font-bold text-neutral-300">Contact me</h3>
-          <article className="flex items-center justify-center bg-orange-400 sm:p-36 xl:p-30 p-20 relative group w-full">
-            <div className="z-[1] flex items-center justify-center w-full h-ful">
-              <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
-                huilensolis@skiff.com
-              </h4>
-            </div>
-            <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-              <span className="text-neutral-200/20 font-geistSans font-semibold text-[30vw] select-none">
-                Gmail
-              </span>
-            </div>
-          </article>
-          <a
-            href="https://www.linkedin.com/in/huilensolis/"
-            target="_blank"
-            className="z-[1] w-full"
-          >
-            <article className="flex items-center justify-center bg-blue-400 sm:p-40 xl:p-30 p-20 relative group">
-              <div className="flex items-center justify-center w-full h-ful">
+          <SingleCard>
+            <article className="flex items-center justify-center sm:p-36 xl:p-30 p-20 relative group w-full">
+              <div className="z-[1] flex items-center justify-center w-full h-ful relative">
                 <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
-                  Huilensolis
+                  huilensolis@skiff.com
                 </h4>
-                <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
+                <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
+
+                <figure className="absolute left-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
               </div>
               <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
-                  LinkedIn
+                <span className="text-neutral-200/20 font-geistSans font-semibold text-[30vw] select-none">
+                  Gmail
                 </span>
               </div>
             </article>
-          </a>
-          <a
-            href="https://github.com/Huilensolis"
-            target="_blank"
-            className="z-[1] w-full"
-          >
-            <article className="flex items-center justify-center bg-violet-400 sm:p-40 xl:p-30 p-20 relative group">
-              <div className="flex items-center justify-center w-full h-ful">
-                <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
-                  Huilensolis
-                </h4>
-                <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
-              </div>
-              <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
-                  Github
-                </span>
-              </div>
-            </article>
-          </a>
-          <a
-            href="https://twitter.com/solishuilen"
-            target="_blank"
-            className="z-[1] w-full"
-          >
-            <article className="flex items-center justify-center bg-blue-400 sm:p-40 xl:p-30 p-20 relative group">
-              <div className="flex items-center justify-center w-full h-ful">
-                <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
-                  solishuilen
-                </h4>
-                <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
-              </div>
-              <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
-                  Twitter
-                </span>
-              </div>
-            </article>
-          </a>
+          </SingleCard>
+          <SingleCard>
+            <a
+              href="https://www.linkedin.com/in/huilensolis/"
+              target="_blank"
+              className="z-[1] w-full"
+            >
+              <article className="flex items-center justify-center sm:p-40 xl:p-30 p-20 relative group">
+                <div className="flex items-center justify-center w-full h-full relative">
+                  <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                    Huilensolis
+                  </h4>
+                  <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
+                  <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                  <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
+
+                  <figure className="absolute left-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                  <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                </div>
+                <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                    LinkedIn
+                  </span>
+                </div>
+              </article>
+            </a>
+          </SingleCard>
+          <SingleCard>
+            <a
+              href="https://github.com/Huilensolis"
+              target="_blank"
+              className="z-[1] w-full"
+            >
+              <article className="flex items-center justify-center sm:p-40 xl:p-30 p-20 relative group">
+                <div className="flex items-center justify-center w-full h-full relative">
+                  <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                    Huilensolis
+                  </h4>
+                  <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
+                  <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                  <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
+
+                  <figure className="absolute left-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                  <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                </div>
+                <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                    Github
+                  </span>
+                </div>
+              </article>
+            </a>
+          </SingleCard>
+          <SingleCard>
+            <a
+              href="https://twitter.com/solishuilen"
+              target="_blank"
+              className="z-[1] w-full"
+            >
+              <article className="flex items-center justify-center sm:p-40 xl:p-30 p-20 relative group">
+                <div className="flex items-center justify-center w-full h-full relative">
+                  <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                    solishuilen
+                  </h4>
+                  <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
+                  <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                  <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
+
+                  <figure className="absolute left-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                  <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
+                </div>
+                <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                    Twitter
+                  </span>
+                </div>
+              </article>
+            </a>
+          </SingleCard>
         </section>
       </section>
     </>
