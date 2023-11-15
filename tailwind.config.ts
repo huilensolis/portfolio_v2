@@ -49,19 +49,9 @@ const config: Config = {
           "0%": { transform: "translateX(-30%)" },
           "100%": { transform: "translateX(0%))" },
         },
-        "cm-fade-text-in-top-dark": {
-          "0%": {
-            color: "transparent",
-            transform: "translateY(100%)",
-          },
-          "20%": { color: "#F1F1EF", transform: " translateY(0)" },
-        },
-        "cm-fade-text-in-top-orange": {
-          "0%": {
-            color: "transparent",
-            transform: "translateY(100%)",
-          },
-          "20%": { color: "#F3722B", transform: " translateY(0)" },
+        "cm-dissapear": {
+          "0%": { opacity: "30%" },
+          "100%": { opacity: "0%" },
         },
       },
       animation: {
@@ -70,8 +60,7 @@ const config: Config = {
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
         "cm-fade-in-left": "3s cm-fade-in-left linear backwards ",
         "cm-translate-to-left": "1s cm-translate-to-left linear move forwards",
-        "cm-fade-text-in-top-dark": "1s cm-fade-text-in-top-dark forwards",
-        "cm-fade-text-in-top-orange": "1s cm-fade-text-in-top-orange forwards",
+        "cm-dissapear": "1s cm-dissapear linear forwards",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",

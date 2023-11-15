@@ -100,9 +100,12 @@ export default function Home() {
       <Suspense>
         <Cursor />
       </Suspense>
-      <section className="flex flex-col items-center gap-24 max-w-5xl w-full">
-        <main className="w-full flex flex-col items-center relative p-20 cm-1xl:p-4 justify-center">
-          <h1 className="text-6xl font-bold text-neutral-300 text-center">
+      <section className="flex flex-col items-center gap-24 max-w-5xl w-full relative">
+        <main className="w-full flex flex-col items-center p-20 cm-1xl:p-4 justify-center relative">
+          <figure className="absolute top-10 left-0 h-full w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
+          <figure className="absolute top-10 right-0 h-full w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
+
+          <h1 className="text-6xl font-bold text-neutral-300 text-center z-10 flex justify-center items-center">
             Huilen Solis
           </h1>
           <h2 className="text-xl font-normal text-neutral-400 w-2/3 text-center">
@@ -367,7 +370,10 @@ export default function Home() {
             </li>
           </ul>
         </section>
-        <section className="w-full flex flex-col justify-center items-center gap-8 mb-20">
+
+        <section className="w-full flex flex-col justify-center items-center gap-8 mb-20 relative">
+          <figure className="absolute top-[-5%] left-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
+          <figure className="absolute top-[5%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <h3 className="text-4xl font-bold text-neutral-300">About me</h3>
           <div className="h-full w-full xl:p-28 md:p-10 p-5 relative overflow-hidden rounded-lg bg-[#232227] border-neutral-700 border mb-20">
             <p className="text-cm-white font-normal text-lg text-center font-geistSans">
