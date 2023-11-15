@@ -370,12 +370,11 @@ export default function Home() {
             </li>
           </ul>
         </section>
-
         <section className="w-full flex flex-col justify-center items-center gap-8 mb-20 relative">
           <figure className="absolute top-[-5%] left-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <figure className="absolute top-[5%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <h3 className="text-4xl font-bold text-neutral-300">About me</h3>
-          <div className="h-full w-full xl:p-28 md:p-10 p-5 relative overflow-hidden rounded-lg bg-[#232227] border-neutral-700 border mb-20">
+          <div className="h-full w-full xl:p-28 md:p-10 p-5 relative overflow-hidden bg-[#232227] border-neutral-700 border mb-20">
             <p className="text-cm-white font-normal text-lg text-center font-geistSans">
               My web development journey began on Platzi, a online learning
               platform, where I mastered <Span>JavaScript</Span>,{" "}
@@ -451,7 +450,7 @@ export default function Home() {
         </section>
         <section className="w-full flex justify-center items-center flex-col gap-8 mb-20">
           <h3 className="text-4xl font-bold text-neutral-300">Contact me</h3>
-          <article className="flex items-center justify-center bg-orange-400 sm:p-36 xl:p-30 p-20 rounded-lg relative group w-full">
+          <article className="flex items-center justify-center bg-orange-400 sm:p-36 xl:p-30 p-20 relative group w-full">
             <div className="z-[1] flex items-center justify-center w-full h-ful">
               <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
                 huilensolis@skiff.com
@@ -468,7 +467,7 @@ export default function Home() {
             target="_blank"
             className="z-[1] w-full"
           >
-            <article className="flex items-center justify-center bg-blue-400 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <article className="flex items-center justify-center bg-blue-400 sm:p-40 xl:p-30 p-20 relative group">
               <div className="flex items-center justify-center w-full h-ful">
                 <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
                   Huilensolis
@@ -487,7 +486,7 @@ export default function Home() {
             target="_blank"
             className="z-[1] w-full"
           >
-            <article className="flex items-center justify-center bg-violet-400 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <article className="flex items-center justify-center bg-violet-400 sm:p-40 xl:p-30 p-20 relative group">
               <div className="flex items-center justify-center w-full h-ful">
                 <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
                   Huilensolis
@@ -506,7 +505,7 @@ export default function Home() {
             target="_blank"
             className="z-[1] w-full"
           >
-            <article className="flex items-center justify-center bg-blue-400 sm:p-40 xl:p-30 p-20 rounded-lg relative group">
+            <article className="flex items-center justify-center bg-blue-400 sm:p-40 xl:p-30 p-20 relative group">
               <div className="flex items-center justify-center w-full h-ful">
                 <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
                   solishuilen

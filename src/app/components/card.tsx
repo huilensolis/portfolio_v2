@@ -14,7 +14,7 @@ export function Card({ leftSide, cards }: Props) {
         "card"
     );
   return (
-    <article className="flex justify-start items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-[#1F2124] border rounded-2xl border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20 cm-1xl:bg-transparent cm-1xl:border-transparent">
+    <article className="flex justify-start items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-[#1F2124] border border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20 cm-1xl:bg-transparent cm-1xl:border-transparent">
       <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
       <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
 
