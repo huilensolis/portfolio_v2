@@ -46,9 +46,9 @@ export function Header() {
                     : "font-normal"
                 } ${
                   isLinkTheCurrentPage(navItem.href, path)
-                    ? "text-cm-orange"
+                    ? "text-orange-300"
                     : "text-gray-400"
-                } hover:font-medium hover:text-cm-orange cursor-pointer`}
+                } hover:font-medium hover:text-orange-300 cursor-pointer`}
               >
                 {navItem.name}
               </Link>

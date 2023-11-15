@@ -10,7 +10,7 @@ export function ErrorComponent() {
       </h1>
       <p className="text-cm-white">
         if the error persist, please{" "}
-        <Link href={"/contact"} className="text-cm-primary font-bold">
+        <Link href={"/contact"} className="text-orange-300 font-bold">
           contact me
         </Link>
       </p>

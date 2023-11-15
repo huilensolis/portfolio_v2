@@ -15,22 +15,8 @@ const config: Config = {
         geistSans: ["var(--font-geist-sans)"],
       },
       colors: {
-        "cm-white": "#F4F4F4" /* #FFFFFF */,
-        "cm-black": "#17181D" /* #141414 */,
-        "cm-gray": "#18181B",
-        "cm-primary": "#A594FD",
-        "cm-secondary": "#5940D4",
-        "cm-orange": "#F3AF37",
-        "light-green": "#31b970",
-        "dark-green": "#53c14f",
-        "cm-yellow": "#f8bd4d",
-        "cm-blue": "#409fd4",
-      },
-      backgroundImage: {
-        "cm-square":
-          "linear-gradient(#cc00ff 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #cc00ff 1.4000000000000001px, #000000 1.4000000000000001px);",
-        // opacity: 1;
-        // background-size: 28px 28px;'
+        "cm-white": "#F4F4F4",
+        "cm-black": "#17181D",
       },
       keyframes: {
         "cm-scale-to-top": {
