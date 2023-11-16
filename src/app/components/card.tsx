@@ -11,7 +11,7 @@ export function Card({ leftSide, cards }: Props) {
     throw new Error(
       "this component doesnt suppont more than 3 cards, please remove " +
         (cards.length - 4) +
-        "card"
+        "card",
     );
   return (
     <article className="flex justify-start items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-[#1F2124] border border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20">
@@ -46,32 +46,32 @@ export function Card({ leftSide, cards }: Props) {
               index === 0
                 ? "translate-x-0 cm-1xl:translate-y-0 cm-1xl:-translate-x-0"
                 : index === 1
-                ? "-translate-x-56 cm-1xl:-translate-y-0 cm-1xl:-translate-x-0"
-                : index === 2
-                ? "-translate-x-[28rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0"
-                : "-translate-x-[42rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0";
+                  ? "-translate-x-56 cm-1xl:-translate-y-0 cm-1xl:-translate-x-0"
+                  : index === 2
+                    ? "-translate-x-[28rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0"
+                    : "-translate-x-[42rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0";
             const rotateValue =
               index === 0 && cards.length > 1
                 ? "-rotate-[16deg] hover:-rotate-[8deg] cm-1xl:-rotate-0"
                 : index === 1 && cards.length > 1
-                ? "-rotate-[12deg] hover:-rotate-[4deg] cm-1xl:-rotate-0"
-                : index === 2 && cards.length > 1
-                ? "-rotate-[8deg] hover:-rotate-0 cm-1xl:-rotate-0"
-                : "-rotate-[4deg] hover:-rotate-0 cm-1xl:-rotate-0";
+                  ? "-rotate-[12deg] hover:-rotate-[4deg] cm-1xl:-rotate-0"
+                  : index === 2 && cards.length > 1
+                    ? "-rotate-[8deg] hover:-rotate-0 cm-1xl:-rotate-0"
+                    : "-rotate-[4deg] hover:-rotate-0 cm-1xl:-rotate-0";
 
             const zIndex =
               index === 0
                 ? "z-10"
                 : index === 1
-                ? "z-20"
-                : index === 2
-                ? "z-30"
-                : "z-40";
+                  ? "z-20"
+                  : index === 2
+                    ? "z-30"
+                    : "z-40";
 
             return (
               <li
                 key={index}
-                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:cm-1xl:scale-100 cm-1xl:contents overflow-hidden shadow-left-bottom shadow-neutral-950/30 animate-cm-fade-in-left [animation-timeline:view();] [animation-range:0px_50vh] cm-2xl:[animation-range:0px_200px] cm-1xl:[animation-range:0px_0px] cm-1xl:p-10`}
+                className={`min-w-[20rem] max-w-[20rem] h-80 ${zIndex} ${rotateValue} ${leftValue} cm-1xl:static hover:-translate-y-8 cm-1xl:hover:-translate-y-0 delay-75 duration-500 transition-all hover:z-50 cm-1xl:hover:${zIndex} hover:cm-1xl:scale-100 cm-1xl:contents overflow-hidden shadow-left-bottom shadow-neutral-950/30 cm-1xl:p-10`}
               >
                 <MiniCard>{card}</MiniCard>
               </li>

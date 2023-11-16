@@ -1,3 +1,4 @@
+import { warn } from "console";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -44,7 +45,7 @@ const config: Config = {
         "cm-scale-top": "cm-scale-to-top 1s",
         "cm-fade-out-down": "cm-fade-out-down 1s ease-out",
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
-        "cm-fade-in-left": "3s cm-fade-in-left linear backwards ",
+        "cm-fade-in-left": "0.0s cm-fade-in-left inear backwards ",
         "cm-translate-to-left": "1s cm-translate-to-left linear move forwards",
         "cm-dissapear": "1s cm-dissapear linear forwards",
       },
