@@ -102,7 +102,7 @@ export default function Home() {
             Huilen Solis
           </h1>
           <h2 className="text-xl font-normal text-neutral-400 w-2/3 text-center font-geistSans">
-            Full Stack Web Developer, building aesthetic and accesible websites
+            Full Stack Web Developer, building aesthetic and accessible websites
             with scalable, perfomant and legible code.
           </h2>
           <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap">
@@ -249,8 +249,8 @@ export default function Home() {
                     <p className="font-normal text-neutral-400 font-geistSans">
                       A personal Project, Built with Next js, Typescript and
                       Tailwind. It Contains almost all Spotify Functionalities,
-                      providing a log In service music player, songs upload,
-                      user profile, favorites colection and a song search
+                      providing a log-in service music player, songs upload,
+                      user profile, favorites collection and a song search
                       system.
                     </p>
                     <div className="flex cm-1xl:flex-col gap-4 mt-4 justify-start w-full">
@@ -283,8 +283,8 @@ export default function Home() {
                         I have used{" "}
                         <span className="text-orange-300">Supabase</span>, which
                         is a Firebase Alternative, Built on PostgreSQL, which
-                        comes with a ORM for Next js, letting you interact with
-                        your database and authenticating the user.
+                        comes with an ORM for Next js, letting you interact with
+                        your database and authenticate the user.
                       </p>
                     </article>
                   </>,
@@ -318,11 +318,11 @@ export default function Home() {
                       08/2023 - 08/2023
                     </span>
                     <p className="font-normal text-neutral-400 font-geistSans">
-                      A mini Duolingo clone, which provides random practicing
-                      exercises in a entretaining way, providing a sentence in
+                      A mini Duolingo clone, which entertainingly provides
+                      random practising exercises, providing a sentence in
                       French, letting you choose the correct traduction to
-                      English, validation the traduction and communicating if
-                      its right or else.
+                      English, validating the traduction and communicating if it
+                      is right or else.
                     </p>
                     <div className="flex cm-1xl:flex-col gap-4 mt-4 justify-start w-full">
                       <a href="https://owr-french.vercel.app/" target="_blank">
@@ -369,20 +369,20 @@ export default function Home() {
           <h3 className="text-4xl font-bold text-neutral-300">About me</h3>
           <Card3>
             <p className="text-cm-white font-normal text-lg text-center font-geistSans">
-              My web development journey began on Platzi, a online learning
+              My web development journey began on Platzi, an online learning
               platform, where I mastered <Span>JavaScript</Span>,{" "}
               <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
               coding. In March 2023, I joined the{" "}
-              <Span>Full Stack Santex Bootcamp</Span>, a initiative organized by
-              Santex, a software company. it was taught by the developers at the
-              company, giving the oportunity to learn web development from
-              developers who are actively working in the industry. This
-              experience not only honed my technical skills in{" "}
-              <Span>JavaScript</Span>, <Span>Node.js</Span>,{" "}
-              <Span>Express</Span>, <Span>TypeScript</Span>, <Span>SCSS</Span>,
-              <Span> and Angular</Span>, but also gave me{" "}
-              <Span>experiencie working in teamwork and Scrum methodology</Span>
-              . As the Bootcamp concluded in October 2023, my journey continued
+              <Span>Full Stack Santex Bootcamp</Span>, an initiative organized
+              by Santex, a software company. it was taught by the developers at
+              the company, allowing learning web development from developers who
+              are actively working in the industry. This experience not only
+              honed my technical skills in <Span>JavaScript</Span>,{" "}
+              <Span>Node.js</Span>, <Span>Express</Span>,{" "}
+              <Span>TypeScript</Span>, <Span>SCSS</Span>,
+              <Span> and Angular</Span> but also gave me{" "}
+              <Span>experience working in teamwork and Scrum methodology</Span>.
+              As the Bootcamp concluded in October 2023, my journey continued
               into the realm of React. Today,{" "}
               <Span>
                 I&apos;m crafting accessible, performant, and maintainable
