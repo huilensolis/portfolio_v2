@@ -1,5 +1,3 @@
-import "./page.css";
-
 import { PrimaryBtn, SecondaryBtn } from "@components/buttons";
 import {
   ArrowUpRight,

@@ -143,7 +143,7 @@ export default function BlogList() {
             </div>
             <Link href="/" className="text-cm-white font-bold w-max">
               <PrimaryBtn>
-                Go back to portfolio <ArrowUpRight classes="w-4 h-4" />
+                Go back to Portfolio <ArrowUpRight classes="w-4 h-4" />
               </PrimaryBtn>
             </Link>
           </article>

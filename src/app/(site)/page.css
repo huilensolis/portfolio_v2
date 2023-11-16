@@ -1,4 +1,9 @@
-* :hover {
+* {
+  cursor: none;
+}
+body:hover,
+button:hover,
+a:hover {
   cursor: none;
 }
 @media (max-width: 1024px) {

@@ -48,7 +48,7 @@ export function Header() {
                   isLinkTheCurrentPage(navItem.href, path)
                     ? "text-orange-300"
                     : "text-gray-400"
-                } hover:font-medium hover:text-orange-300 cursor-pointer`}
+                } hover:text-orange-300 cursor-pointer`}
               >
                 {navItem.name}
               </Link>
