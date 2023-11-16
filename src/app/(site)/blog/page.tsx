@@ -33,8 +33,8 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   return (
-    <>
+    <div className="max-w-5xl w-full h-full">
       <BlogList />
-    </>
+    </div>
   );
 }

@@ -16,6 +16,7 @@ import { Card } from "@components/card";
 import { Span } from "../components/span";
 import { SingleCard } from "../components/card-2";
 import { SquarePatten } from "../components/square-patten";
+import { Card3 } from "../components/card-3";
 
 export const metadata = {
   title: `Huilen Solis's Portfolio`,
@@ -368,7 +369,7 @@ export default function Home() {
           <figure className="absolute top-[-5%] left-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <figure className="absolute top-[5%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <h3 className="text-4xl font-bold text-neutral-300">About me</h3>
-          <div className="h-full w-full xl:p-28 md:p-10 p-5 relative overflow-hidden bg-[#232227] border-neutral-700 border mb-20">
+          <Card3>
             <p className="text-cm-white font-normal text-lg text-center font-geistSans">
               My web development journey began on Platzi, a online learning
               platform, where I mastered <Span>JavaScript</Span>,{" "}
@@ -395,7 +396,7 @@ export default function Home() {
               deliver top-notch solutions. Let&apos;s create something cool
               together!
             </p>
-          </div>
+          </Card3>
         </section>
         <section className="w-full flex flex-col items-center justify-center gap-8 mb-20">
           <h3 className="text-4xl font-bold text-neutral-300">My stack</h3>
@@ -443,7 +444,9 @@ export default function Home() {
           </ul>
         </section>
         <section className="w-full flex justify-center items-center flex-col gap-8 mb-20">
-          <h3 className="text-4xl font-bold text-neutral-300">Contact me</h3>
+          <h3 className="text-4xl font-bold text-neutral-300" id="contact">
+            Contact me
+          </h3>
           <SingleCard>
             <article className="flex items-center justify-center sm:p-36 xl:p-30 p-20 relative group w-full">
               <div className="z-[1] flex items-center justify-center w-full h-ful relative">

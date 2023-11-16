@@ -6,3 +6,6 @@
     cursor: default;
   }
 }
+body {
+  scroll-behavior: smooth;
+}

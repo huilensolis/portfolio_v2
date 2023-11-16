@@ -6,10 +6,13 @@ import { type InterfacePostMetadata } from "@models/post-metadata.interface";
 import { useEffect, useState } from "react";
 import { ErrorComponent } from "@components/error";
 import RelativeTime from "@components/relative-time";
-import { Logo } from "@components/icons";
+import { ArrowUpRight, Logo } from "@components/icons";
 import { Hr } from "@components/hr";
 import { ProseLayout } from "@components/layout/prose-layout";
 import { ImageComponent } from "@components/image";
+import { Loader } from "../../../components/loader";
+import { Card3 } from "../../../components/card-3";
+import { PrimaryBtn } from "../../../components/buttons";
 
 export default function BlogList() {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,6 +26,7 @@ export default function BlogList() {
   const [error, setError] = useState(false);
   const [isFirstRequest, setIsFirstRequest] = useState(true);
   const [latestPost, setLatestPost] = useState({} as InterfacePostMetadata);
+
   useEffect(() => {
     async function fetchData() {
       setIsFetching(true);
@@ -71,7 +75,7 @@ export default function BlogList() {
   return (
     <>
       {blogsMetaData.length > 0 && (
-        <main className="max-w-4xl w-full flex flex-col items-center">
+        <main className="w-full flex flex-col items-center">
           {Boolean(latestPost) && (
             <Link href={`/blog/${latestPost.slug}`} className="w-full">
               <article className="flex flex-col gap-5">
@@ -117,12 +121,33 @@ export default function BlogList() {
                 </Link>
               </li>
             ))}
-            <ProseLayout>
-              {isLoading && <></>}
-              {error && <ErrorComponent />}
-            </ProseLayout>
           </ul>
         </main>
+      )}
+      {isLoading && (
+        <div className="h-[calc(100dvh-120px)] py-[calc(100px+)] w-full flex justify-center items-center">
+          <Loader />
+        </div>
+      )}
+      {error && <ErrorComponent />}
+      {blogsMetaData.length === 0 && !isLoading && (
+        <Card3>
+          <article className="flex flex-col items-center justify-center gap-4">
+            <div>
+              <h4 className="text-red-300 text-center text-4xl font-bold">
+                No blogs found
+              </h4>
+              <p className="text-red-300 font-normal text-lg text-center font-geistSans">
+                There are no blogs yet, please check back later
+              </p>
+            </div>
+            <Link href="/" className="text-cm-white font-bold w-max">
+              <PrimaryBtn>
+                Go back to portfolio <ArrowUpRight classes="w-4 h-4" />
+              </PrimaryBtn>
+            </Link>
+          </article>
+        </Card3>
       )}
     </>
   );
