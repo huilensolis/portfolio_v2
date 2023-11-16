@@ -21,7 +21,7 @@ export const metadata = {
   description:
     "Full stack developer, Working with React, Nextjs, Nodejs and Tailwind!",
   openGraph: {
-    images: [{ url: "/portfolio-preview.png", alt: "Huilen Solis logo" }],
+    images: [{ url: "/metadata-portfolio.png", alt: "Huilen Solis logo" }],
     title: `Huilen Solis's Portfolio`,
     description:
       "Full stack developer, Working with React, Nextjs, Nodejs and Tailwind!",
@@ -34,7 +34,7 @@ export const metadata = {
     description:
       "Full stack developer, Working with React, Nextjs, Nodejs and Tailwind!",
     creator: "@solishuilen",
-    images: [{ url: "/portfolio-preview.png", alt: "Huilen Solis logo" }],
+    images: [{ url: "/metadata-portfolio.png", alt: "Huilen Solis logo" }],
   },
 };
 const technologies: {
