@@ -40,14 +40,21 @@ const config: Config = {
           "0%": { opacity: "30%" },
           "100%": { opacity: "0%" },
         },
+        "cm-add-border-bottom": {
+          "0%": { borderColor: "transparent", background: "transparent" },
+          "100%": {
+            borderColor: "rgb(64 64 64 / 1)",
+            background: "#17181D",
+          },
+        },
       },
       animation: {
         "cm-scale-top": "cm-scale-to-top 1s",
         "cm-fade-out-down": "cm-fade-out-down 1s ease-out",
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
-        "cm-fade-in-left": "0.0s cm-fade-in-left inear backwards ",
         "cm-translate-to-left": "1s cm-translate-to-left linear move forwards",
         "cm-dissapear": "1s cm-dissapear linear forwards",
+        "cm-add-border-bottom": "0.75s cm-add-border-bottom ease-out forwards",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",

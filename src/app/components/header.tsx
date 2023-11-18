@@ -28,7 +28,7 @@ export function Header() {
     },
   ];
   return (
-    <header className="w-screen flex justify-center items-center h-20 fixed top-0 left-0 bg-cm-black border-b-2 border-gray-700 z-50 sm:px-20 px-5 cm-1xl:px-2">
+    <header className="w-screen flex justify-center items-center h-20 fixed top-0 left-0 supports-no-scroll-driven-animations:bg-cm-black border-b-[1px] transition-all animate-cm-add-border-bottom [animation-timeline:view()] md:[animation-range:900px] supports-no-scroll-driven-animations:animate-none supports-no-scroll-driven-animations:border-neutral-700 border-transparent delay-75 border-neutral-700 z-50 sm:px-20 px-5 cm-1xl:px-2">
       <nav className="max-w-5xl w-full">
         <ul className="w-max flex justify-start gap-5">
           <li>
@@ -40,15 +40,12 @@ export function Header() {
             <li key={navItem.href} className="flex justify-center items-center">
               <Link
                 href={navItem.href}
-                className={`${
-                  isLinkTheCurrentPage(navItem.href, path)
-                    ? "font-medium"
-                    : "font-normal"
-                } ${
-                  isLinkTheCurrentPage(navItem.href, path)
-                    ? "text-orange-300"
-                    : "text-gray-400"
-                } hover:text-orange-300 cursor-pointer`}
+                className={`
+                   ${
+                     isLinkTheCurrentPage(navItem.href, path)
+                       ? "text-orange-300"
+                       : "text-gray-400"
+                   } hover:text-orange-300 cursor-pointer`}
               >
                 {navItem.name}
               </Link>

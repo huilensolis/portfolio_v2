@@ -236,7 +236,7 @@ export default function Home() {
                 ]}
               />
             </li>
-            <li className="sticky top-36 cm-2xl:static z-[2] animate-cm-fade-in-top [animation-timeline:view();] [animation-range:10%_500px] w-full opacity-0">
+            <li className="sticky top-36 cm-2xl:static z-[2] animate-cm-fade-in-top [animation-timeline:view();] [animation-range:10%_500px] supports-no-scroll-driven-animations:animate-none w-full opacity-0">
               <Card
                 leftSide={
                   <article className="h-full w-full flex flex-col justify-center items-start">
@@ -275,7 +275,7 @@ export default function Home() {
                 }
                 cards={[
                   <>
-                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px]   h-full w-full ">
+                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] h-full w-full ">
                       <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Backend Technologies
                       </h3>
@@ -307,7 +307,7 @@ export default function Home() {
                 ]}
               />
             </li>
-            <li className="sticky top-40 cm-2xl:static z-[3] animate-cm-fade-in-top [animation-timeline:view();] [animation-range:10%_500px] opacity-0 w-full">
+            <li className="sticky top-40 cm-2xl:static z-[3] animate-cm-fade-in-top supports-no-scroll-driven-animations:animate-none [animation-timeline:view();] [animation-range:10%_500px] opacity-0 w-full">
               <Card
                 leftSide={
                   <article className="h-full w-full flex flex-col justify-center items-start">
@@ -409,12 +409,12 @@ export default function Home() {
                           technologie.color === "blue"
                             ? "fill-blue-200 text-blue-200"
                             : technologie.color === "orange"
-                            ? "fill-orange-200 text-orange-300"
-                            : technologie.color === "violet"
-                            ? "fill-violet-200 text-violet-200"
-                            : technologie.color === "green"
-                            ? "fill-green-200 text-green-200"
-                            : "fill-neutral-400 text-neutral-400"
+                              ? "fill-orange-200 text-orange-300"
+                              : technologie.color === "violet"
+                                ? "fill-violet-200 text-violet-200"
+                                : technologie.color === "green"
+                                  ? "fill-green-200 text-green-200"
+                                  : "fill-neutral-400 text-neutral-400"
                         } w-20 h-20 xl:inline-block hidden`}
                       />
                       <div className="flex flex-col justify-center h-full">
@@ -423,12 +423,12 @@ export default function Home() {
                             technologie.color === "blue"
                               ? "text-blue-200"
                               : technologie.color === "orange"
-                              ? "text-orange-300"
-                              : technologie.color === "violet"
-                              ? "text-violet-200"
-                              : technologie.color === "green"
-                              ? "text-green-200"
-                              : "text-neutral-400"
+                                ? "text-orange-300"
+                                : technologie.color === "violet"
+                                  ? "text-violet-200"
+                                  : technologie.color === "green"
+                                    ? "text-green-200"
+                                    : "text-neutral-400"
                           } font-geistSans font-semibold text-3xl`}
                         >
                           {technologie.name}
