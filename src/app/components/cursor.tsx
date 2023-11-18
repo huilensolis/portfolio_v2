@@ -24,17 +24,6 @@ export function Cursor() {
           `${y}px`
         );
       }
-
-      if (cursor.current) {
-        (cursor.current as HTMLElement).style.setProperty(
-          "--mouse-width",
-          "2.5rem"
-        );
-        (cursor.current as HTMLElement).style.setProperty(
-          "--mouse-height",
-          "2.5rem"
-        );
-      }
     }
     return () => {
       const body = document.querySelector("body");
@@ -44,7 +33,7 @@ export function Cursor() {
   }, []);
   return (
     <div
-      className="fixed [width:var(--mouse-width)] [height:var(--mouse-height)] rounded-full bg-cm-white pointer-events-none mix-blend-difference z-[99999] [top:var(--mouse-y)] [left:var(--mouse-x)] duration-75 ease-in-out "
+      className="fixed [width:2.5rem] [height:2.5rem] rounded-full bg-cm-white pointer-events-none mix-blend-difference z-[99999] [top:var(--mouse-y)] [left:var(--mouse-x)] duration-75 ease-in-out "
       ref={cursor}
     />
   );
