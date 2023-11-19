@@ -137,7 +137,7 @@ export default function BlogList() {
               <h4 className="text-red-300 text-center text-4xl font-bold">
                 No blogs found
               </h4>
-              <p className="text-red-300 font-normal text-lg text-center font-geistSans">
+              <p className="text-red-300 font-normal text-lg text-center ">
                 There are no blogs yet, please check back later
               </p>
             </div>

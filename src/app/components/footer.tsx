@@ -27,7 +27,7 @@ export function Footer() {
   return (
     <footer className="w-full flex justify-center items-center bg-cm-black px-5 sm:px-20 cm-1xl:px-2 pt-36 pb-12">
       <div className="w-full flex flex-col xl:flex-row justify-center items-center gap-4 lg:max-w-5xl md:justify-between">
-        <span className="text-lg text-neutral-300 gap-x-2 font-geistSans text-center sm:text-start">
+        <span className="text-lg text-neutral-300 gap-x-2  text-center sm:text-start">
           © 2023{" "}
           <a href="/" className="hover:underline">
             Huilen Solis.
@@ -41,7 +41,7 @@ export function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-lg hover:underline flex items-center justify-center group font-geistSans"
+                className="text-lg hover:underline flex items-center justify-center group "
               >
                 {link.name}
                 <div className="flex justify-center items-center">

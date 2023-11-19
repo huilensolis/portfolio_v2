@@ -100,13 +100,13 @@ export default function Home() {
       <SquarePatten />
       <section className="flex flex-col items-center gap-24 max-w-5xl w-full relative">
         <main className="flex flex-col items-center p-20 cm-1xl:p-4 justify-center z-[3]">
-          <h1 className="text-6xl font-bold text-neutral-300 text-center z-10 flex justify-center items-center">
-            Huilen Solis
+          <h1 className="text-7xl font-bold text-neutral-300 text-center z-10 flex justify-center items-center">
+          Huilen Solis
           </h1>
-          <h2 className="text-xl font-normal text-neutral-400 [text-wrap:balance;] w-full text-center font-geistSans">
+          <sub className="text-xl font-normal text-neutral-400 [text-wrap:balance;] w-full text-center ">
             Full Stack Web Developer, building aesthetic and accessible websites
             with scalable, perfomant and legible code.
-          </h2>
+          </sub>
           <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap w-full">
             <a
               href="https://github.com/Huilensolis"
@@ -130,19 +130,19 @@ export default function Home() {
           </div>
         </main>
         <section className="w-full flex flex-col justify-center items-center gap-8 mb-20 z-10">
-          <h3 className="text-5xl font-bold text-neutral-300">Projects</h3>
+          <h2 className="text-5xl font-bold text-neutral-300">Projects</h2>
           <ul className="flex flex-col gap-16 justify-center items-center w-full">
             <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
               <Card
                 leftSide={
                   <article className="h-full w-full flex flex-col justify-center items-start">
-                    <h4 className="text-4xl font-bold tracking-tight text-neutral-300">
+                    <h3 className="text-4xl font-semibold tracking-tight text-neutral-300">
                       Culinary Alchemy
-                    </h4>
-                    <span className="text-orange-300 mb-2 font-geistSans">
+                    </h3>
+                    <span className="text-orange-300 mb-2 ">
                       07/2023 - Present
                     </span>
-                    <p className="font-normal text-neutral-400 font-geistSans">
+                    <p className="font-normal text-neutral-400 [text-wrap:_balance;]">
                       A Recipe Social Network, built in collaboration with{" "}
                       <a
                         href="https://www.linkedin.com/in/jesus-oyola-b9b530284/"
@@ -181,10 +181,10 @@ export default function Home() {
                 cards={[
                   <>
                     <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px]   h-full w-full ">
-                      <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
+                      <h4 className="mb-2 text-2xl font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Metodologies
-                      </h3>
-                      <p className="font-normal text-neutral-400 font-geistSans">
+                      </h4>
+                      <p className="font-normal text-neutral-400 ">
                         We have been working with a{" "}
                         <span className="text-orange-300">
                           Clean Architecture
@@ -203,10 +203,10 @@ export default function Home() {
                   </>,
                   <>
                     <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px]   h-full w-full ">
-                      <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
+                      <h4 className="mb-2 text-2xl font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Backend Technologies
-                      </h3>
-                      <p className="font-normal text-neutral-400 font-geistSans">
+                      </h4>
+                      <p className="font-normal text-neutral-400 ">
                         <span className="text-orange-300">Typescript</span>,{" "}
                         <span className="text-orange-300">Node.JS</span>,{" "}
                         <span className="text-orange-300">Express</span>,{" "}
@@ -226,10 +226,10 @@ export default function Home() {
                   </>,
                   <>
                     <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px]   h-full w-full">
-                      <h3 className="mb-2 text-3xl  font-bold tracking-tight  text-neutral-300 cm-1xl:break-all">
+                      <h4 className="mb-2 text-2xl  font-semibold tracking-tight  text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
-                      </h3>
-                      <p className="font-normal text-neutral-400 font-geistSans">
+                      </h4>
+                      <p className="font-normal text-neutral-400 ">
                         <span className="text-orange-300">Typescript</span>,{" "}
                         <span className="text-orange-300">React</span>,{" "}
                         <span className="text-orange-300">
@@ -250,13 +250,13 @@ export default function Home() {
               <Card
                 leftSide={
                   <article className="h-full w-full flex flex-col justify-center items-start">
-                    <h4 className=" text44xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
+                    <h3 className="text-4xl font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                       Spotify Clone
-                    </h4>
-                    <span className="text-orange-300 mb-2 font-geistSans">
+                    </h3>
+                    <span className="text-orange-300 mb-2 ">
                       09/2023 - 09/2023
                     </span>
-                    <p className="font-normal text-neutral-400 font-geistSans">
+                    <p className="font-normal text-neutral-400 [text-wrap:_balance;]">
                       A personal Project, Built with Next js, Typescript and
                       Tailwind. It Contains almost all Spotify Functionalities,
                       providing a log-in service music player, songs upload,
@@ -286,10 +286,10 @@ export default function Home() {
                 cards={[
                   <>
                     <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] h-full w-full ">
-                      <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
+                      <h4 className="mb-2 text-2xl  font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Backend Technologies
-                      </h3>
-                      <p className="font-normal text-neutral-400 font-geistSans">
+                      </h4>
+                      <p className="font-normal text-neutral-400 [text-wrap:_balance;]">
                         I have used{" "}
                         <span className="text-orange-300">Supabase</span>, which
                         is a Firebase Alternative, Built on PostgreSQL, which
@@ -300,10 +300,10 @@ export default function Home() {
                   </>,
                   <>
                     <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px]   h-full w-full ">
-                      <h3 className="mb-2 text-3xl  font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
+                      <h4 className="mb-2 text-2xl font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
-                      </h3>
-                      <p className="font-normal text-neutral-400 font-geistSans">
+                      </h4>
+                      <p className="font-normal text-neutral-400 ">
                         <span className="text-orange-300">Typescript</span>,{" "}
                         <span className="text-orange-300">Next JS</span>,{" "}
                         <span className="text-orange-300">Supabase</span>,{" "}
@@ -321,13 +321,13 @@ export default function Home() {
               <Card
                 leftSide={
                   <article className="h-full w-full flex flex-col justify-center items-start">
-                    <h4 className=" text44xl font-bold tracking-tight text-neutral-300">
+                    <h3 className=" text-4xl font-semibold tracking-tight text-neutral-300">
                       Owr
-                    </h4>
-                    <span className="text-orange-300 mb-2 font-geistSans">
+                    </h3>
+                    <span className="text-orange-300 mb-2 ">
                       08/2023 - 08/2023
                     </span>
-                    <p className="font-normal text-neutral-400 font-geistSans">
+                    <p className="font-normal text-neutral-400 [text-wrap:_balance;]">
                       A mini Duolingo clone, which entertainingly provides
                       random practising exercises, providing a sentence in
                       French, letting you choose the correct traduction to
@@ -353,11 +353,11 @@ export default function Home() {
                 }
                 cards={[
                   <>
-                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px]   h-full w-full ">
-                      <h3 className="mb-2 text-3xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
+                    <article className="p-8 cm-1xl:p-4 flex flex-col border-neutral-600 border-[1px] h-full w-full ">
+                      <h4 className="mb-2 text-2xl font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
-                      </h3>
-                      <p className="font-normal text-neutral-400 font-geistSans">
+                      </h4>
+                      <p className="font-normal text-neutral-400 ">
                         <span className="text-orange-300">Typescript</span>,{" "}
                         <span className="text-orange-300">React</span>,{" "}
                         <span className="text-orange-300">
@@ -376,9 +376,9 @@ export default function Home() {
         <section className="w-full flex flex-col justify-center items-center gap-8 mb-20 relative">
           <figure className="absolute top-[-5%] left-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <figure className="absolute top-[5%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
-          <h3 className="text-4xl font-bold text-neutral-300">About me</h3>
+          <h2 className="text-5xl font-bold text-neutral-300">About me</h2>
           <Card3>
-            <p className="text-cm-white font-normal text-lg text-center font-geistSans">
+            <p className="text-cm-white font-normal text-lg text-center ">
               My web development journey began on Platzi, an online learning
               platform, where I mastered <Span>JavaScript</Span>,{" "}
               <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
@@ -407,7 +407,7 @@ export default function Home() {
           </Card3>
         </section>
         <section className="w-full flex flex-col items-center justify-center gap-8 mb-20">
-          <h3 className="text-4xl font-bold text-neutral-300">My stack</h3>
+          <h2 className="text-5xl font-bold text-neutral-300">My stack</h2>
           <ul className="md:grid flex flex-col w-full max-w-full xl:grid-cols-6 md:grid-cols-2 gap-3">
             {technologies.map((technologie, i) => {
               return (
@@ -428,7 +428,7 @@ export default function Home() {
                         } w-20 h-20 xl:inline-block hidden`}
                       />
                       <div className="flex flex-col justify-center h-full">
-                        <h4
+                        <h3
                           className={` ${
                             technologie.color === "blue"
                               ? "text-blue-200"
@@ -439,10 +439,10 @@ export default function Home() {
                               : technologie.color === "green"
                               ? "text-green-200"
                               : "text-neutral-400"
-                          } font-geistSans font-semibold text-3xl`}
+                          }  font-semibold text-3xl`}
                         >
                           {technologie.name}
-                        </h4>
+                        </h3>
                       </div>
                     </article>
                   </SingleCard>
@@ -452,15 +452,15 @@ export default function Home() {
           </ul>
         </section>
         <section className="w-full flex justify-center items-center flex-col gap-8 mb-20">
-          <h3 className="text-4xl font-bold text-neutral-300" id="contact">
+          <h2 className="text-5xl font-bold text-neutral-300" id="contact">
             Contact me
-          </h3>
+          </h2>
           <SingleCard>
             <article className="flex items-center justify-center xl:p-40 p-5 py-20 relative group w-full">
               <div className="z-[1] flex items-center justify-center w-full h-ful relative">
-                <h4 className="text-neutral-200 font-geistSans font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
+                <h3 className="text-neutral-200 font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
                   huilensolis@skiff.com
-                </h4>
+                </h3>
                 <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
 
@@ -468,7 +468,7 @@ export default function Home() {
                 <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
               </div>
               <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none">
+                <span className="text-neutral-200/20  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none">
                   Gmail
                 </span>
               </div>
@@ -482,9 +482,9 @@ export default function Home() {
             >
               <article className="flex items-center justify-center xl:p-40 p-5 py-20 relative group">
                 <div className="flex items-center justify-center w-full h-full relative">
-                  <h4 className="text-neutral-200 font-geistSans font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
+                  <h3 className="text-neutral-200  font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
                     Huilensolis
-                  </h4>
+                  </h3>
                   <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
                   <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                   <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
@@ -493,7 +493,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
+                  <span className="text-neutral-200/20  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     LinkedIn
                   </span>
                 </div>
@@ -508,9 +508,9 @@ export default function Home() {
             >
               <article className="flex items-center justify-center xl:p-40 p-5 py-20 relative group">
                 <div className="flex items-center justify-center w-full h-full relative">
-                  <h4 className="text-neutral-200 font-geistSans font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
+                  <h3 className="text-neutral-200  font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
                     Huilensolis
-                  </h4>
+                  </h3>
                   <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
                   <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                   <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
@@ -519,7 +519,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
+                  <span className="text-neutral-200/20  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     Github
                   </span>
                 </div>
@@ -534,9 +534,9 @@ export default function Home() {
             >
               <article className="flex items-center justify-center xl:p-40 p-5 py-20 relative group">
                 <div className="flex items-center justify-center w-full h-full relative">
-                  <h4 className="text-neutral-200 font-geistSans font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
+                  <h3 className="text-neutral-200  font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
                     solishuilen
-                  </h4>
+                  </h3>
                   <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
                   <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                   <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px] inline-block cm-1xl:hidden" />
@@ -545,7 +545,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
+                  <span className="text-neutral-200/20  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     Twitter
                   </span>
                 </div>

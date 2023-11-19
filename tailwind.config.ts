@@ -12,9 +12,6 @@ const config: Config = {
       fontSize: {
         "cm-icons": "1.50rem",
       },
-      fontFamily: {
-        geistSans: ["var(--font-geist-sans)"],
-      },
       colors: {
         "cm-white": "#F4F4F4",
         "cm-black": "#17181D",
