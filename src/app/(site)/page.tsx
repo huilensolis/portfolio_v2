@@ -47,49 +47,51 @@ const technologies: {
     name: "Next JS",
     icon: IconNextjs,
     color: "violet",
-    span: "col-span-1",
+    span: "xl:col-span-3 col-span-1",
   },
   {
     name: "React JS",
     icon: IconBxlReact,
     color: "blue",
+    span: "xl:col-span-3 col-span-1",
+  },
+  {
+    name: "Node JS",
+    icon: IconNodeJs,
+    color: "green",
     span: "xl:col-span-2 col-span-1",
   },
   {
     name: "Typescript",
     icon: IconTypescript,
     color: "blue",
-    span: "col-span-2",
+    span: "xl:col-span-4 col-span-1",
   },
-  {
-    name: "CSS",
-    icon: IconCss3,
-    color: "blue",
-    span: "col-span-1",
-  },
-  {
-    name: "HTML",
-    icon: IconHtml5,
-    color: "orange",
-    span: "col-span-1",
-  },
+
   {
     name: "JavaScript",
     icon: IconBxlJavascript,
     color: "orange",
-    span: "col-span-2",
-  },
-  {
-    name: "Node JS",
-    icon: IconNodeJs,
-    color: "green",
-    span: "col-span-2",
+    span: "xl:col-span-4 col-span-1",
   },
   {
     name: "Express",
     icon: IconExpress,
     color: "green",
-    span: "col-span-1",
+    span: "xl:col-span-2 col-sapn-1",
+  },
+  {
+    name: "CSS",
+    icon: IconCss3,
+    color: "blue",
+    span: "xl:col-span-3 col-span-1",
+  },
+
+  {
+    name: "HTML",
+    icon: IconHtml5,
+    color: "orange",
+    span: "xl:col-span-3 col-span-1",
   },
 ];
 export default function Home() {
@@ -398,7 +400,7 @@ export default function Home() {
         </section>
         <section className="w-full flex flex-col items-center justify-center gap-8 mb-20">
           <h3 className="text-4xl font-bold text-neutral-300">My stack</h3>
-          <ul className="md:grid flex flex-col w-full max-w-full xl:grid-cols-3 md:grid-cols-2 gap-3">
+          <ul className="md:grid flex flex-col w-full max-w-full xl:grid-cols-6 md:grid-cols-2 gap-3">
             {technologies.map((technologie, i) => {
               return (
                 <li key={i} className={`w-full h-full ${technologie.span}`}>
@@ -409,12 +411,12 @@ export default function Home() {
                           technologie.color === "blue"
                             ? "fill-blue-200 text-blue-200"
                             : technologie.color === "orange"
-                              ? "fill-orange-200 text-orange-300"
-                              : technologie.color === "violet"
-                                ? "fill-violet-200 text-violet-200"
-                                : technologie.color === "green"
-                                  ? "fill-green-200 text-green-200"
-                                  : "fill-neutral-400 text-neutral-400"
+                            ? "fill-orange-200 text-orange-300"
+                            : technologie.color === "violet"
+                            ? "fill-violet-200 text-violet-200"
+                            : technologie.color === "green"
+                            ? "fill-green-200 text-green-200"
+                            : "fill-neutral-400 text-neutral-400"
                         } w-20 h-20 xl:inline-block hidden`}
                       />
                       <div className="flex flex-col justify-center h-full">
@@ -423,12 +425,12 @@ export default function Home() {
                             technologie.color === "blue"
                               ? "text-blue-200"
                               : technologie.color === "orange"
-                                ? "text-orange-300"
-                                : technologie.color === "violet"
-                                  ? "text-violet-200"
-                                  : technologie.color === "green"
-                                    ? "text-green-200"
-                                    : "text-neutral-400"
+                              ? "text-orange-300"
+                              : technologie.color === "violet"
+                              ? "text-violet-200"
+                              : technologie.color === "green"
+                              ? "text-green-200"
+                              : "text-neutral-400"
                           } font-geistSans font-semibold text-3xl`}
                         >
                           {technologie.name}
@@ -458,7 +460,7 @@ export default function Home() {
                 <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
               </div>
               <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                <span className="text-neutral-200/20 font-geistSans font-semibold text-[30vw] select-none">
+                <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[5rem] select-none">
                   Gmail
                 </span>
               </div>
@@ -483,7 +485,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[5rem] select-none z-0">
                     LinkedIn
                   </span>
                 </div>
@@ -509,7 +511,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[5rem] select-none z-0">
                     Github
                   </span>
                 </div>
@@ -535,7 +537,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold text-[26rem] select-none z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[5rem] select-none z-0">
                     Twitter
                   </span>
                 </div>

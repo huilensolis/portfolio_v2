@@ -32,7 +32,7 @@ export function Header() {
       <nav className="max-w-5xl w-full">
         <ul className="w-max flex justify-start gap-5">
           <li>
-            <Link href={"/"}>
+            <Link href={"/"} aria-label="Home">
               <Logo />
             </Link>
           </li>
