@@ -1,5 +1,3 @@
-import "./page.css";
-
 import { GeistSans } from "geist/font/sans";
 
 import "./globals.css";
@@ -9,8 +7,6 @@ import localFont from "next/font/local";
 import { Header } from "@components/header";
 import { Footer } from "@components/footer";
 import { Analytics } from "@vercel/analytics/react";
-import { Suspense } from "react";
-import { Cursor } from "@components/cursor";
 
 export const metadata: Metadata = {
   title: {

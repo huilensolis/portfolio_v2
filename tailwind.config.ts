@@ -44,7 +44,7 @@ const config: Config = {
           "0%": { borderColor: "transparent", background: "transparent" },
           "100%": {
             borderColor: "rgb(64 64 64 / 1)",
-            background: "#17181D",
+            background: "#1F2124",
           },
         },
       },

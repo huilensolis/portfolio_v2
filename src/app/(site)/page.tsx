@@ -103,18 +103,26 @@ export default function Home() {
           <h1 className="text-6xl font-bold text-neutral-300 text-center z-10 flex justify-center items-center">
             Huilen Solis
           </h1>
-          <h2 className="text-xl font-normal text-neutral-400 w-2/3 text-center font-geistSans">
+          <h2 className="text-xl font-normal text-neutral-400 [text-wrap:balance;] w-full text-center font-geistSans">
             Full Stack Web Developer, building aesthetic and accessible websites
             with scalable, perfomant and legible code.
           </h2>
-          <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap">
-            <a href="https://github.com/Huilensolis" target="_blank">
+          <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap w-full">
+            <a
+              href="https://github.com/Huilensolis"
+              target="_blank"
+              className="sm:w-36 w-full"
+            >
               <SecondaryBtn>
                 Github
                 <ArrowUpRight classes="w-4 h-4" />
               </SecondaryBtn>
             </a>
-            <a href="https://www.linkedin.com/in/huilensolis/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/huilensolis/"
+              target="_blank"
+              className="sm:w-36 w-full"
+            >
               <PrimaryBtn>
                 LinkedIn <ArrowUpRight classes="w-4 h-4" />
               </PrimaryBtn>
@@ -122,15 +130,15 @@ export default function Home() {
           </div>
         </main>
         <section className="w-full flex flex-col justify-center items-center gap-8 mb-20 z-10">
-          <h3 className="text-4xl font-bold text-neutral-300">Projects</h3>
+          <h3 className="text-5xl font-bold text-neutral-300">Projects</h3>
           <ul className="flex flex-col gap-16 justify-center items-center w-full">
             <li className="z-[1] sticky top-32 cm-2xl:static animate-cm-scale-top w-full">
               <Card
                 leftSide={
                   <article className="h-full w-full flex flex-col justify-center items-start">
-                    <h3 className="text-4xl font-bold tracking-tight text-neutral-300">
+                    <h4 className="text-4xl font-bold tracking-tight text-neutral-300">
                       Culinary Alchemy
-                    </h3>
+                    </h4>
                     <span className="text-orange-300 mb-2 font-geistSans">
                       07/2023 - Present
                     </span>
@@ -242,9 +250,9 @@ export default function Home() {
               <Card
                 leftSide={
                   <article className="h-full w-full flex flex-col justify-center items-start">
-                    <h3 className=" text-4xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
+                    <h4 className=" text44xl font-bold tracking-tight text-neutral-300 cm-1xl:break-all">
                       Spotify Clone
-                    </h3>
+                    </h4>
                     <span className="text-orange-300 mb-2 font-geistSans">
                       09/2023 - 09/2023
                     </span>
@@ -313,9 +321,9 @@ export default function Home() {
               <Card
                 leftSide={
                   <article className="h-full w-full flex flex-col justify-center items-start">
-                    <h3 className=" text-4xl font-bold tracking-tight text-neutral-300">
+                    <h4 className=" text44xl font-bold tracking-tight text-neutral-300">
                       Owr
-                    </h3>
+                    </h4>
                     <span className="text-orange-300 mb-2 font-geistSans">
                       08/2023 - 08/2023
                     </span>
@@ -448,9 +456,9 @@ export default function Home() {
             Contact me
           </h3>
           <SingleCard>
-            <article className="flex items-center justify-center sm:p-36 xl:p-30 p-20 relative group w-full">
+            <article className="flex items-center justify-center xl:p-40 p-5 py-20 relative group w-full">
               <div className="z-[1] flex items-center justify-center w-full h-ful relative">
-                <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                <h4 className="text-neutral-200 font-geistSans font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
                   huilensolis@skiff.com
                 </h4>
                 <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
@@ -460,7 +468,7 @@ export default function Home() {
                 <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
               </div>
               <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[5rem] select-none">
+                <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none">
                   Gmail
                 </span>
               </div>
@@ -472,9 +480,9 @@ export default function Home() {
               target="_blank"
               className="z-[1] w-full"
             >
-              <article className="flex items-center justify-center sm:p-40 xl:p-30 p-20 relative group">
+              <article className="flex items-center justify-center xl:p-40 p-5 py-20 relative group">
                 <div className="flex items-center justify-center w-full h-full relative">
-                  <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                  <h4 className="text-neutral-200 font-geistSans font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
                     Huilensolis
                   </h4>
                   <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
@@ -485,7 +493,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[5rem] select-none z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     LinkedIn
                   </span>
                 </div>
@@ -498,9 +506,9 @@ export default function Home() {
               target="_blank"
               className="z-[1] w-full"
             >
-              <article className="flex items-center justify-center sm:p-40 xl:p-30 p-20 relative group">
+              <article className="flex items-center justify-center xl:p-40 p-5 py-20 relative group">
                 <div className="flex items-center justify-center w-full h-full relative">
-                  <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                  <h4 className="text-neutral-200 font-geistSans font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
                     Huilensolis
                   </h4>
                   <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
@@ -511,7 +519,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[5rem] select-none z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     Github
                   </span>
                 </div>
@@ -524,9 +532,9 @@ export default function Home() {
               target="_blank"
               className="z-[1] w-full"
             >
-              <article className="flex items-center justify-center sm:p-40 xl:p-30 p-20 relative group">
+              <article className="flex items-center justify-center xl:p-40 p-5 py-20 relative group">
                 <div className="flex items-center justify-center w-full h-full relative">
-                  <h4 className="text-neutral-200 font-geistSans font-semibold xl:text-6xl text-4xl break-all">
+                  <h4 className="text-neutral-200 font-geistSans font-semibold sm:text-5xl xl:text-6xl text-4xl break-all">
                     solishuilen
                   </h4>
                   <ArrowUpRight classes="w-12 h-12 text-neutral-200" />
@@ -537,7 +545,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[5rem] select-none z-0">
+                  <span className="text-neutral-200/20 font-geistSans font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     Twitter
                   </span>
                 </div>

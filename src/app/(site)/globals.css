@@ -1,12 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
-  --sb-track-color: #18181b;
-  --sb-thumb-color: #424242;
-  --sb-size: 13px;
+  --sb-track-color: #424242;
+  --sb-thumb-color: #676767;
+  --sb-size: 15px;
 
   scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -21,5 +23,4 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 5px;
 }

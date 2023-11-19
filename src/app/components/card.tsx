@@ -11,10 +11,10 @@ export function Card({ leftSide, cards }: Props) {
     throw new Error(
       "this component doesnt suppont more than 3 cards, please remove " +
         (cards.length - 4) +
-        "card",
+        "card"
     );
   return (
-    <article className="flex justify-start items-start cm-2xl:items-center gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-[#1F2124] border border-neutral-700 p-20 cm-1xl:p-2 relative shadow-2xl shadow-neutral-950/20">
+    <article className="flex justify-start items-start cm-2xl:items-center sm:gap-14 w-full min-h-[600px] cm-2xl:h-full cm-2xl:flex-col bg-[#1F2124] border border-neutral-700 p-20 relative shadow-2xl shadow-neutral-950/20 cm-1xl:p-5 cm-1xl:gap-10">
       <figure className="absolute top-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px]" />
       <figure className="absolute bottom-0 right-[-15%] w-[130%] h-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_400px]" />
 
@@ -34,39 +34,39 @@ export function Card({ leftSide, cards }: Props) {
         </div>
 
         <div
-          className={`z-10 flex justify-center items-center before:[background-image:url(/square-pattern.png)] before:[background-size:1200px] before:[background-position:center] relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-[1] cm-1xl:p-5`}
+          className={`z-10 flex justify-center items-center sm:before:[background-image:url(/square-pattern.png)] sm:before:[background-size:1200px] before:[background-position:center] relative sm:before:absolute before:top-0 sm:before:left-0 sm:before:w-full sm:before:h-full sm:before:-z-[1]`}
         >
           {leftSide}
         </div>
       </div>
       <div className="w-1/2 cm-2xl:w-3/4 cm-1xl:w-full h-full flex justify-center items-center">
-        <ul className="flex cm-1xl:flex-col cm-1xl:gap-4 cm-1xl:justify-center items-center w-full overflow-visible">
+        <ul className="flex cm-1xl:flex-col cm-1xl:gap-5 cm-1xl:justify-center items-center w-full overflow-visible">
           {cards.map((card, index) => {
             const leftValue =
               index === 0
                 ? "translate-x-0 cm-1xl:translate-y-0 cm-1xl:-translate-x-0"
                 : index === 1
-                  ? "-translate-x-56 cm-1xl:-translate-y-0 cm-1xl:-translate-x-0"
-                  : index === 2
-                    ? "-translate-x-[28rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0"
-                    : "-translate-x-[42rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0";
+                ? "-translate-x-56 cm-1xl:-translate-y-0 cm-1xl:-translate-x-0"
+                : index === 2
+                ? "-translate-x-[28rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0"
+                : "-translate-x-[42rem] cm-1xl:-translate-y-[0] cm-1xl:-translate-x-0";
             const rotateValue =
               index === 0 && cards.length > 1
                 ? "-rotate-[16deg] hover:-rotate-[8deg] cm-1xl:-rotate-0"
                 : index === 1 && cards.length > 1
-                  ? "-rotate-[12deg] hover:-rotate-[4deg] cm-1xl:-rotate-0"
-                  : index === 2 && cards.length > 1
-                    ? "-rotate-[8deg] hover:-rotate-0 cm-1xl:-rotate-0"
-                    : "-rotate-[4deg] hover:-rotate-0 cm-1xl:-rotate-0";
+                ? "-rotate-[12deg] hover:-rotate-[4deg] cm-1xl:-rotate-0"
+                : index === 2 && cards.length > 1
+                ? "-rotate-[8deg] hover:-rotate-0 cm-1xl:-rotate-0"
+                : "-rotate-[4deg] hover:-rotate-0 cm-1xl:-rotate-0";
 
             const zIndex =
               index === 0
                 ? "z-10"
                 : index === 1
-                  ? "z-20"
-                  : index === 2
-                    ? "z-30"
-                    : "z-40";
+                ? "z-20"
+                : index === 2
+                ? "z-30"
+                : "z-40";
 
             return (
               <li
