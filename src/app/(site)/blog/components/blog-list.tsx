@@ -17,11 +17,11 @@ import { PrimaryBtn } from "../../../components/buttons";
 export default function BlogList() {
   const [isLoading, setIsLoading] = useState(false);
   const [blogsMetaData, setBlogsMetaData] = useState(
-    [] as InterfacePostMetadata[]
+    [] as InterfacePostMetadata[],
   );
   const [offset, setOffset] = useState(0);
   const [areMorePosts, setAreMorePosts] = useState(true);
-  const [limit, setLimit] = useState(10);
+  const [limit, _setLimit] = useState(10);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
   const [isFirstRequest, setIsFirstRequest] = useState(true);
@@ -39,7 +39,7 @@ export default function BlogList() {
             headers: {
               "Content-Type": "application/json",
             },
-          }
+          },
         );
         const jsonResponse: { data: InterfacePostMetadata[] } =
           await response.json();

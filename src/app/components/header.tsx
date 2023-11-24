@@ -28,7 +28,7 @@ export function Header() {
     },
   ];
   return (
-    <header className="w-screen flex justify-center items-center h-20 fixed top-0 left-0 supports-no-scroll-driven-animations:bg-cm-black border-b-[1px] transition-colors animate-cm-add-border-bottom [animation-timeline:view()] md:[animation-range:130%] supports-no-scroll-driven-animations:animate-none supports-no-scroll-driven-animations:border-neutral-700 border-transparent delay-75 border-neutral-700 z-50 sm:px-20 px-5 cm-1xl:px-2">
+    <header className="w-screen flex justify-center items-center h-20 fixed top-0 left-0 supports-no-scroll-driven-animations:bg-cm-black border-b-[1px] transition-colors animate-cm-add-border-bottom [animation-timeline:view()] md:[animation-range:130%_200%] supports-no-scroll-driven-animations:animate-none supports-no-scroll-driven-animations:border-neutral-700 border-transparent delay-75 border-neutral-700 z-50 sm:px-20 px-5 cm-1xl:px-2">
       <nav className="max-w-5xl w-full">
         <ul className="w-max flex justify-start gap-5">
           <li>

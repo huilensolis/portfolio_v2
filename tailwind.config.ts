@@ -51,7 +51,7 @@ const config: Config = {
         "cm-fade-in-top": "cm-fade-in-top 1s linear forwards",
         "cm-translate-to-left": "1s cm-translate-to-left linear move forwards",
         "cm-dissapear": "1s cm-dissapear linear forwards",
-        "cm-add-border-bottom": "0.75s cm-add-border-bottom ease-out forwards",
+        "cm-add-border-bottom": "2s cm-add-border-bottom ease-out forwards",
       },
       boxShadow: {
         "left-bottom": "-20px 17px 60px 0px",
