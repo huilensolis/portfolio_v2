@@ -9,7 +9,7 @@ const postsDir = path.join(
   "app",
   "(site)",
   "blog",
-  "posts"
+  "posts",
 );
 
 export function usePosts() {
@@ -21,8 +21,9 @@ export function usePosts() {
     limit: number;
   }): InterfacePostMetadata[] {
     const markDownXFiles = readdirSync(postsDir).filter((filename) =>
-      filename.endsWith(".mdx")
+      filename.endsWith(".mdx"),
     );
+    if (markDownXFiles.length === 0) return [];
 
     const postsMetadata = markDownXFiles.map((fileName) => {
       const postPath = path.join(postsDir, fileName);

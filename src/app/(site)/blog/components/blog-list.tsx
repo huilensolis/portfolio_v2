@@ -13,6 +13,7 @@ import { ImageComponent } from "@components/image";
 import { Loader } from "../../../components/loader";
 import { Card3 } from "../../../components/card-3";
 import { PrimaryBtn } from "../../../components/buttons";
+import { Span } from "@/app/components/span";
 
 export default function BlogList() {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +26,7 @@ export default function BlogList() {
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
   const [isFirstRequest, setIsFirstRequest] = useState(true);
-  const [latestPost, setLatestPost] = useState({} as InterfacePostMetadata);
+  const [latestPost, setLatestPost] = useState(null as InterfacePostMetadata);
 
   useEffect(() => {
     async function fetchData() {
@@ -53,7 +54,9 @@ export default function BlogList() {
 
         const areThereMorePosts = jsonResponse.data.length + 1 >= limit;
         setAreMorePosts(areThereMorePosts);
+        setError(false);
       } catch (error) {
+        setLatestPost(null);
         setError(true);
       } finally {
         setIsLoading(false);
@@ -73,38 +76,37 @@ export default function BlogList() {
     return;
   }
   return (
-    <>
-      {blogsMetaData.length > 0 && (
-        <main className="w-full flex flex-col items-center">
-          {Boolean(latestPost) && (
-            <Link href={`/blog/${latestPost.slug}`} className="w-full">
-              <article className="flex flex-col gap-5">
-                <ImageComponent
-                  src={latestPost.image}
-                  alt={latestPost.title}
-                  className="w-full h-full object-cover object-center"
-                />
-                <ProseLayout margings={false}>
-                  <div className="flex xl:max-h-64 gap-5 justify-start">
-                    <Logo classes={"h-auto w-72 xl:inline-block hidden"} />
-                    <section className="flex flex-col w-full">
-                      <h1 className="font-bold text-3xl sm:text-5xl text-cm-white flex-grow-[1]">
-                        {latestPost.title}
-                      </h1>
-                      <p className="text-gray-500">{latestPost.subtitle}</p>
-                      <span className="dark:text-gray-500 text-gray-600">
-                        <RelativeTime date={Date.parse(latestPost.date)} />
-                      </span>
-                    </section>
-                  </div>
-                </ProseLayout>
+    <div className="flex flex-col justify-center items-center gap-5 max-w-5xl">
+      <main className="w-full flex flex-col items-center">
+        {Boolean(latestPost) && (
+          <Link href={`/blog/${latestPost.slug}`} className="w-full">
+            <article className="flex flex-col gap-5">
+              <ImageComponent
+                src={latestPost.image}
+                alt={latestPost.title}
+                className="w-full h-full object-cover object-center"
+              />
+              <article className="flex flex-col xl:max-h-64 justify-start">
+                <h1 className="font-bold text-2xl sm:text-5xl text-cm-white [text-wrap:_balance;]">
+                  {latestPost.title}
+                </h1>
+                <p className="text-gray-500 [text-wrap:_balance;] text-xl">
+                  {latestPost.subtitle}
+                </p>
+                <Span>
+                  <span className="text-xl">
+                    <RelativeTime date={Date.parse(latestPost.date)} />
+                  </span>
+                </Span>
               </article>
-            </Link>
-          )}
-          <Hr />
-          <ul className="max-w-4xl w-full flex flex-col gap-5">
+            </article>
+          </Link>
+        )}
+        <Hr />
+        {blogsMetaData.length > 0 && (
+          <ul className="w-full flex flex-col gap-5">
             {blogsMetaData.map((metaData, index) => (
-              <li key={index} className="max-w-4xl">
+              <li key={index} className="w-full">
                 <Link
                   href={`blog/${metaData.slug}`}
                   className="hover:cursor-pointer"
@@ -122,12 +124,25 @@ export default function BlogList() {
               </li>
             ))}
           </ul>
-        </main>
-      )}
+        )}
+      </main>
       {isLoading && (
-        <div className="h-[calc(100dvh-120px)] py-[calc(100px+)] w-full flex justify-center items-center">
-          <Loader />
-        </div>
+        <ul className="flex flex-col justify-center items-center gap-5 w-full">
+          {Array(5)
+            .fill("")
+            .map((_, index) => (
+              <li
+                key={index}
+                className="w-full animate-pulse delay-75 ease-in-out"
+              >
+                <article className="w-full flex flex-col gap-3">
+                  <figure className="w-3/4 h-8 bg-neutral-600 rounded-xl" />
+                  <figure className="w-2/4 h-16 bg-neutral-600 rounded-xl" />
+                  <figure className="w-1/4 h-8 bg-neutral-600 rounded-xl" />
+                </article>
+              </li>
+            ))}
+        </ul>
       )}
       {error && <ErrorComponent />}
       {blogsMetaData.length === 0 && !isLoading && (
@@ -149,6 +164,6 @@ export default function BlogList() {
           </article>
         </Card3>
       )}
-    </>
+    </div>
   );
 }

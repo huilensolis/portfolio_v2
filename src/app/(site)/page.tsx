@@ -99,9 +99,9 @@ export default function Home() {
     <>
       <SquarePatten />
       <section className="flex flex-col items-center gap-24 max-w-5xl w-full relative">
-        <main className="flex flex-col items-center p-20 cm-1xl:p-4 justify-center z-[3]">
+        <main className="flex flex-col items-center px-20 pb-20 cm-1xl:p-4 justify-center z-[3]">
           <h1 className="text-7xl font-bold text-neutral-300 text-center z-10 flex justify-center items-center">
-          Huilen Solis
+            Huilen Solis
           </h1>
           <sub className="text-xl font-normal text-neutral-400 [text-wrap:balance;] w-full text-center ">
             Full Stack Web Developer, building aesthetic and accessible websites
@@ -111,7 +111,7 @@ export default function Home() {
             <a
               href="https://github.com/Huilensolis"
               target="_blank"
-              className="sm:w-36 w-full"
+              className="sm:w-40 w-full"
             >
               <SecondaryBtn>
                 Github
@@ -121,7 +121,7 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/in/huilensolis/"
               target="_blank"
-              className="sm:w-36 w-full"
+              className="sm:w-40 w-full"
             >
               <PrimaryBtn>
                 LinkedIn <ArrowUpRight classes="w-4 h-4" />
@@ -378,32 +378,45 @@ export default function Home() {
           <figure className="absolute top-[5%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <h2 className="text-5xl font-bold text-neutral-300">About me</h2>
           <Card3>
-            <p className="text-cm-white font-normal text-lg text-center ">
-              My web development journey began on Platzi, an online learning
-              platform, where I mastered <Span>JavaScript</Span>,{" "}
-              <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
-              coding. In March 2023, I joined the{" "}
-              <Span>Full Stack Santex Bootcamp</Span>, an initiative organized
-              by Santex, a software company. it was taught by the developers at
-              the company, allowing learning web development from developers who
-              are actively working in the industry. This experience not only
-              honed my technical skills in <Span>JavaScript</Span>,{" "}
-              <Span>Node.js</Span>, <Span>Express</Span>,{" "}
-              <Span>TypeScript</Span>, <Span>SCSS</Span>,
-              <Span> and Angular</Span> but also gave me{" "}
-              <Span>experience working in teamwork and Scrum methodology</Span>.
-              As the Bootcamp concluded in October 2023, my journey continued
-              into the realm of React. Today,{" "}
-              <Span>
-                I&apos;m crafting accessible, performant, and maintainable
-                projects using React.js, Next.js, Tailwind CSS, Node.js,
-                Express, and TypeScript.
-              </Span>
-              <br /> <br /> The learning never stops, and I&apos;m committed to
-              staying at the forefront of web development technologies to
-              deliver top-notch solutions. Let&apos;s create something cool
-              together!
-            </p>
+            <div className="flex flex-col justify-center items-center gap-5">
+              <p className="text-cm-white font-normal text-lg text-center ">
+                My web development journey began on Platzi, an online learning
+                platform, where I mastered <Span>JavaScript</Span>,{" "}
+                <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
+                coding. In March 2023, I joined the{" "}
+                <Span>Full Stack Santex Bootcamp</Span>, an initiative organized
+                by Santex, a software company. it was taught by the developers
+                at the company, allowing learning web development from
+                developers who are actively working in the industry. This
+                experience not only honed my technical skills in{" "}
+                <Span>JavaScript</Span>, <Span>Node.js</Span>,{" "}
+                <Span>Express</Span>, <Span>TypeScript</Span>, <Span>SCSS</Span>
+                ,<Span> and Angular</Span> but also gave me{" "}
+                <Span>
+                  experience working in teamwork and Scrum methodology
+                </Span>
+                . As the Bootcamp concluded in October 2023, my journey
+                continued into the realm of React. Today,{" "}
+                <Span>
+                  I&apos;m crafting accessible, performant, and maintainable
+                  projects using React.js, Next.js, Tailwind CSS, Node.js,
+                  Express, and TypeScript.
+                </Span>
+                <br /> <br /> The learning never stops, and I&apos;m committed
+                to staying at the forefront of web development technologies to
+                deliver top-notch solutions. Let&apos;s create something cool
+                together!
+              </p>
+              <a
+                href="https://www.linkedin.com/in/huilensolis/"
+                target="_blank"
+                className="sm:w-40 inline-block w-full"
+              >
+                <PrimaryBtn>
+                  LinkedIn <ArrowUpRight classes="w-4 h-4" />
+                </PrimaryBtn>
+              </a>
+            </div>
           </Card3>
         </section>
         <section className="w-full flex flex-col items-center justify-center gap-8 mb-20">
@@ -419,12 +432,12 @@ export default function Home() {
                           technologie.color === "blue"
                             ? "fill-blue-200 text-blue-200"
                             : technologie.color === "orange"
-                            ? "fill-orange-200 text-orange-300"
-                            : technologie.color === "violet"
-                            ? "fill-violet-200 text-violet-200"
-                            : technologie.color === "green"
-                            ? "fill-green-200 text-green-200"
-                            : "fill-neutral-400 text-neutral-400"
+                              ? "fill-orange-200 text-orange-300"
+                              : technologie.color === "violet"
+                                ? "fill-violet-200 text-violet-200"
+                                : technologie.color === "green"
+                                  ? "fill-green-200 text-green-200"
+                                  : "fill-neutral-400 text-neutral-400"
                         } w-20 h-20 xl:inline-block hidden`}
                       />
                       <div className="flex flex-col justify-center h-full">
@@ -433,12 +446,12 @@ export default function Home() {
                             technologie.color === "blue"
                               ? "text-blue-200"
                               : technologie.color === "orange"
-                              ? "text-orange-300"
-                              : technologie.color === "violet"
-                              ? "text-violet-200"
-                              : technologie.color === "green"
-                              ? "text-green-200"
-                              : "text-neutral-400"
+                                ? "text-orange-300"
+                                : technologie.color === "violet"
+                                  ? "text-violet-200"
+                                  : technologie.color === "green"
+                                    ? "text-green-200"
+                                    : "text-neutral-400"
                           }  font-semibold text-3xl`}
                         >
                           {technologie.name}
@@ -468,7 +481,7 @@ export default function Home() {
                 <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
               </div>
               <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                <span className="text-neutral-200/20  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none">
+                <span className="text-neutral-200/10  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none">
                   Gmail
                 </span>
               </div>
@@ -493,7 +506,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
+                  <span className="text-neutral-200/10  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     LinkedIn
                   </span>
                 </div>
@@ -519,7 +532,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
+                  <span className="text-neutral-200/10  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     Github
                   </span>
                 </div>
@@ -545,7 +558,7 @@ export default function Home() {
                   <figure className="absolute right-0 top-[-150%] h-[400%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] animate-cm-dissapear [animation-timeline:view();] [animation-range:0%_1200px] inline-block cm-1xl:hidden" />
                 </div>
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0 overflow-hidden z-0">
-                  <span className="text-neutral-200/20  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
+                  <span className="text-neutral-200/10  font-semibold xl:text-[15rem] md:text-9xl text-[6rem] select-none z-0">
                     Twitter
                   </span>
                 </div>

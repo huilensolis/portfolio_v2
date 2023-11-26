@@ -28,7 +28,7 @@ export default function RootLayout({
       </Head>
       <body className={GeistSans.className}>
         <Header />
-        <div className="bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-80px)] pt-24 w-full sm:px-20 px-5 cm-1xl:px-2 overflow-x-clip">
+        <div className="bg-cm-black flex flex-col justify-start items-center min-h-[calc(100dvh-80px)] pt-44 w-full sm:px-20 px-5 cm-1xl:px-2 overflow-x-clip">
           {children}
           <Analytics />
         </div>

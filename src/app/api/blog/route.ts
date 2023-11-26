@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { usePosts } from "@hooks/posts";
 
-export async function GET(req: Request, res: NextResponse) {
+export async function GET(req: Request, _res: NextResponse) {
   const { getPostsListMetadata } = usePosts();
 
   const { searchParams } = new URL(req.url);
