@@ -100,14 +100,20 @@ export default function Home() {
       <SquarePatten />
       <section className="flex flex-col items-center gap-24 max-w-5xl w-full relative">
         <main className="flex flex-col items-center px-20 pb-20 cm-1xl:p-4 justify-center z-[3]">
-          <h1 className="text-7xl font-bold text-neutral-300 text-center z-10 flex justify-center items-center">
-            Huilen Solis
+          <h1 className="text-5xl cm-lg:text-4xl break-words font-bold text-neutral-300 text-center z-10 flex justify-center items-center">
+            Frontend Engineer, building solutions with State-of-The-Art
+            technologies, clean architecture and high-performance code
           </h1>
-          <sub className="text-xl font-normal text-neutral-400 [text-wrap:balance;] w-full text-center ">
-            Full Stack Web Developer, building aesthetic and accessible websites
-            with scalable, perfomant and legible code.
-          </sub>
           <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap w-full">
+            <a
+              href="https://www.linkedin.com/in/huilensolis/"
+              target="_blank"
+              className="sm:w-40 w-full"
+            >
+              <PrimaryBtn>
+                LinkedIn <ArrowUpRight classes="w-4 h-4" />
+              </PrimaryBtn>
+            </a>
             <a
               href="https://github.com/Huilensolis"
               target="_blank"
@@ -117,15 +123,6 @@ export default function Home() {
                 Github
                 <ArrowUpRight classes="w-4 h-4" />
               </SecondaryBtn>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/huilensolis/"
-              target="_blank"
-              className="sm:w-40 w-full"
-            >
-              <PrimaryBtn>
-                LinkedIn <ArrowUpRight classes="w-4 h-4" />
-              </PrimaryBtn>
             </a>
           </div>
         </main>
@@ -296,6 +293,7 @@ export default function Home() {
                         comes with an ORM for Next js, letting you interact with
                         your database and authenticate the user.
                       </p>
+                      |
                     </article>
                   </>,
                   <>
@@ -380,10 +378,7 @@ export default function Home() {
           <Card3>
             <div className="flex flex-col justify-center items-center gap-5">
               <p className="text-cm-white font-normal text-lg text-center ">
-                My web development journey began on Platzi, an online learning
-                platform, where I mastered <Span>JavaScript</Span>,{" "}
-                <Span>HTML</Span>, and <Span>CSS</Span>, igniting my passion for
-                coding. In March 2023, I joined the{" "}
+                In March 2023, I joined the{" "}
                 <Span>Full Stack Santex Bootcamp</Span>, an initiative organized
                 by Santex, a software company. it was taught by the developers
                 at the company, allowing learning web development from

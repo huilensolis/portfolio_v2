@@ -36,13 +36,10 @@ export default function Blog() {
   return (
     <div className="max-w-5xl w-full h-full flex flex-col gap-24">
       <main className="flex flex-col items-center px-20 pb-20 cm-1xl:p-4 justify-center gap-2">
-        <h1 className="text-7xl cm-lg:text-4xl cm-1xl:text-5xl font-bold text-neutral-300 text-center [text-wrap:_balance;]">
-          My Developer <Span>Journey</Span> Blog
+        <h1 className="text-5xl cm-lg:text-4xl cm-1xl:text-5xl font-bold text-neutral-300 text-center [text-wrap:_balance;]">
+          A place to document my code journey, sharing opinions, experiences and
+          tutorials.
         </h1>
-        <sub className="text-xl font-normal text-neutral-400 [text-wrap:_balance;] w-full text-center">
-          Here is where I share my journey in web development. Sharing
-          experiences, opinions, tips and tutorials.
-        </sub>
       </main>
       <BlogList />
     </div>

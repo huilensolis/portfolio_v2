@@ -41,12 +41,9 @@ export function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-lg hover:underline flex items-center justify-center group "
+                className="text-lg hover:underline"
               >
                 {link.name}
-                <div className="flex justify-center items-center">
-                  <ArrowUpRight classes="w-5 h-5 text-neutral-300" />
-                </div>
               </a>
             </li>
           ))}
