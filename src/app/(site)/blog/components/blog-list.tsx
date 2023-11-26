@@ -26,7 +26,9 @@ export default function BlogList() {
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
   const [isFirstRequest, setIsFirstRequest] = useState(true);
-  const [latestPost, setLatestPost] = useState(null as InterfacePostMetadata);
+  const [latestPost, setLatestPost] = useState<InterfacePostMetadata | null>(
+    null,
+  );
 
   useEffect(() => {
     async function fetchData() {
@@ -78,7 +80,7 @@ export default function BlogList() {
   return (
     <div className="flex flex-col justify-center items-center gap-5 max-w-5xl">
       <main className="w-full flex flex-col items-center">
-        {Boolean(latestPost) && (
+        {latestPost && (
           <Link href={`/blog/${latestPost.slug}`} className="w-full">
             <article className="flex flex-col gap-5">
               <ImageComponent
