@@ -100,7 +100,7 @@ export default function Home() {
       <SquarePatten />
       <section className="flex flex-col items-center gap-24 max-w-5xl w-full relative">
         <main className="flex flex-col items-center px-20 pb-20 cm-1xl:p-4 justify-center z-[3]">
-          <h1 className="text-5xl cm-lg:text-4xl break-words font-bold text-neutral-300 text-center z-10 flex justify-center items-center [text-wrap:_center]">
+          <h1 className="text-5xl cm-lg:text-4xl break-words font-bold text-neutral-300 text-center z-10 flex justify-center items-center [text-wrap:_balance]">
             Frontend Engineer - Forging Solutions with The-State-Of-Art
             Technologies, Enforcing Accessibility for Inclusive User Experiences
           </h1>
