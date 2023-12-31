@@ -104,7 +104,7 @@ export default function Home() {
             Frontend Engineer - Forging Solutions with The-State-Of-Art
             Technologies, Enforcing Accessibility for Inclusive User Experiences
           </h1>
-          <div className="mt-6 flex justify-center items-center gap-4 cm-1xl:flex-wrap w-full">
+          <div className="mt-6 flex justify-center items-center gap-8 cm-1xl:flex-wrap w-full">
             <a
               href="https://www.linkedin.com/in/huilensolis/"
               target="_blank"
@@ -293,7 +293,6 @@ export default function Home() {
                         comes with an ORM for Next js, letting you interact with
                         your database and authenticate the user.
                       </p>
-                      |
                     </article>
                   </>,
                   <>
