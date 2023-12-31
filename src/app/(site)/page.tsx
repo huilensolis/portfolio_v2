@@ -372,47 +372,43 @@ export default function Home() {
           </ul>
         </section>
         <section className="w-full flex flex-col justify-center items-center gap-8 mb-20 relative">
-          <figure className="absolute top-[-5%] left-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
-          <figure className="absolute top-[5%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
+          <figure className="absolute top-[-10%] left-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
+          <figure className="absolute top-[10%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <h2 className="text-5xl font-bold text-neutral-300">About me</h2>
-          <Card3>
-            <div className="flex flex-col justify-center items-center gap-5">
-              <p className="text-cm-white font-normal text-lg text-center ">
-                In March 2023, I joined the{" "}
-                <Span>Full Stack Santex Bootcamp</Span>, an initiative organized
-                by Santex, a software company. it was taught by the developers
-                at the company, allowing learning web development from
-                developers who are actively working in the industry. This
-                experience not only honed my technical skills in{" "}
-                <Span>JavaScript</Span>, <Span>Node.js</Span>,{" "}
-                <Span>Express</Span>, <Span>TypeScript</Span>, <Span>SCSS</Span>
-                ,<Span> and Angular</Span> but also gave me{" "}
-                <Span>
-                  experience working in teamwork and Scrum methodology
-                </Span>
-                . As the Bootcamp concluded in October 2023, my journey
-                continued into the realm of React. Today,{" "}
-                <Span>
-                  I&apos;m crafting accessible, performant, and maintainable
-                  projects using React.js, Next.js, Tailwind CSS, Node.js,
-                  Express, and TypeScript.
-                </Span>
-                <br /> <br /> The learning never stops, and I&apos;m committed
-                to staying at the forefront of web development technologies to
-                deliver top-notch solutions. Let&apos;s create something cool
-                together!
-              </p>
-              <a
-                href="https://www.linkedin.com/in/huilensolis/"
-                target="_blank"
-                className="sm:w-40 inline-block w-full"
-              >
-                <PrimaryBtn>
-                  LinkedIn <ArrowUpRight classes="w-4 h-4" />
-                </PrimaryBtn>
-              </a>
-            </div>
-          </Card3>
+          <article className="flex flex-col justify-center items-center gap-5 p-14">
+            <p className="text-cm-white font-normal text-lg text-center ">
+              In March 2023, I joined the{" "}
+              <Span>Full Stack Santex Bootcamp</Span>, an initiative organized
+              by Santex, a software company. it was taught by the developers at
+              the company, allowing learning web development from developers who
+              are actively working in the industry. This experience not only
+              honed my technical skills in <Span>JavaScript</Span>,{" "}
+              <Span>Node.js</Span>, <Span>Express</Span>,{" "}
+              <Span>TypeScript</Span>, <Span>SCSS</Span>,
+              <Span> and Angular</Span> but also gave me{" "}
+              <Span>experience working in teamwork and Scrum methodology</Span>.
+              As the Bootcamp concluded in October 2023, my journey continued
+              into the realm of React. Today,{" "}
+              <Span>
+                I&apos;m crafting accessible, performant, and maintainable
+                projects using React.js, Next.js, Tailwind CSS, Node.js,
+                Express, and TypeScript.
+              </Span>
+              <br /> <br /> The learning never stops, and I&apos;m committed to
+              staying at the forefront of web development technologies to
+              deliver top-notch solutions. Let&apos;s create something cool
+              together!
+            </p>
+            <a
+              href="https://www.linkedin.com/in/huilensolis/"
+              target="_blank"
+              className="sm:w-40 inline-block w-full"
+            >
+              <PrimaryBtn>
+                LinkedIn <ArrowUpRight classes="w-4 h-4" />
+              </PrimaryBtn>
+            </a>
+          </article>
         </section>
         <section className="w-full flex flex-col items-center justify-center gap-8 mb-20">
           <h2 className="text-5xl font-bold text-neutral-300">My stack</h2>
