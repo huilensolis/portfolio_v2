@@ -57,7 +57,8 @@ const config: Config = {
         "left-bottom": "-20px 17px 60px 0px",
       },
       supports: {
-        "no-scroll-driven-animations": "not(animation-timeline)",
+        "no-scroll-driven-animations":
+          "@supports not (animation-timeline: scroll())",
       },
       screens: {
         "cm-2xl": { max: "1500px" },
