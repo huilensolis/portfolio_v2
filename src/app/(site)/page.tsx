@@ -103,11 +103,11 @@ export default function Home() {
             Frontend Engineer - Forging Solutions with The-State-Of-Art
             Technologies, Enforcing Accessibility for Inclusive User Experiences
           </h1>
-          <div className="mt-6 flex justify-center items-center gap-8 cm-1xl:flex-wrap w-full">
+          <div className="mt-6 flex justify-center items-center gap-8 cm-1xl:gap-4 cm-1xl:flex-wrap w-full">
             <a
               href="https://www.linkedin.com/in/huilensolis/"
               target="_blank"
-              className="sm:w-40 w-full"
+              className="sm:w-40 w-full max-w-xs"
             >
               <PrimaryBtn>
                 LinkedIn <ArrowUpRight classes="w-4 h-4" />
@@ -116,7 +116,7 @@ export default function Home() {
             <a
               href="https://github.com/Huilensolis"
               target="_blank"
-              className="sm:w-40 w-full"
+              className="sm:w-40 w-full max-w-xs"
             >
               <SecondaryBtn>
                 Github
@@ -373,7 +373,7 @@ export default function Home() {
           <figure className="absolute top-[-10%] left-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <figure className="absolute top-[10%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <h2 className="text-5xl font-bold text-neutral-300">About me</h2>
-          <article className="flex flex-col justify-center items-center gap-5 px-32 text-cm-white font-normal text-lg text-center">
+          <article className="flex flex-col justify-center items-center gap-5 px-32 cm-1xl:px-5 text-cm-white font-normal text-lg text-center">
             <p className="[text-wrap:_pretty]">
               In March 2023, I joined the{" "}
               <Span>Full Stack Santex Bootcamp</Span>, an initiative organized
@@ -435,9 +435,9 @@ export default function Home() {
                                   : "fill-neutral-400 text-neutral-400"
                         } w-20 h-20 xl:inline-block hidden`}
                       />
-                      <div className="flex flex-col justify-center h-full">
+                      <div className="flex flex-col justify-center h-full w-full">
                         <h3
-                          className={` ${
+                          className={`${
                             technologie.color === "blue"
                               ? "text-blue-200"
                               : technologie.color === "orange"
@@ -447,7 +447,7 @@ export default function Home() {
                                   : technologie.color === "green"
                                     ? "text-green-200"
                                     : "text-neutral-400"
-                          }  font-semibold text-3xl`}
+                          } w-full cm-1xl:text-center font-semibold text-3xl`}
                         >
                           {technologie.name}
                         </h3>

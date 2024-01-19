@@ -36,12 +36,12 @@ export function Footer() {
         </span>
         <ul className="w-full lg:w-auto cm-1xl:grid grid-cols-2 max-w-[22rem] gap-4 flex items-center justify-center text-lg font-medium text-neutral-300">
           {SOCIALNETWORKS.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="w-full">
               <a
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-lg hover:underline"
+                className="text-lg flex items-center justify-center w-full text-neutral-300 cm-1xl:p-1 cm-1xl:text-center cm-1xl:bg-neutral-800 cm-1xl:border cm-1xl:border-neutral-600 hover:brightness-110 transition-all delay-75"
               >
                 {link.name}
               </a>
