@@ -14,6 +14,7 @@ import { Card } from "@components/card";
 import { Span } from "../components/span";
 import { SingleCard } from "../components/card-2";
 import { SquarePatten } from "../components/square-patten";
+import { Chip } from "../components/chip";
 
 export const metadata = {
   title: `Huilen Solis's Portfolio`,
@@ -202,22 +203,41 @@ export default function Home() {
                       <h4 className="mb-2 text-2xl font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Backend Technologies
                       </h4>
-                      <p className="font-normal text-neutral-400 ">
-                        <span className="text-orange-300">Typescript</span>,{" "}
-                        <span className="text-orange-300">Node.JS</span>,{" "}
-                        <span className="text-orange-300">Express</span>,{" "}
-                        <span className="text-orange-300">Sequelize</span>{" "}
-                        (database ORM),{" "}
-                        <span className="text-orange-300">JWT</span> (Json Web
-                        Tokens),{" "}
-                        <span className="text-orange-300">PostgreSQL</span>,{" "}
-                        <span className="text-orange-300">Bcrypt</span>{" "}
-                        (encripting library),{" "}
-                        <span className="text-orange-300">
-                          Express-validator
-                        </span>{" "}
-                        (input validation)
-                      </p>
+                      <section className="flex flex-wrap gap-2">
+                        <Chip bgColor="bg-blue-500/20" textColor="text-sky-200">
+                          Typescript
+                        </Chip>
+                        <Chip
+                          bgColor="bg-emerald-500/30"
+                          textColor="text-emerald-200"
+                        >
+                          Node JS
+                        </Chip>
+                        <Chip
+                          bgColor="bg-violet-500/30"
+                          textColor="text-violet-200"
+                        >
+                          Express
+                        </Chip>
+                        <Chip bgColor="bg-blue-500/20" textColor="text-sky-200">
+                          Sequelize(ORM)
+                        </Chip>
+                        <Chip
+                          bgColor="bg-orange-500/20"
+                          textColor="text-orange-200"
+                        >
+                          Json Web Tokens
+                        </Chip>
+                        <Chip
+                          bgColor="bg-yellow-500/20"
+                          textColor="text-yellow-200"
+                        >
+                          PostgreSQL
+                        </Chip>
+                        <Chip bgColor="bg-sky-500/20" textColor="text-sky-200">
+                          Bcrypt (encrypting)
+                        </Chip>
+                      </section>
                     </article>
                   </>,
                   <>
@@ -225,18 +245,35 @@ export default function Home() {
                       <h4 className="mb-2 text-2xl  font-semibold tracking-tight  text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h4>
-                      <p className="font-normal text-neutral-400 ">
-                        <span className="text-orange-300">Typescript</span>,{" "}
-                        <span className="text-orange-300">React</span>,{" "}
-                        <span className="text-orange-300">
-                          React-router-dom
-                        </span>
-                        , <span className="text-orange-300">Mui</span>{" "}
-                        (component library),{" "}
-                        <span className="text-orange-300">Axios</span> and{" "}
-                        <span className="text-orange-300">Zod</span> (input
-                        validation)
-                      </p>
+                      <section className="flex flex-wrap gap-2">
+                        <Chip bgColor="bg-blue-500/20" textColor="text-sky-200">
+                          Typescript
+                        </Chip>
+                        <Chip bgColor="bg-sky-500/30" textColor="text-sky-200">
+                          React
+                        </Chip>
+                        <Chip bgColor="bg-red-500/30" textColor="text-red-200">
+                          React Router Dom
+                        </Chip>
+                        <Chip bgColor="bg-blue-500/20" textColor="text-sky-200">
+                          Sequelize(ORM)
+                        </Chip>
+                        <Chip
+                          bgColor="bg-blue-500/20"
+                          textColor="text-blue-200"
+                        >
+                          MUI
+                        </Chip>
+                        <Chip
+                          bgColor="bg-yellow-500/20"
+                          textColor="text-yellow-200"
+                        >
+                          Axios
+                        </Chip>
+                        <Chip bgColor="bg-red-500/20" textColor="text-red-200">
+                          Zod
+                        </Chip>
+                      </section>
                     </article>
                   </>,
                 ]}
@@ -299,15 +336,41 @@ export default function Home() {
                       <h4 className="mb-2 text-2xl font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h4>
-                      <p className="font-normal text-neutral-400 ">
-                        <span className="text-orange-300">Typescript</span>,{" "}
-                        <span className="text-orange-300">Next JS</span>,{" "}
-                        <span className="text-orange-300">Supabase</span>,{" "}
-                        <span className="text-orange-300">Zustand</span> (Global
-                        State manager), and{" "}
-                        <span className="text-orange-300">Remix</span>{" "}
-                        (component library)
-                      </p>
+                      <section className="flex flex-wrap gap-2">
+                        <Chip bgColor="bg-blue-500/20" textColor="text-sky-200">
+                          Typescript
+                        </Chip>
+                        <Chip
+                          bgColor="bg-neutral-500/30"
+                          textColor="text-neutral-200"
+                        >
+                          Next JS
+                        </Chip>
+                        <Chip
+                          bgColor="bg-emerald-500/30"
+                          textColor="text-emerald-200"
+                        >
+                          Supabase ORM
+                        </Chip>
+                        <Chip
+                          bgColor="bg-orange-500/20"
+                          textColor="text-orange-200"
+                        >
+                          Zustand
+                        </Chip>
+                        <Chip
+                          bgColor="bg-pink-500/20"
+                          textColor="text-pink-200"
+                        >
+                          Radix UI
+                        </Chip>
+                        <Chip
+                          bgColor="bg-blue-500/20"
+                          textColor="text-blue-200"
+                        >
+                          Tailwind CSS
+                        </Chip>
+                      </section>
                     </article>
                   </>,
                 ]}
@@ -353,15 +416,29 @@ export default function Home() {
                       <h4 className="mb-2 text-2xl font-semibold tracking-tight text-neutral-300 cm-1xl:break-all">
                         Frontend Technologies
                       </h4>
-                      <p className="font-normal text-neutral-400 ">
-                        <span className="text-orange-300">Typescript</span>,{" "}
-                        <span className="text-orange-300">React</span>,{" "}
-                        <span className="text-orange-300">
-                          React-router-dom
-                        </span>{" "}
-                        and <span className="text-orange-300">Zustand</span>{" "}
-                        (global state manager)
-                      </p>
+                      <section className="flex flex-wrap gap-2">
+                        <Chip bgColor="bg-blue-500/20" textColor="text-sky-200">
+                          Typescript
+                        </Chip>
+                        <Chip bgColor="bg-sky-500/30" textColor="text-sky-200">
+                          React
+                        </Chip>
+                        <Chip bgColor="bg-red-500/30" textColor="text-red-200">
+                          React Router DOM
+                        </Chip>
+                        <Chip
+                          bgColor="bg-orange-500/20"
+                          textColor="text-orange-200"
+                        >
+                          Zustand
+                        </Chip>
+                        <Chip
+                          bgColor="bg-blue-500/20"
+                          textColor="text-blue-200"
+                        >
+                          Tailwind CSS
+                        </Chip>
+                      </section>
                     </article>
                   </>,
                 ]}
