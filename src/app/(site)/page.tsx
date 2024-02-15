@@ -451,34 +451,23 @@ export default function Home() {
           <figure className="absolute top-[10%] right-0 h-[110%] w-[1px] [background-image:_radial-gradient(at_center,_#FFDBB3,_#FFF7E41A);] opacity-20" />
           <h2 className="text-5xl font-bold text-neutral-300">About me</h2>
           <article className="flex flex-col justify-center items-center gap-5 px-32 cm-1xl:px-5 text-cm-white font-normal text-lg text-center">
-            <p className="[text-wrap:_pretty]">
-              In March 2023, I joined the{" "}
-              <Span>Full Stack Santex Bootcamp</Span>, an initiative organized
-              by Santex, a software company. it was taught by the developers at
-              the company, allowing learning web development from developers who
-              are actively working in the industry.
-            </p>
-            <p>
-              This experience not only honed my technical skills in{" "}
-              <Span>
-                JavaScript, Node.js, Express, TypeScript, SCSS, and Angular
-              </Span>{" "}
-              but also gave me{" "}
-              <Span>experience working in teamwork and Scrum methodology</Span>.
-            </p>
-            <p>
-              As the Bootcamp concluded in October 2023, my journey continued
-              into the realm of React. Today,{" "}
-              <Span>
-                I&apos;m crafting accessible, performant, and maintainable
-                projects using React.js, Next.js, Tailwind CSS, Node.js,
-                Express, and TypeScript.
-              </Span>
-            </p>
-            <p>
-              The learning never stops, and I&apos;m committed to staying at the
-              forefront of web development technologies to deliver top-notch
-              solutions. Let&apos;s connect!
+            <p className="text-neutral-200">
+              Completed Santex Bootcamp in 2023, gaining proficiency in
+              full-stack development, collaborative workflows, and utilizing
+              Scrum methodology for product development. Continuously improving
+              English proficiency since 2019 through ongoing language studies.
+              <br />
+              <br />
+              Subsequently, I have actively built personal projects
+              collaborating with friends and open-source contributors on GitHub.
+              <br />
+              <br />
+              Seeking a remote Frontend/Full-stack position, with an environment
+              that propels my developer growth. Eager to join a collaborative
+              team and receive mentorship from seasoned professionals, while
+              contributing my skills for building innovative products. My
+              commitment to ongoing learning drives my interest in embracing new
+              technologies, industry best practices, and design patterns.
             </p>
             <a
               href="https://www.linkedin.com/in/huilensolis/"
