@@ -6,8 +6,8 @@ export function Chip({
   textColor,
 }: {
   children: ReactNode;
-  bgColor: `bg-${string}-${number}`;
-  textColor: `text-${string}-${number}`;
+  bgColor: string;
+  textColor: string;
 }) {
   return (
     <span
